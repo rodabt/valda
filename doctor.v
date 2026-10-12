@@ -91,6 +91,9 @@ fn run_doctor(cmd cli.Command) ! {
 			engine.open(state.soundfont)!
 			backend := engine.backend()
 			engine.close()
+			if backend == 'Null' {
+				return error('no audio device found (playback would be silent); WAV and MIDI export still work')
+			}
 			return 'backend: ${backend}'
 		}},
 		Check{'Start a REPL server and connect to it', fn () !string {

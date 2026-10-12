@@ -20,7 +20,8 @@ background-process architecture.
 ## Building
 
 Requires V (tested with 0.5.1). No other dependencies: the synthesizer and
-audio I/O are vendored single-header C libraries.
+audio I/O are vendored single-header C libraries. No V? Use the Docker image
+instead (see [Docker](#docker)).
 
 ```
 v -o valda .                     # development build (tcc)
@@ -47,6 +48,66 @@ order:
 [GeneralUser GS](https://schristiancollins.com/generaluser.php) is a good,
 free, ~30 MB choice. Run `valda doctor` to check your setup.
 
+### Docker
+
+The `Dockerfile` builds valda with the same V compiler it was tested with
+and adds a small General MIDI SoundFont (TimGM6mb), so WAV export works out
+of the box. You don't need V installed.
+
+```
+docker build -t valda .
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD":/work valda export -f song.alda -M 1 -o song.mid
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD":/work valda export -f song.alda -O wav -o song.wav
+```
+
+Mount the folder that holds your scores at `/work`. `--user` makes the files
+valda writes yours instead of root's. To use a better SoundFont, mount it
+and point `VALDA_SOUNDFONT` at it
+(`-v ~/sf2:/sf2 -e VALDA_SOUNDFONT=/sf2/GeneralUser.sf2`).
+
+`scripts/valda-docker.sh` wraps all of this, so the image works like an
+installed binary. It mounts the current directory at the same path inside the
+container, so file paths work unchanged:
+
+```
+scripts/valda-docker.sh export -f song.alda -o song.mid
+VALDA=$PWD/scripts/valda-docker.sh skills/valda-music/scripts/check.sh song.alda --midi song.mid
+```
+
+Setting `VALDA` this way lets the Claude Code skills use the image. Keep the
+scores they write under the directory you run them from, because valda can't
+see files outside it.
+
+**Playback** (`play`, and sound from the REPL) needs a sound device, and a
+container doesn't have one: valda says so instead of playing silence. On Linux
+and WSL, lend it the host's PulseAudio or PipeWire server.
+`scripts/valda-docker.sh` does this by itself when it finds the server's
+socket. By hand:
+
+```
+pulse="${PULSE_SERVER#unix:}"                 # WSL: /mnt/wslg/PulseServer
+pulse="${pulse:-$XDG_RUNTIME_DIR/pulse/native}"
+docker run --rm -it --user "$(id -u):$(id -g)" -v "$PWD":/work \
+  -v "$pulse":/tmp/pulse -e PULSE_SERVER=unix:/tmp/pulse \
+  valda play -f song.alda
+```
+
+On macOS and Windows (outside WSL) it's simpler to export WAV and play the
+file on the host. `docker run --rm valda doctor` shows which parts of your
+setup work.
+
+**REPL server:** by default the server only accepts connections from inside
+its own container. Listen on all addresses and publish the port to reach it
+from the host or from an editor:
+
+```
+docker run --rm -p 127.0.0.1:12345:12345 valda repl --server --host 0.0.0.0 --port 12345
+valda repl --client --port 12345        # on the host
+```
+
+Anyone who can reach the port can play and export scores. `-p 127.0.0.1:…`
+keeps it reachable only from your own machine.
+
 ## Commands
 
 | Command | Description |
@@ -56,7 +117,7 @@ free, ~30 MB choice. Run `valda doctor` to check your setup.
 | `export` | Export to MIDI (`-O midi`, default) or WAV (`-O wav`, rendered offline faster than real time). MIDI is format 0 (one track, as in Alda) unless `-M 1` asks for format 1: a tempo track plus one track per part, named after the part's alias or instrument. |
 | `import` | Import MusicXML (`-i musicxml`) into Alda code |
 | `format` | Format Alda code (experimental; drops comments, as in Alda) |
-| `repl` | Interactive REPL plus nREPL server (`--server`, `--client`, `--port`, `--message`) |
+| `repl` | Interactive REPL plus nREPL server (`--server`, `--client`, `--port`, `--message`). The server listens on 127.0.0.1 unless `--host` says otherwise, e.g. `--host 0.0.0.0` in a container. |
 | `stop` | Stop playback in a running REPL server |
 | `instruments`, `version`, `doctor` | |
 
@@ -97,7 +158,10 @@ skills/install.sh     # symlink both skills into ~/.claude/skills (or $CLAUDE_SK
 skills/test.sh        # check every code snippet and template with valda
 ```
 
-Restart Claude Code (or start a new session) after installing.
+Restart Claude Code (or start a new session) after installing. If you run
+valda in Docker, start Claude Code with
+`VALDA=/path/to/valda/scripts/valda-docker.sh` in its environment and keep
+your scores under the directory you start it from (see [Docker](#docker)).
 
 ## Architecture
 

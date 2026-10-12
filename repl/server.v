@@ -257,10 +257,19 @@ fn (mut s Server) dispatch(msg map[string]BValue, mut response map[string]BValue
 	return true
 }
 
+@[params]
+pub struct ListenOptions {
+pub:
+	// The address to listen on. The default only accepts connections from this
+	// machine; 0.0.0.0 accepts them from anywhere, e.g. from outside a
+	// container.
+	host string = '127.0.0.1'
+}
+
 // listen starts accepting connections in the background. Port 0 picks an
 // available port. Returns the port.
-pub fn (mut s Server) listen(port int) !int {
-	mut listener := net.listen_tcp(.ip, '127.0.0.1:${port}')!
+pub fn (mut s Server) listen(port int, opts ListenOptions) !int {
+	mut listener := net.listen_tcp(.ip, '${opts.host}:${port}')!
 	listener.set_accept_timeout(net.infinite_timeout)
 	addr := listener.addr()!
 	s.port = addr.port()!

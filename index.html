@@ -139,6 +139,13 @@ h3 { font-size: 1.3rem; font-weight: 700; font-variation-settings: "opsz" 32; ma
 @media (min-width: 900px) { .split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; } }
 
 /* Commands */
+.get h3 { margin-bottom: 6px; }
+.get > div > p { color: var(--muted); margin: 0 0 14px; max-width: 52ch; }
+.get .cmd { margin-top: 0; }
+.get .cmd code { white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 600px) { .cmd code { white-space: normal; overflow-wrap: anywhere; } }
+.get .after { color: var(--muted); font-size: 0.95rem; margin: 14px 0 0; max-width: 52ch; }
+
 .commands { margin: 0; display: grid; grid-template-columns: 1fr; }
 .commands div { display: grid; grid-template-columns: 1fr; gap: 6px 32px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
 .commands div:first-child { border-top: 1px solid var(--rule); }
@@ -174,6 +181,7 @@ pre.sample .c { color: var(--muted); }
 .skill .links { color: var(--muted); font-size: 0.95rem; margin: 0; }
 .install { margin-top: 48px; max-width: 640px; }
 .install p { color: var(--muted); margin: 0 0 12px; }
+.install .after-skills { margin-top: 20px; }
 
 footer { border-top: 1px solid var(--rule); padding: 40px 0 56px; color: var(--muted); font-size: 0.92rem; }
 footer p { margin: 0 0 6px; max-width: 80ch; }
@@ -183,6 +191,7 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
 <header class="wrap top">
   <a class="mark" href="#">valda</a>
   <nav aria-label="Main">
+    <a href="#install">Install</a>
     <a href="#commands">Commands</a>
     <a href="#examples">Examples</a>
     <a href="#learn">Learn</a>
@@ -222,6 +231,29 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
     </div>
   </div>
 
+  <section id="install">
+    <div class="wrap">
+      <h2>Get valda</h2>
+      <p class="intro">Build it from source, or run it in Docker without installing anything else. Either way, run <code>valda doctor</code> first to check your setup.</p>
+      <div class="split get">
+        <div>
+          <h3>Build from source</h3>
+          <p>Needs the <a href="https://vlang.io">V compiler</a> (tested with 0.5.1) and a C compiler. The synthesizer and audio code are built in. For playback, add a General MIDI SoundFont, for example Debian's <code>timgm6mb-soundfont</code> package.</p>
+          <div class="cmd"><code>git clone https://github.com/rodabt/valda</code><button class="copy" type="button">Copy</button></div>
+          <div class="cmd"><code>cd valda &amp;&amp; v -prod -cc gcc -o valda .</code><button class="copy" type="button">Copy</button></div>
+          <p class="after">Then put the <code>valda</code> binary on your <code>PATH</code>.</p>
+        </div>
+        <div>
+          <h3>Run it in Docker</h3>
+          <p>The image includes valda and a small SoundFont, so MIDI and WAV export work straight away. The wrapper script runs it like an installed binary, on files in the current directory.</p>
+          <div class="cmd"><code>docker build -t valda .</code><button class="copy" type="button">Copy</button></div>
+          <div class="cmd"><code>scripts/valda-docker.sh export -f song.alda -O wav -o song.wav</code><button class="copy" type="button">Copy</button></div>
+          <p class="after">On Linux and WSL the wrapper plays through your computer's sound server. Elsewhere, export WAV and play the file. The <a href="README.md#docker">README</a> covers the REPL server and other options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="commands">
     <div class="wrap">
       <h2>From the terminal</h2>
@@ -241,7 +273,7 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
         </div>
         <div>
           <dt><code>valda repl</code></dt>
-          <dd>Write music a line at a time and hear each line as you enter it. The server speaks Alda's nREPL protocol, so Alda's editor integrations can connect to it.</dd>
+          <dd>Write music a line at a time and hear each line as you enter it. The server speaks Alda's nREPL protocol, so Alda's editor integrations can connect to it. It only accepts connections from your own machine unless you add <code>--host 0.0.0.0</code>, for example to reach it inside a container.</dd>
         </div>
         <div>
           <dt><code>valda import -i musicxml -f score.musicxml</code></dt>
@@ -249,7 +281,7 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
         </div>
         <div>
           <dt><code>valda doctor</code></dt>
-          <dd>Checks your setup: parsing, MIDI export, the SoundFont, the audio device and the REPL.</dd>
+          <dd>Checks your setup: parsing, MIDI export, the SoundFont, the audio device and the REPL. If there's no sound device, it says so, and <code>play</code> stops with the same message instead of playing silence.</dd>
         </div>
       </dl>
     </div>
@@ -361,6 +393,8 @@ verseA = [
       <div class="install">
         <p>Link both skills into Claude Code, then start a new session:</p>
         <div class="cmd"><code>skills/install.sh</code><button class="copy" type="button">Copy</button></div>
+        <p class="after-skills">Using Docker? Start Claude Code with <code>VALDA</code> pointing at the wrapper, so the skills run valda through the image. Keep your scores under the folder you start it from.</p>
+        <div class="cmd"><code>VALDA=$PWD/scripts/valda-docker.sh claude</code><button class="copy" type="button">Copy</button></div>
       </div>
     </div>
   </section>

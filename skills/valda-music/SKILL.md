@@ -25,6 +25,12 @@ You write a `.alda` score, check it with `scripts/check.sh`, then the user plays
 - `templates/backing-track.alda`: full-song structure to copy (sections, variables, markers, mix).
 - `templates/scale-exercise.alda`: exercise structure to copy (count-in, click, drone, ramp).
 
+**Running valda:** `scripts/check.sh` uses `$VALDA`, then `valda` on `PATH`, then the binary in this skill's repo.
+If the user runs valda in Docker, prefix commands with `VALDA=<repo>/scripts/valda-docker.sh`, save the score under
+the current directory (the container sees nothing outside it), and give the user `<repo>/scripts/valda-docker.sh play -f FILE`
+instead of `valda play -f FILE`. If check.sh reports that valda isn't found, ask whether they built it or use Docker.
+If `play` says no audio device was found, offer the WAV export instead.
+
 ## Workflow
 
 1. **Brief.** Settle on: purpose (jam / practice / accompany a melody), genre/feel, key and mode, tempo,

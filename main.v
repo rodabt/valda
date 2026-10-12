@@ -132,7 +132,19 @@ fn soundfont_flag(cmd cli.Command) string {
 fn open_audio(cmd cli.Command) ! {
 	sf := find_soundfont(soundfont_flag(cmd))!
 	engine.open(sf) or { return error('Failed to start audio: ${err.msg()}') }
+	// With no sound device, miniaudio falls back to a backend that discards
+	// everything; playing would be silent, so treat it as a failure.
+	if engine.backend() == 'Null' {
+		engine.close()
+		return error(no_audio_device)
+	}
 }
+
+const no_audio_device = "No audio device found, so playback would be silent.
+
+To hear the score, export it instead (valda export -O wav) and play the file.
+In a Docker container, see the Docker section of the README to use the
+host's sound server."
 
 // ---------------------------------------------------------------------------
 // play
@@ -479,6 +491,11 @@ Examples:
     Starts a REPL server without an interactive prompt. Clients (including
     Alda editor integrations) can then connect via nREPL.
 
+  valda repl --server --host 0.0.0.0 --port 12345
+    Starts a REPL server that accepts connections from other machines, e.g.
+    from outside a Docker container. Anyone who can reach the port can play
+    and export scores, so only do this on a network you trust.
+
   valda repl --port 12345 --message \'{"op": "eval-and-play", "code": "banjo: c"}\'
     Sends an nREPL message to the REPL server running on port 12345.'
 		posix_mode:      true
@@ -487,7 +504,7 @@ Examples:
 				flag:          .string
 				name:          'host'
 				abbrev:        'H'
-				description:   'The hostname of the REPL server'
+				description:   'The hostname of the REPL server (with --server: the address to listen on)'
 				default_value: ['127.0.0.1']
 			},
 			cli.Flag{
@@ -570,8 +587,11 @@ fn run_repl(cmd cli.Command) ! {
 		audio = false
 	}
 	mut server := repl.new_server(audio)
-	port = server.listen(if port > 0 { port } else { 0 })!
-	eprintln('nREPL server started on port ${port} on host 127.0.0.1 - nrepl://127.0.0.1:${port}')
+	port = server.listen(if port > 0 { port } else { 0 }, host: host)!
+	eprintln('nREPL server started on port ${port} on host ${host} - nrepl://${host}:${port}')
+	if host !in ['127.0.0.1', 'localhost'] {
+		eprintln('WARN The REPL server accepts connections from other machines. Anyone who can reach port ${port} can play and export scores.\n')
+	}
 
 	// NB: `defer` is block-scoped in V, so this must live at function level.
 	defer {
@@ -595,7 +615,8 @@ fn run_repl(cmd cli.Command) ! {
 		}
 	}
 
-	connect_client(host, port)!
+	// A wildcard address can be listened on, but not connected to.
+	connect_client(if host == '0.0.0.0' { '127.0.0.1' } else { host }, port)!
 }
 
 fn connect_client(host string, port int) ! {

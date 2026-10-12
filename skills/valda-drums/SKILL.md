@@ -25,6 +25,12 @@ played with `valda play -f FILE` or exported (`--midi`/`--wav`). MIDI drops stra
 - `templates/song-drums.alda`: a complete 64-bar rock arrangement. Copy its layout.
 - valda-music's `references/alda-syntax.md` has the general Alda rules if you need them.
 
+**Running valda:** `scripts/check.sh` uses `$VALDA`, then `valda` on `PATH`, then the binary in this skill's repo.
+If the user runs valda in Docker, prefix commands with `VALDA=<repo>/scripts/valda-docker.sh`, save the score under
+the current directory (the container sees nothing outside it), and give the user `<repo>/scripts/valda-docker.sh play -f FILE`
+instead of `valda play -f FILE`. If check.sh reports that valda isn't found, ask whether they built it or use Docker.
+If `play` says no audio device was found, offer the WAV export instead.
+
 ## Notation convention (always follow it)
 
 1. **Every bar is a variable in limb voices**, with a tab comment above it:
