@@ -1,0 +1,27 @@
+# Exercise: A minor pentatonic, two octaves, up and down in 8ths, for guitar.
+# Played twice: at 80 BPM, then at 100 BPM, with a 1-bar count-in before each pass.
+# A low drone (A + E) runs underneath so you can hear the tonal center.
+#
+# Each pass = 1 count-in bar + 4 bars of scale = 5 bars. Total 10 bars.
+
+# Up: A C D E G | A C D E G | A (two octaves, 11 notes); down the same way.
+# 10 eighths (5 beats) + a dotted half on the top/bottom A = 8 beats = 2 bars.
+scaleUp   = o2 a8 > c d e g a > c d e g a2. |
+scaleDown = o4 a8 g e d c < a g e d c < a2. |
+
+countIn  = o5 (vol 90) e4 (vol 60) e e e
+clickBar = o5 (vol 80) e4 (vol 55) e e e
+
+midi-electric-guitar-clean:
+  (track-vol 85)
+  (tempo! 80)  r1 scaleUp scaleDown
+  (tempo! 100) r1 scaleUp scaleDown
+
+midi-percussion:
+  (track-vol 75)
+  countIn clickBar*4
+  countIn clickBar*4
+
+midi-synth-pad-warm:
+  (track-vol 45) (quant 100) (vol 50)
+  o2 a1~1~1~1~1/>e< a1~1~1~1~1/>e<

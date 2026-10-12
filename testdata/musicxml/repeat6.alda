@@ -1,0 +1,17 @@
+midi-flute:
+  (key-signature "")
+  [
+    g4 a b a
+  ] *2 |
+  [
+    g1
+  ] *1
+
+midi-oboe:
+  (key-signature "")
+  [
+    r1
+  ] *2 |
+  [
+    r1
+  ] *1

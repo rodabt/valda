@@ -1,0 +1,11 @@
+midi-acoustic-grand-piano:
+  (key-signature "")
+  [
+    o5 c1 |
+    [
+      e1 <
+    ] '1 |
+    [
+      g1
+    ] '2
+  ] *2

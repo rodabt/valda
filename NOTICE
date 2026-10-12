@@ -1,0 +1,42 @@
+valda
+Copyright © 2026 Rodrigo Abt
+
+valda is a reimplementation of Alda (https://alda.io) in the V programming
+language. Most of its source code is a translation of Alda's Go client and
+Kotlin player, and it includes Alda's example scores and MusicXML test files.
+
+Alda
+Copyright © 2012-2026 Dave Yarwood et al
+https://github.com/alda-lang/alda
+
+Both are distributed under the Eclipse Public License version 2.0 (see
+LICENSE). The source code of valda is available under the same license from
+the location given in README.md and printed by `valda version`.
+
+valda is an independent project. It is not affiliated with or endorsed by the
+Alda project, and "Alda" is used here only to describe what valda implements.
+
+Third-party components
+----------------------
+
+These are distributed under their own licenses. Their license texts are in the
+thirdparty/ directory and must accompany binary distributions of valda.
+
+- TinySoundFont, Copyright (C) 2017-2023 Bernhard Schelling
+  (based on SFZero, Copyright (C) 2012 Steve Folta).
+  MIT License: thirdparty/LICENSE.TinySoundFont
+
+- miniaudio, by David Reid.
+  Public domain, or MIT No Attribution: see the end of thirdparty/miniaudio.h
+
+- The V runtime and standard library, which are compiled into the valda
+  binary. Copyright (c) 2019-2024 Alexander Medvednikov.
+  MIT License: thirdparty/LICENSE.V
+
+Content under other licenses
+----------------------------
+
+- examples/nicechord-alda-demo.alda, composed by Wiwi Kuan (2021),
+  NiceChord.com. Licensed under Creative Commons Attribution-ShareAlike 4.0
+  International (https://creativecommons.org/licenses/by-sa/4.0/), not under
+  the EPL. Modified versions must keep this attribution and the same license.

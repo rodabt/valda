@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>valda: scores you can type</title>
+<meta name="description" content="valda plays Alda, the text-based music language, from a single binary with a built-in synthesizer. Export to MIDI or WAV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f3f5f8;
+  --sheet: #ffffff;
+  --ink: #172033;
+  --muted: #566176;
+  --rule: #d6dce6;
+  --row: #e9edf3;
+  --cobalt: #2b50d8;
+  --teal: #0b8a85;
+  --plum: #a8417a;
+  --marigold: #f0b429;
+  --focus: #2b50d8;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1626;
+    --sheet: #172036;
+    --ink: #e5e9f2;
+    --muted: #9aa4b8;
+    --rule: #2a3550;
+    --row: #1c2640;
+    --cobalt: #7d98ff;
+    --teal: #3cc7bf;
+    --plum: #e07ab3;
+    --marigold: #f5c451;
+    --focus: #f5c451;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1626;
+  --sheet: #172036;
+  --ink: #e5e9f2;
+  --muted: #9aa4b8;
+  --rule: #2a3550;
+  --row: #1c2640;
+  --cobalt: #7d98ff;
+  --teal: #3cc7bf;
+  --plum: #e07ab3;
+  --marigold: #f5c451;
+  --focus: #f5c451;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-variation-settings: "opsz" 14;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration-color: color-mix(in srgb, var(--cobalt) 55%, transparent); text-underline-offset: 0.18em; text-decoration-thickness: 0.08em; }
+a:hover { color: var(--cobalt); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 3px; }
+code, pre, textarea { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.875rem; }
+p code, li code, dd code { background: var(--row); padding: 0.08em 0.35em; border-radius: 4px; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 720px) { .wrap { padding: 0 32px; } }
+
+/* Header */
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-block: 22px; flex-wrap: wrap; }
+.mark { font-size: 1.6rem; font-weight: 800; font-variation-settings: "opsz" 96, "wdth" 80; letter-spacing: -0.02em; text-decoration: none; }
+.top nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.top nav a { text-decoration: none; color: var(--muted); }
+.top nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; padding-block: 32px 72px; align-items: start; }
+@media (min-width: 960px) { .hero { grid-template-columns: minmax(0, 11fr) minmax(0, 13fr); gap: 56px; padding-block-start: 56px; } }
+h1 {
+  font-size: clamp(3rem, 8.5vw, 6.2rem);
+  line-height: 0.92;
+  font-weight: 800;
+  font-variation-settings: "opsz" 96, "wdth" 75;
+  letter-spacing: -0.035em;
+  margin: 0 0 28px;
+}
+.lede { font-size: 1.25rem; line-height: 1.5; max-width: 34ch; margin: 0 0 28px; color: var(--ink); }
+.lede + p { color: var(--muted); max-width: 44ch; margin: 0 0 28px; }
+
+.cmd { display: flex; align-items: center; gap: 8px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 10px 10px 14px; max-width: 100%; }
+.cmd code { flex: 1; overflow-x: auto; white-space: nowrap; scrollbar-width: thin; font-size: 0.8125rem; }
+.cmd code::before { content: "$ "; color: var(--muted); }
+.cmd + .cmd { margin-top: 8px; }
+.copy { font: inherit; font-size: 0.85rem; border: 1px solid var(--rule); background: transparent; color: var(--muted); border-radius: 6px; padding: 3px 10px; cursor: pointer; }
+.copy:hover { color: var(--ink); border-color: var(--muted); }
+
+/* Studio: the live score */
+.studio { background: var(--sheet); border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.studio-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 12px 10px 16px; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+.studio-head label { font-weight: 600; }
+.controls { display: flex; gap: 8px; }
+.btn { font: inherit; font-weight: 600; border-radius: 999px; padding: 7px 18px; cursor: pointer; border: 1px solid var(--rule); background: transparent; color: var(--ink); }
+.btn.play { background: var(--ink); color: var(--paper); border-color: var(--ink); min-width: 6.5em; }
+.btn.play[aria-pressed="true"] { background: var(--marigold); border-color: var(--marigold); color: #172033; }
+textarea {
+  display: block; width: 100%; min-height: 220px; resize: vertical; overflow: hidden;
+  border: 0; padding: 16px; background: transparent; color: var(--ink);
+  line-height: 1.6; tab-size: 2;
+}
+textarea:focus-visible { outline: none; box-shadow: inset 0 0 0 3px var(--focus); border-radius: 0; }
+.roll { position: relative; border-top: 1px solid var(--rule); background: var(--paper); }
+.roll svg { display: block; width: 100%; height: 240px; }
+.status { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 16px; border-top: 1px solid var(--rule); font-size: 0.9rem; color: var(--muted); }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; background: var(--c); vertical-align: -1px; }
+.studio-note { font-size: 0.85rem; color: var(--muted); margin: 12px 2px 0; max-width: 62ch; }
+
+/* Sections */
+section { padding: 72px 0; border-top: 1px solid var(--rule); }
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1;
+  font-weight: 800;
+  font-variation-settings: "opsz" 96, "wdth" 80;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px;
+}
+h3 { font-size: 1.3rem; font-weight: 700; font-variation-settings: "opsz" 32; margin: 0 0 8px; letter-spacing: -0.01em; }
+.intro { color: var(--muted); max-width: 60ch; margin: 0 0 40px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
+@media (min-width: 900px) { .split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; } }
+
+/* Commands */
+.commands { margin: 0; display: grid; grid-template-columns: 1fr; }
+.commands div { display: grid; grid-template-columns: 1fr; gap: 6px 32px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.commands div:first-child { border-top: 1px solid var(--rule); }
+@media (min-width: 820px) { .commands div { grid-template-columns: minmax(0, 26rem) 1fr; } }
+.commands dt code { font-size: 0.9rem; overflow-wrap: anywhere; }
+.commands dd { margin: 0; color: var(--muted); max-width: 60ch; }
+.commands dd strong { color: var(--ink); font-weight: 600; }
+
+/* Examples */
+.shelves { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
+@media (min-width: 900px) { .shelves { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; } }
+.shelf h3 { padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+.shelf > p { color: var(--muted); font-size: 0.95rem; margin: 0 0 8px; }
+.shelf ul { list-style: none; margin: 0; padding: 0; }
+.shelf li { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.shelf li a { font-weight: 600; }
+.shelf li span { display: block; color: var(--muted); font-size: 0.95rem; }
+.try { margin-top: 28px; color: var(--muted); }
+
+/* Learn */
+.learn { list-style: none; margin: 0; padding: 0; }
+.learn li { padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.learn li:first-child { border-top: 1px solid var(--rule); }
+.learn a { font-size: 1.2rem; font-weight: 700; }
+.learn p { margin: 4px 0 0; color: var(--muted); max-width: 58ch; }
+
+/* Skills */
+.skill { display: flex; flex-direction: column; gap: 14px; }
+.skill > p { margin: 0; max-width: 58ch; }
+.skill blockquote { margin: 0; padding: 4px 0 4px 16px; border-left: 3px solid var(--marigold); color: var(--ink); font-size: 1.05rem; }
+pre.sample { margin: 0; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; overflow-x: auto; line-height: 1.5; }
+pre.sample .c { color: var(--muted); }
+.skill .links { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.install { margin-top: 48px; max-width: 640px; }
+.install p { color: var(--muted); margin: 0 0 12px; }
+
+footer { border-top: 1px solid var(--rule); padding: 40px 0 56px; color: var(--muted); font-size: 0.92rem; }
+footer p { margin: 0 0 6px; max-width: 80ch; }
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <a class="mark" href="#">valda</a>
+  <nav aria-label="Main">
+    <a href="#commands">Commands</a>
+    <a href="#examples">Examples</a>
+    <a href="#learn">Learn</a>
+    <a href="#skills">Claude skills</a>
+    <a href="README.md">README</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <h1>Scores you can&nbsp;type.</h1>
+      <p class="lede">valda plays <a href="https://alda.io/">Alda</a>, the music language written in plain text, straight from your terminal.</p>
+      <p>One small binary with a synthesizer built in. Play a score, keep jamming in a REPL, or export it to MIDI and WAV for your DAW.</p>
+      <div class="cmd"><code>valda play -c 'piano: c8 d e f g4 a8 b &gt; c2'</code><button class="copy" type="button">Copy</button></div>
+      <div class="cmd"><code>valda export -f song.alda -M 1 -o song.mid</code><button class="copy" type="button">Copy</button></div>
+    </div>
+
+    <div>
+      <div class="studio">
+        <div class="studio-head">
+          <label for="score">Try it: edit the score</label>
+          <div class="controls">
+            <button class="btn" type="button" id="reset">Reset</button>
+            <button class="btn play" type="button" id="play" aria-pressed="false">Play</button>
+          </div>
+        </div>
+        <textarea id="score" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+        <div class="roll"><svg id="roll" role="img" aria-label="Piano roll of the score" preserveAspectRatio="none"></svg></div>
+        <div class="status">
+          <span id="summary" aria-live="polite"></span>
+          <span class="legend" id="legend"></span>
+        </div>
+      </div>
+      <p class="studio-note">This preview reads a small part of Alda (parts, notes, rests, chords, octaves, durations and tempo) and plays it with a simple browser synth. valda itself reads the whole language and plays it with a General MIDI SoundFont.</p>
+    </div>
+  </div>
+
+  <section id="commands">
+    <div class="wrap">
+      <h2>From the terminal</h2>
+      <p class="intro">Every command takes a file (<code>-f</code>), a string of code (<code>-c</code>) or a score piped in on stdin.</p>
+      <dl class="commands">
+        <div>
+          <dt><code>valda play -f song.alda</code></dt>
+          <dd>Plays the score and returns when it ends. Use <code>--from</code> and <code>--to</code> with times like <code>0:30</code> or with marker names to hear one section.</dd>
+        </div>
+        <div>
+          <dt><code>valda export -f song.alda -o song.mid</code></dt>
+          <dd>Writes a Standard MIDI File. <strong>Add <code>-M 1</code> to give each part its own named track</strong>, so your DAW shows the piano, bass and drums separately.</dd>
+        </div>
+        <div>
+          <dt><code>valda export -f song.alda -O wav -o song.wav</code></dt>
+          <dd>Renders audio offline, faster than real time, with your SoundFont.</dd>
+        </div>
+        <div>
+          <dt><code>valda repl</code></dt>
+          <dd>Write music a line at a time and hear each line as you enter it. The server speaks Alda's nREPL protocol, so Alda's editor integrations can connect to it.</dd>
+        </div>
+        <div>
+          <dt><code>valda import -i musicxml -f score.musicxml</code></dt>
+          <dd>Turns MusicXML from a notation program into Alda code you can edit.</dd>
+        </div>
+        <div>
+          <dt><code>valda doctor</code></dt>
+          <dd>Checks your setup: parsing, MIDI export, the SoundFont, the audio device and the REPL.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="examples">
+    <div class="wrap">
+      <h2>Examples</h2>
+      <p class="intro">29 scores come with valda, from a single line to a nine-part concerto. Open one to read the code, then play it.</p>
+      <div class="shelves">
+        <div class="shelf">
+          <h3>Start here</h3>
+          <p>Short scores that each show one idea.</p>
+          <ul>
+            <li><a href="examples/hello_world.alda">hello_world</a><span>One line, one piano, nine notes.</span></li>
+            <li><a href="examples/variables.alda">variables</a><span>Name a phrase once and reuse it.</span></li>
+            <li><a href="examples/dynamics.alda">dynamics</a><span>From pianissimo to fortissimo.</span></li>
+            <li><a href="examples/key_signature.alda">key_signature</a><span>Set the key once instead of writing every sharp.</span></li>
+            <li><a href="examples/seconds_and_milliseconds.alda">seconds_and_milliseconds</a><span>Chords timed in seconds instead of beats.</span></li>
+            <li><a href="examples/percussion.alda">percussion</a><span>The General MIDI drum kit, note by note.</span></li>
+          </ul>
+        </div>
+        <div class="shelf">
+          <h3>Full pieces</h3>
+          <p>Transcriptions and originals to listen to and pick apart.</p>
+          <ul>
+            <li><a href="examples/bach_cello_suite_no_1.alda">bach_cello_suite_no_1</a><span>Bach's Prelude from Cello Suite No. 1, with voices for the open strings.</span></li>
+            <li><a href="examples/debussy_quartet.alda">debussy_quartet</a><span>An excerpt from Debussy's String Quartet in G minor.</span></li>
+            <li><a href="examples/rachmaninoff_piano_concerto_2_mvmt_2.alda">rachmaninoff_piano_concerto_2_mvmt_2</a><span>The Adagio of Rachmaninoff's Piano Concerto No. 2: solo piano and orchestra.</span></li>
+            <li><a href="examples/jimenez-divertimento.alda">jimenez-divertimento</a><span>A saxophone quartet: soprano, alto, tenor and baritone.</span></li>
+            <li><a href="examples/gau.alda">gau</a><span>Gau's Theme by Nobuo Uematsu, for cello and guitar.</span></li>
+            <li><a href="examples/nicechord-alda-demo.alda">nicechord-alda-demo</a><span>Wiwi Kuan's 11-part demo, with drums, brass and sound effects (CC BY-SA 4.0).</span></li>
+          </ul>
+        </div>
+        <div class="shelf">
+          <h3>Things only text can do easily</h3>
+          <p>Ideas that are awkward to play by hand.</p>
+          <ul>
+            <li><a href="examples/phase.alda">phase</a><span>Three strings in three different tempos, drifting apart.</span></li>
+            <li><a href="examples/poly.alda">poly</a><span>Polyrhythms on woodblock, agogô and piano.</span></li>
+            <li><a href="examples/all-instruments.alda">all-instruments</a><span>One lick on each of the 128 General MIDI instruments.</span></li>
+            <li><a href="examples/alternate-endings.alda">alternate-endings</a><span>Repeats with first and second endings.</span></li>
+            <li><a href="examples/nesting.alda">nesting</a><span>Voices inside parts, and repeats inside voices.</span></li>
+            <li><a href="examples/midi-channel-management.alda">midi-channel-management</a><span>31 parts, more than MIDI's 16 channels, sharing them automatically.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="try">To play one: <code>valda play -f examples/bach_cello_suite_no_1.alda</code>. The full list is in the <a href="examples/">examples folder</a>.</p>
+    </div>
+  </section>
+
+  <section id="learn">
+    <div class="wrap split">
+      <div>
+        <h2>Learn the language</h2>
+        <p class="intro">valda runs the same language as Alda 2, so Alda's tutorials apply word for word. Wherever they say <code>alda</code>, type <code>valda</code>.</p>
+      </div>
+      <ul class="learn">
+        <li>
+          <a href="https://alda.io/tutorial/">Alda tutorial</a>
+          <p>Start from nothing: parts, notes, octaves, durations, chords, then voices, variables and markers.</p>
+        </li>
+        <li>
+          <a href="https://alda.io/cheat-sheet/">Cheat sheet</a>
+          <p>The whole syntax on one page. Keep it open while you write.</p>
+        </li>
+        <li>
+          <a href="https://github.com/alda-lang/alda/tree/master/doc">Alda reference docs</a>
+          <p>Every attribute, the instrument list, repeats, cram, alda-lisp and the REPL.</p>
+        </li>
+        <li>
+          <a href="README.md">valda README</a>
+          <p>Building valda, setting up a SoundFont, every command, and how valda differs from Alda.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Ask Claude to write it</h2>
+      <p class="intro">Two Claude Code skills come with valda. Describe what you want to play along with. Claude plans the form, writes the <code>.alda</code> score, checks it with valda and exports MIDI or WAV.</p>
+      <div class="split">
+        <article class="skill">
+          <h3>valda-music</h3>
+          <p>Backing tracks and practice material: jam tracks in blues, rock, pop, funk, jazz, bossa, reggae, country, metal or ballad style, chord progressions, scales, modes, arpeggios, interval and rhythm drills, and tempo ramps with a click.</p>
+          <blockquote>“A 12-bar blues in A at 96 BPM with bass, piano and drums. Leave the guitar out, I'll play that.”</blockquote>
+          <pre class="sample"><code><span class="c"># Claude shows the plan before writing the score</span>
+intro 4 | verse 8: Am F C G ×2 | chorus 8: F C G Am ×2 | outro 4   @ 100 BPM ≈ 1:07</code></pre>
+          <p class="links"><a href="skills/valda-music/SKILL.md">Read the skill</a>, or start from a template: <a href="skills/valda-music/templates/backing-track.alda">backing track</a>, <a href="skills/valda-music/templates/scale-exercise.alda">scale exercise</a>.</p>
+        </article>
+        <article class="skill">
+          <h3>valda-drums</h3>
+          <p>Drum parts for rock, pop and metal, from punk and pop-punk to thrash and metalcore. Grooves, fills, crashes, builds, stops and endings, arranged across intro, verse, chorus, bridge and outro. It also adds drums to a score you already have.</p>
+          <blockquote>“A pop-punk drum track at 170 BPM: verse, chorus, verse, chorus, bridge, double chorus. Put a fill into every chorus.”</blockquote>
+          <pre class="sample"><code><span class="c">#     1 &amp; 2 &amp; 3 &amp; 4 &amp;
+# HH  x x x x x x x x
+# SN  . . x . . . x .
+# BD  x . . . x x . .</span>
+verseA = [
+  V1: (vol 70) o2 f+8 f+ f+ f+ f+ f+ f+ f+
+  V2: r8 r (vol 90) o2 d r r r d r
+  V3: (vol 92) o2 c8 r r r c c r r
+  V0:
+]</code></pre>
+          <p class="links"><a href="skills/valda-drums/SKILL.md">Read the skill</a>, or open the <a href="skills/valda-drums/templates/song-drums.alda">64-bar rock arrangement</a>. Exported drums land on MIDI channel 10, ready for any DAW drum track.</p>
+        </article>
+      </div>
+      <div class="install">
+        <p>Link both skills into Claude Code, then start a new session:</p>
+        <div class="cmd"><code>skills/install.sh</code><button class="copy" type="button">Copy</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>valda is based on <a href="https://github.com/alda-lang/alda">Alda</a> by Dave Yarwood et al., and distributed under the Eclipse Public License 2.0 (<a href="LICENSE">LICENSE</a>, <a href="NOTICE">NOTICE</a>).</p>
+    <p>It's an independent project, not affiliated with or endorsed by the Alda project.</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const DEFAULT_SCORE = `(tempo! 104)
+
+piano:
+  o4 c8 e g > c < b g e g |
+  a8 > c e c < a4 g4 |
+  f8 a > c < a g b > d < b |
+  c1/e/g
+
+cello:
+  o2 c1 | a2 g2 | f2 g2 | c1
+`;
+  const PART_COLORS = ["--cobalt", "--teal", "--plum"];
+  const SEMITONES = { c: 0, d: 2, e: 4, f: 5, g: 7, a: 9, b: 11 };
+
+  // parse reads a small subset of Alda: global tempo, part declarations,
+  // notes with accidentals, durations (dots, ties, ms/s), rests, chords,
+  // octave changes and barlines. Anything else is skipped.
+  function parse(src) {
+    src = src.replace(/#.*$/gm, "");
+    let tempo = 120;
+    // A global (tempo! N) applies anywhere; a plain (tempo N) only inside a part.
+    const firstPart = src.search(/[A-Za-z][\w-]*(?:\s+"[^"]*")?\s*:/);
+    const tm = src.match(/\(tempo!\s+(\d+(?:\.\d+)?)\)/) ||
+      (firstPart >= 0 ? src.slice(firstPart).match(/\(tempo\s+(\d+(?:\.\d+)?)\)/) : null);
+    if (tm) tempo = Math.max(20, Math.min(400, parseFloat(tm[1])));
+    src = src.replace(/\([^()]*\)/g, " ");
+
+    const tokens = src.match(/[A-Za-z][\w-]*(?:\s+"[^"]*")?\s*:|[a-g][+\-_]*(?:\d+(?:ms|s)|\d+\.*)?(?:~\d+\.*)*|r(?:\d+\.*)?(?:~\d+\.*)*|o\d|[<>\/|]|\S+/g) || [];
+    const parts = [];
+    const notes = [];
+    let part = null;
+    let chord = null; // { start, min } while inside a chord
+
+    const beatsOf = (spec, p) => {
+      if (!spec) return p.dur;
+      let total = 0;
+      for (const piece of spec.split("~")) {
+        const ms = piece.match(/^(\d+)(ms|s)$/);
+        if (ms) { total += (parseInt(ms[1]) * (ms[2] === "s" ? 1000 : 1)) / (60000 / tempo); continue; }
+        const m = piece.match(/^(\d+)(\.*)$/);
+        if (!m) continue;
+        let b = 4 / parseInt(m[1]), add = b;
+        for (let i = 0; i < m[2].length; i++) { add /= 2; b += add; }
+        total += b;
+      }
+      p.dur = total || p.dur;
+      return p.dur;
+    };
+
+    tokens.forEach((t, i) => {
+      if (/:$/.test(t)) {
+        const name = t.replace(/:$/, "").trim();
+        if (/^V\d+$/.test(name)) return;
+        let p = parts.find(x => x.name === name);
+        if (!p) { p = { name, octave: 4, dur: 1, offset: 0 }; parts.push(p); }
+        part = p;
+        return;
+      }
+      if (!part) return;
+      const next = tokens[i + 1];
+      if (t === ">") { part.octave++; return; }
+      if (t === "<") { part.octave--; return; }
+      if (/^o\d$/.test(t)) { part.octave = parseInt(t.slice(1)); return; }
+      if (t === "/" || t === "|") return;
+      const note = t.match(/^([a-g])([+\-_]*)(.*)$/);
+      const rest = t.match(/^r(.*)$/);
+      if (!note && !rest) return;
+      const start = chord ? chord.start : part.offset;
+      const dur = beatsOf((note ? note[3] : rest[1]) || "", part);
+      if (note) {
+        let pitch = (part.octave + 1) * 12 + SEMITONES[note[1]];
+        for (const a of note[2]) pitch += a === "+" ? 1 : a === "-" ? -1 : 0;
+        notes.push({ part: parts.indexOf(part), pitch, start, dur });
+      }
+      if (next === "/") {
+        chord = chord || { start, min: Infinity };
+        chord.min = Math.min(chord.min, dur);
+      } else if (chord) {
+        part.offset = chord.start + Math.min(chord.min, dur);
+        chord = null;
+      } else {
+        part.offset += dur;
+      }
+    });
+    return { tempo, parts, notes };
+  }
+
+  const svgNS = "http://www.w3.org/2000/svg";
+  const textarea = document.getElementById("score");
+  const svg = document.getElementById("roll");
+  const summary = document.getElementById("summary");
+  const legend = document.getElementById("legend");
+  const playBtn = document.getElementById("play");
+  let score = null;
+  let playhead = null;
+
+  function el(name, attrs) {
+    const node = document.createElementNS(svgNS, name);
+    for (const k in attrs) node.setAttribute(k, attrs[k]);
+    return node;
+  }
+
+  function render() {
+    score = parse(textarea.value);
+    svg.replaceChildren();
+    legend.replaceChildren();
+    const { notes, parts, tempo } = score;
+    if (!notes.length) {
+      summary.textContent = "No notes yet. Start a part with an instrument name, like piano:, then add notes such as c d e.";
+      svg.setAttribute("viewBox", "0 0 16 12");
+      return;
+    }
+    const end = Math.max(...notes.map(n => n.start + n.dur));
+    const bars = Math.ceil(end / 4 - 1e-6);
+    const width = Math.max(bars, 1) * 4;
+    const lo = Math.min(...notes.map(n => n.pitch)) - 2;
+    const hi = Math.max(...notes.map(n => n.pitch)) + 2;
+    const rows = hi - lo + 1;
+    svg.setAttribute("viewBox", `0 0 ${width} ${rows}`);
+
+    for (let p = lo; p <= hi; p++) {
+      if ([1, 3, 6, 8, 10].includes(((p % 12) + 12) % 12)) {
+        svg.append(el("rect", { x: 0, y: hi - p, width, height: 1, fill: "var(--row)" }));
+      }
+    }
+    for (let b = 0; b <= width; b++) {
+      svg.append(el("line", { x1: b, x2: b, y1: 0, y2: rows, stroke: "var(--rule)", "stroke-width": b % 4 ? 0.5 : 1.5, "vector-effect": "non-scaling-stroke" }));
+    }
+    for (const n of notes) {
+      svg.append(el("rect", {
+        x: n.start + 0.02, y: hi - n.pitch + 0.1, width: Math.max(n.dur * 0.9, 0.05), height: 0.8, rx: 0.08, ry: 0.2,
+        fill: `var(${PART_COLORS[n.part % PART_COLORS.length]})`
+      }));
+    }
+    playhead = el("line", { x1: 0, x2: 0, y1: 0, y2: rows, stroke: "var(--marigold)", "stroke-width": 3, "vector-effect": "non-scaling-stroke", visibility: "hidden" });
+    svg.append(playhead);
+
+    parts.forEach((p, i) => {
+      if (!notes.some(n => n.part === i)) return;
+      const s = document.createElement("span");
+      s.style.setProperty("--c", `var(${PART_COLORS[i % PART_COLORS.length]})`);
+      s.textContent = p.name;
+      legend.append(s);
+    });
+    const secs = Math.round(end * 60 / tempo);
+    summary.textContent = `${notes.length} notes, ${bars} ${bars === 1 ? "bar" : "bars"} at ${tempo} BPM, ${secs} s`;
+  }
+
+  // Playback: a small two-oscillator synth per note, scheduled up front.
+  let ctx = null, voices = [], startedAt = 0, raf = 0, stopTimer = 0;
+
+  function stop() {
+    voices.forEach(v => { try { v.stop(); } catch (e) {} });
+    voices = [];
+    cancelAnimationFrame(raf);
+    clearTimeout(stopTimer);
+    if (playhead) playhead.setAttribute("visibility", "hidden");
+    playBtn.textContent = "Play";
+    playBtn.setAttribute("aria-pressed", "false");
+  }
+
+  function play() {
+    if (!score || !score.notes.length) return;
+    ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+    ctx.resume();
+    const spb = 60 / score.tempo;
+    const t0 = ctx.currentTime + 0.08;
+    const master = ctx.createGain();
+    master.gain.value = 0.18;
+    master.connect(ctx.destination);
+    for (const n of score.notes) {
+      const freq = 440 * Math.pow(2, (n.pitch - 69) / 12);
+      const on = t0 + n.start * spb;
+      const len = Math.max(n.dur * spb * 0.9, 0.05);
+      const bowed = n.part % 2 === 1;
+      const env = ctx.createGain();
+      env.gain.setValueAtTime(0, on);
+      env.gain.linearRampToValueAtTime(bowed ? 0.5 : 0.8, on + (bowed ? 0.06 : 0.008));
+      env.gain.exponentialRampToValueAtTime(bowed ? 0.35 : 0.25, on + (bowed ? 0.3 : 0.35));
+      env.gain.setValueAtTime(bowed ? 0.35 : 0.25, on + len);
+      env.gain.exponentialRampToValueAtTime(0.0001, on + len + 0.25);
+      env.connect(master);
+      for (const [type, mult, gain] of [[bowed ? "sawtooth" : "triangle", 1, 1], ["sine", 2, 0.25]]) {
+        const osc = ctx.createOscillator();
+        const g = ctx.createGain();
+        osc.type = type;
+        osc.frequency.value = freq * mult;
+        g.gain.value = bowed && type === "sawtooth" ? gain * 0.35 : gain;
+        let out = g;
+        if (bowed && type === "sawtooth") {
+          const lp = ctx.createBiquadFilter();
+          lp.type = "lowpass";
+          lp.frequency.value = 1200;
+          g.connect(lp);
+          out = lp;
+        }
+        osc.connect(g);
+        out.connect(env);
+        osc.start(on);
+        osc.stop(on + len + 0.3);
+        voices.push(osc);
+      }
+    }
+    const end = Math.max(...score.notes.map(n => n.start + n.dur));
+    startedAt = t0;
+    playBtn.textContent = "Stop";
+    playBtn.setAttribute("aria-pressed", "true");
+    playhead.setAttribute("visibility", "visible");
+    const tick = () => {
+      const beat = Math.max(0, (ctx.currentTime - startedAt) / spb);
+      playhead.setAttribute("x1", beat);
+      playhead.setAttribute("x2", beat);
+      if (beat < end) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    stopTimer = setTimeout(stop, (end * spb + 0.6) * 1000);
+  }
+
+  playBtn.addEventListener("click", () => {
+    if (playBtn.getAttribute("aria-pressed") === "true") stop(); else play();
+  });
+  document.getElementById("reset").addEventListener("click", () => {
+    stop();
+    textarea.value = DEFAULT_SCORE;
+    fit();
+    render();
+  });
+  // Grow the editor with the score, so the whole score stays visible.
+  function fit() {
+    textarea.style.height = "auto";
+    textarea.style.height = textarea.scrollHeight + 2 + "px";
+  }
+  textarea.addEventListener("input", () => { stop(); fit(); render(); });
+  textarea.addEventListener("keydown", e => {
+    if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); playBtn.click(); }
+  });
+
+  document.querySelectorAll(".copy").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const text = btn.parentElement.querySelector("code").textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = "Copied";
+      } catch (e) {
+        btn.textContent = "Select and copy";
+      }
+      setTimeout(() => { btn.textContent = "Copy"; }, 1600);
+    });
+  });
+
+  textarea.value = DEFAULT_SCORE;
+  fit();
+  render();
+  if (document.fonts) document.fonts.ready.then(fit);
+})();
+</script>
+</body>
+</html>

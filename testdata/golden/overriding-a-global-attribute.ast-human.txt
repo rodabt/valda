@@ -1,0 +1,123 @@
+RootNode
+  ImplicitPartNode [1:1]
+    EventSequenceNode [1:1]
+      LispListNode [1:1]
+        LispSymbolNode [1:2]: "tempo!"
+        LispNumberNode [1:9]: 60
+  PartNode [3:1]
+    PartDeclarationNode [3:1]
+      PartNamesNode [3:1]
+        PartNameNode [3:1]: "harpsichord"
+    EventSequenceNode [3:14]
+      NoteNode [3:14]
+        NoteLetterAndAccidentalsNode [3:14]
+          NoteLetterNode [3:14]: "c"
+        DurationNode [3:15]
+          NoteLengthNode [3:15]
+            DenominatorNode: 8
+      NoteNode [3:17]
+        NoteLetterAndAccidentalsNode [3:17]
+          NoteLetterNode [3:17]: "d"
+      NoteNode [3:19]
+        NoteLetterAndAccidentalsNode [3:19]
+          NoteLetterNode [3:19]: "e"
+      NoteNode [3:21]
+        NoteLetterAndAccidentalsNode [3:21]
+          NoteLetterNode [3:21]: "f"
+      NoteNode [3:23]
+        NoteLetterAndAccidentalsNode [3:23]
+          NoteLetterNode [3:23]: "g"
+      NoteNode [3:25]
+        NoteLetterAndAccidentalsNode [3:25]
+          NoteLetterNode [3:25]: "a"
+      NoteNode [3:27]
+        NoteLetterAndAccidentalsNode [3:27]
+          NoteLetterNode [3:27]: "b"
+      OctaveUpNode [3:29]
+      NoteNode [3:31]
+        NoteLetterAndAccidentalsNode [3:31]
+          NoteLetterNode [3:31]: "c"
+  PartNode [5:1]
+    PartDeclarationNode [5:1]
+      PartNamesNode [5:1]
+        PartNameNode [5:1]: "banjo"
+    EventSequenceNode [5:8]
+      LispListNode [5:8]
+        LispSymbolNode [5:9]: "tempo"
+        LispNumberNode [5:15]: 180
+      NoteNode [5:20]
+        NoteLetterAndAccidentalsNode [5:20]
+          NoteLetterNode [5:20]: "c"
+        DurationNode [5:21]
+          NoteLengthNode [5:21]
+            DenominatorNode: 8
+      NoteNode [5:23]
+        NoteLetterAndAccidentalsNode [5:23]
+          NoteLetterNode [5:23]: "d"
+      NoteNode [5:25]
+        NoteLetterAndAccidentalsNode [5:25]
+          NoteLetterNode [5:25]: "e"
+      NoteNode [5:27]
+        NoteLetterAndAccidentalsNode [5:27]
+          NoteLetterNode [5:27]: "f"
+      NoteNode [5:29]
+        NoteLetterAndAccidentalsNode [5:29]
+          NoteLetterNode [5:29]: "g"
+      NoteNode [5:31]
+        NoteLetterAndAccidentalsNode [5:31]
+          NoteLetterNode [5:31]: "a"
+      NoteNode [5:33]
+        NoteLetterAndAccidentalsNode [5:33]
+          NoteLetterNode [5:33]: "b"
+      OctaveUpNode [5:35]
+      NoteNode [5:37]
+        NoteLetterAndAccidentalsNode [5:37]
+          NoteLetterNode [5:37]: "c"
+      NoteNode [5:39]
+        NoteLetterAndAccidentalsNode [5:39]
+          NoteLetterNode [5:39]: "d"
+      NoteNode [5:41]
+        NoteLetterAndAccidentalsNode [5:41]
+          NoteLetterNode [5:41]: "c"
+      OctaveDownNode [5:43]
+      NoteNode [5:45]
+        NoteLetterAndAccidentalsNode [5:45]
+          NoteLetterNode [5:45]: "b"
+      NoteNode [5:47]
+        NoteLetterAndAccidentalsNode [5:47]
+          NoteLetterNode [5:47]: "a"
+      NoteNode [5:49]
+        NoteLetterAndAccidentalsNode [5:49]
+          NoteLetterNode [5:49]: "g"
+      NoteNode [5:51]
+        NoteLetterAndAccidentalsNode [5:51]
+          NoteLetterNode [5:51]: "f"
+      NoteNode [5:53]
+        NoteLetterAndAccidentalsNode [5:53]
+          NoteLetterNode [5:53]: "e"
+      NoteNode [5:55]
+        NoteLetterAndAccidentalsNode [5:55]
+          NoteLetterNode [5:55]: "d"
+      NoteNode [5:57]
+        NoteLetterAndAccidentalsNode [5:57]
+          NoteLetterNode [5:57]: "c"
+      OctaveDownNode [5:59]
+      NoteNode [5:61]
+        NoteLetterAndAccidentalsNode [5:61]
+          NoteLetterNode [5:61]: "b"
+      NoteNode [5:63]
+        NoteLetterAndAccidentalsNode [5:63]
+          NoteLetterNode [5:63]: "a"
+      NoteNode [5:65]
+        NoteLetterAndAccidentalsNode [5:65]
+          NoteLetterNode [5:65]: "g"
+      NoteNode [5:67]
+        NoteLetterAndAccidentalsNode [5:67]
+          NoteLetterNode [5:67]: "f"
+      NoteNode [5:69]
+        NoteLetterAndAccidentalsNode [5:69]
+          NoteLetterNode [5:69]: "e"
+        DurationNode [5:70]
+          NoteLengthNode [5:70]
+            DenominatorNode: 4
+            DotsNode: 1

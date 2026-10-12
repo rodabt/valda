@@ -1,0 +1,5 @@
+midi-acoustic-grand-piano:
+  (key-signature "")
+  [
+    > c1 | g1 <
+  ] *2

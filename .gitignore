@@ -1,0 +1,6 @@
+/valda
+/valda.exe
+*.o
+*.mid
+*.wav
+.alda-nrepl-port

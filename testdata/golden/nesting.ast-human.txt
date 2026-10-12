@@ -1,0 +1,168 @@
+RootNode
+  PartNode [1:1]
+    PartDeclarationNode [1:1]
+      PartNamesNode [1:1]
+        PartNameNode [1:1]: "piano"
+    EventSequenceNode [2:3]
+      VoiceGroupNode [2:3]
+        VoiceNode [2:3]
+          VoiceNumberNode [2:3]: 1
+          EventSequenceNode [3:5]
+            NoteNode [3:5]
+              NoteLetterAndAccidentalsNode [3:5]
+                NoteLetterNode [3:5]: "c"
+              DurationNode [3:6]
+                NoteLengthNode [3:6]
+                  DenominatorNode: 8
+            NoteNode [3:8]
+              NoteLetterAndAccidentalsNode [3:8]
+                NoteLetterNode [3:8]: "d"
+            NoteNode [3:10]
+              NoteLetterAndAccidentalsNode [3:10]
+                NoteLetterNode [3:10]: "e"
+            NoteNode [3:12]
+              NoteLetterAndAccidentalsNode [3:12]
+                NoteLetterNode [3:12]: "f"
+            NoteNode [3:14]
+              NoteLetterAndAccidentalsNode [3:14]
+                NoteLetterNode [3:14]: "g"
+              DurationNode [3:15]
+                NoteLengthNode [3:15]
+                  DenominatorNode: 2
+              TieNode [3:16]
+        VoiceNode [5:3]
+          VoiceNumberNode [5:3]: 2
+          EventSequenceNode [6:5]
+            EventSequenceNode [6:5]
+              RepeatNode [6:13]
+                EventSequenceNode [6:7]
+                  NoteNode [6:8]
+                    NoteLetterAndAccidentalsNode [6:8]
+                      NoteLetterNode [6:8]: "c"
+                    DurationNode [6:9]
+                      NoteLengthNode [6:9]
+                        DenominatorNode: 8
+                  NoteNode [6:11]
+                    NoteLetterAndAccidentalsNode [6:11]
+                      NoteLetterNode [6:11]: "d"
+                TimesNode: 2
+              NoteNode [6:16]
+                NoteLetterAndAccidentalsNode [6:16]
+                  NoteLetterNode [6:16]: "e"
+              EventSequenceNode [6:18]
+                NoteNode [6:20]
+                  NoteLetterAndAccidentalsNode [6:20]
+                    NoteLetterNode [6:20]: "f"
+                RepeatNode [6:23]
+                  NoteNode [6:22]
+                    NoteLetterAndAccidentalsNode [6:22]
+                      NoteLetterNode [6:22]: "g"
+                  TimesNode: 3
+                RepeatNode [6:56]
+                  LispListNode [6:26]
+                    LispSymbolNode [6:27]: "key-sig"
+                    LispQuotedFormNode [6:35]
+                      LispListNode [6:36]
+                        LispSymbolNode [6:37]: "b"
+                        LispListNode [6:39]
+                          LispSymbolNode [6:40]: "flat"
+                        LispSymbolNode [6:46]: "e"
+                        LispListNode [6:48]
+                          LispSymbolNode [6:49]: "flat"
+                  TimesNode: 5
+                RepeatNode [8:33]
+                  CramNode [7:20]
+                    EventSequenceNode [7:22]
+                      CramNode [7:22]
+                        EventSequenceNode [7:23]
+                          NoteNode [7:23]
+                            NoteLetterAndAccidentalsNode [7:23]
+                              NoteLetterNode [7:23]: "c"
+                          NoteNode [7:25]
+                            NoteLetterAndAccidentalsNode [7:25]
+                              NoteLetterNode [7:25]: "c"
+                      RepeatNode [7:45]
+                        EventSequenceNode [7:28]
+                          ChordNode [7:30]
+                            NoteNode [7:30]
+                              NoteLetterAndAccidentalsNode [7:30]
+                                NoteLetterNode [7:30]: "g"
+                            NoteNode [7:32]
+                              NoteLetterAndAccidentalsNode [7:32]
+                                NoteLetterNode [7:32]: "e"
+                            NoteNode [7:34]
+                              NoteLetterAndAccidentalsNode [7:34]
+                                NoteLetterNode [7:34]: "c"
+                          RepeatNode [7:41]
+                            EventSequenceNode [7:36]
+                              NoteNode [7:38]
+                                NoteLetterAndAccidentalsNode [7:38]
+                                  NoteLetterNode [7:38]: "d"
+                            TimesNode: 2
+                        TimesNode: 1
+                      RepeatNode [8:29]
+                        CramNode [8:22]
+                          EventSequenceNode [8:24]
+                            NoteNode [8:24]
+                              NoteLetterAndAccidentalsNode [8:24]
+                                NoteLetterNode [8:24]: "c"
+                            NoteNode [8:26]
+                              NoteLetterAndAccidentalsNode [8:26]
+                                NoteLetterNode [8:26]: "d"
+                        TimesNode: 5
+                  TimesNode: 5
+                EventSequenceNode [9:22]
+                  ChordNode [9:24]
+                    NoteNode [9:24]
+                      NoteLetterAndAccidentalsNode [9:24]
+                        NoteLetterNode [9:24]: "a"
+                    NoteNode [9:26]
+                      NoteLetterAndAccidentalsNode [9:26]
+                        NoteLetterNode [9:26]: "b"
+                    NoteNode [9:28]
+                      NoteLetterAndAccidentalsNode [9:28]
+                        NoteLetterNode [9:28]: "c"
+                NoteNode [9:32]
+                  NoteLetterAndAccidentalsNode [9:32]
+                    NoteLetterNode [9:32]: "b"
+              ChordNode [10:19]
+                NoteNode [10:19]
+                  NoteLetterAndAccidentalsNode [10:19]
+                    NoteLetterNode [10:19]: "c"
+                NoteNode [10:21]
+                  NoteLetterAndAccidentalsNode [10:21]
+                    NoteLetterNode [10:21]: "e"
+        VoiceNode [12:3]
+          VoiceNumberNode [12:3]: 3
+          EventSequenceNode [13:5]
+            NoteNode [13:5]
+              NoteLetterAndAccidentalsNode [13:5]
+                NoteLetterNode [13:5]: "a"
+              DurationNode [13:6]
+                NoteLengthNode [13:6]
+                  DenominatorNode: 8
+            NoteNode [13:8]
+              NoteLetterAndAccidentalsNode [13:8]
+                NoteLetterNode [13:8]: "b"
+            OctaveUpNode [13:10]
+            NoteNode [13:12]
+              NoteLetterAndAccidentalsNode [13:12]
+                NoteLetterNode [13:12]: "c"
+              DurationNode [13:13]
+                NoteLengthNode [13:13]
+                  DenominatorNode: 2
+              TieNode [13:14]
+  PartNode [15:1]
+    PartDeclarationNode [15:1]
+      PartNamesNode [15:1]
+        PartNameNode [15:1]: "clarinet"
+    EventSequenceNode [16:3]
+      NoteNode [16:3]
+        NoteLetterAndAccidentalsNode [16:3]
+          NoteLetterNode [16:3]: "a"
+        DurationNode [16:4]
+          NoteLengthNode [16:4]
+            DenominatorNode: 2
+      NoteNode [16:6]
+        NoteLetterAndAccidentalsNode [16:6]
+          NoteLetterNode [16:6]: "e"

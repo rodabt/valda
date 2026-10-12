@@ -1,0 +1,10 @@
+midi-acoustic-grand-piano:
+  (key-signature "")
+  V1:
+    o5 c4 d e f | g4 a b > c
+  V2:
+    r1 | r2 > g
+  V3:
+    r4 g2 r4 | g1
+  V4:
+    c4 r c r | r1

@@ -1,0 +1,76 @@
+RootNode
+  PartNode [1:1]
+    PartDeclarationNode [1:1]
+      PartNamesNode [1:1]
+        PartNameNode [1:1]: "piano"
+    EventSequenceNode [1:8]
+      LispListNode [1:8]
+        LispSymbolNode [1:9]: "set-duration"
+        LispNumberNode [1:22]: 4
+  PartNode [2:1]
+    PartDeclarationNode [2:1]
+      PartNamesNode [2:1]
+        PartNameNode [2:1]: "harp"
+    EventSequenceNode [2:8]
+      LispListNode [2:8]
+        LispSymbolNode [2:9]: "set-duration"
+        LispNumberNode [2:22]: 2
+      LispListNode [2:25]
+        LispSymbolNode [2:26]: "octave"
+        LispNumberNode [2:33]: 3
+  PartNode [4:1]
+    PartDeclarationNode [4:1]
+      PartNamesNode [4:1]
+        PartNameNode [4:1]: "piano"
+        PartNameNode [4:7]: "harp"
+    EventSequenceNode [5:3]
+      CramNode [5:3]
+        EventSequenceNode [5:4]
+          NoteNode [5:4]
+            NoteLetterAndAccidentalsNode [5:4]
+              NoteLetterNode [5:4]: "e"
+          NoteNode [5:6]
+            NoteLetterAndAccidentalsNode [5:6]
+              NoteLetterNode [5:6]: "f"
+          NoteNode [5:8]
+            NoteLetterAndAccidentalsNode [5:8]
+              NoteLetterNode [5:8]: "g"
+      CramNode [5:11]
+        EventSequenceNode [5:12]
+          NoteNode [5:12]
+            NoteLetterAndAccidentalsNode [5:12]
+              NoteLetterNode [5:12]: "a"
+          NoteNode [5:14]
+            NoteLetterAndAccidentalsNode [5:14]
+              NoteLetterNode [5:14]: "b"
+          OctaveUpNode [5:16]
+          NoteNode [5:18]
+            NoteLetterAndAccidentalsNode [5:18]
+              NoteLetterNode [5:18]: "c"
+  PartNode [7:1]
+    PartDeclarationNode [7:1]
+      PartNamesNode [7:1]
+        PartNameNode [7:1]: "harp"
+    EventSequenceNode [8:3]
+      CramNode [8:3]
+        EventSequenceNode [8:4]
+          NoteNode [8:4]
+            NoteLetterAndAccidentalsNode [8:4]
+              NoteLetterNode [8:4]: "d"
+          NoteNode [8:6]
+            NoteLetterAndAccidentalsNode [8:6]
+              NoteLetterNode [8:6]: "e"
+          NoteNode [8:8]
+            NoteLetterAndAccidentalsNode [8:8]
+              NoteLetterNode [8:8]: "f"
+      CramNode [8:11]
+        EventSequenceNode [8:12]
+          NoteNode [8:12]
+            NoteLetterAndAccidentalsNode [8:12]
+              NoteLetterNode [8:12]: "g"
+          NoteNode [8:14]
+            NoteLetterAndAccidentalsNode [8:14]
+              NoteLetterNode [8:14]: "a"
+          NoteNode [8:16]
+            NoteLetterAndAccidentalsNode [8:16]
+              NoteLetterNode [8:16]: "b"

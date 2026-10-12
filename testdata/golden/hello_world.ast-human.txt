@@ -1,0 +1,40 @@
+RootNode
+  PartNode [1:1]
+    PartDeclarationNode [1:1]
+      PartNamesNode [1:1]
+        PartNameNode [1:1]: "piano"
+    EventSequenceNode [1:8]
+      NoteNode [1:8]
+        NoteLetterAndAccidentalsNode [1:8]
+          NoteLetterNode [1:8]: "c"
+        DurationNode [1:9]
+          NoteLengthNode [1:9]
+            DenominatorNode: 8
+      NoteNode [1:11]
+        NoteLetterAndAccidentalsNode [1:11]
+          NoteLetterNode [1:11]: "d"
+      NoteNode [1:13]
+        NoteLetterAndAccidentalsNode [1:13]
+          NoteLetterNode [1:13]: "e"
+      NoteNode [1:15]
+        NoteLetterAndAccidentalsNode [1:15]
+          NoteLetterNode [1:15]: "f"
+      NoteNode [1:17]
+        NoteLetterAndAccidentalsNode [1:17]
+          NoteLetterNode [1:17]: "g"
+      NoteNode [1:19]
+        NoteLetterAndAccidentalsNode [1:19]
+          NoteLetterNode [1:19]: "f"
+      NoteNode [1:21]
+        NoteLetterAndAccidentalsNode [1:21]
+          NoteLetterNode [1:21]: "e"
+      NoteNode [1:23]
+        NoteLetterAndAccidentalsNode [1:23]
+          NoteLetterNode [1:23]: "d"
+      NoteNode [1:25]
+        NoteLetterAndAccidentalsNode [1:25]
+          NoteLetterNode [1:25]: "c"
+        DurationNode [1:26]
+          NoteLengthNode [1:26]
+            DenominatorNode: 2
+            DotsNode: 1

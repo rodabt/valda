@@ -1,0 +1,134 @@
+RootNode
+  PartNode [1:1]
+    PartDeclarationNode [1:1]
+      PartNamesNode [1:1]
+        PartNameNode [1:1]: "vibraphone"
+    EventSequenceNode [2:3]
+      LispListNode [2:3]
+        LispSymbolNode [2:4]: "quant"
+        LispNumberNode [2:10]: 200
+      LispListNode [3:3]
+        LispSymbolNode [3:4]: "key-signature"
+        LispStringNode [3:18]: "f+ c+ g+"
+      NoteNode [4:3]
+        NoteLetterAndAccidentalsNode [4:3]
+          NoteLetterNode [4:3]: "a"
+        DurationNode [4:4]
+          NoteLengthNode [4:4]
+            DenominatorNode: 8
+      NoteNode [4:6]
+        NoteLetterAndAccidentalsNode [4:6]
+          NoteLetterNode [4:6]: "b"
+      OctaveUpNode [4:8]
+      NoteNode [4:10]
+        NoteLetterAndAccidentalsNode [4:10]
+          NoteLetterNode [4:10]: "c"
+      NoteNode [4:12]
+        NoteLetterAndAccidentalsNode [4:12]
+          NoteLetterNode [4:12]: "d"
+      NoteNode [4:14]
+        NoteLetterAndAccidentalsNode [4:14]
+          NoteLetterNode [4:14]: "e"
+      NoteNode [4:16]
+        NoteLetterAndAccidentalsNode [4:16]
+          NoteLetterNode [4:16]: "f"
+      NoteNode [4:18]
+        NoteLetterAndAccidentalsNode [4:18]
+          NoteLetterNode [4:18]: "g"
+      NoteNode [4:20]
+        NoteLetterAndAccidentalsNode [4:20]
+          NoteLetterNode [4:20]: "a"
+      OctaveDownNode [4:22]
+      NoteNode [5:3]
+        NoteLetterAndAccidentalsNode [5:3]
+          NoteLetterNode [5:3]: "a"
+      NoteNode [5:5]
+        NoteLetterAndAccidentalsNode [5:5]
+          NoteLetterNode [5:5]: "b"
+      OctaveUpNode [5:7]
+      NoteNode [5:9]
+        NoteLetterAndAccidentalsNode [5:9]
+          NoteLetterNode [5:9]: "c"
+          NoteAccidentalsNode [5:10]
+            NaturalNode [5:10]
+      NoteNode [5:12]
+        NoteLetterAndAccidentalsNode [5:12]
+          NoteLetterNode [5:12]: "d"
+      NoteNode [5:14]
+        NoteLetterAndAccidentalsNode [5:14]
+          NoteLetterNode [5:14]: "e"
+      NoteNode [5:16]
+        NoteLetterAndAccidentalsNode [5:16]
+          NoteLetterNode [5:16]: "f"
+          NoteAccidentalsNode [5:17]
+            NaturalNode [5:17]
+      NoteNode [5:19]
+        NoteLetterAndAccidentalsNode [5:19]
+          NoteLetterNode [5:19]: "g"
+          NoteAccidentalsNode [5:20]
+            NaturalNode [5:20]
+      NoteNode [5:22]
+        NoteLetterAndAccidentalsNode [5:22]
+          NoteLetterNode [5:22]: "a"
+      OctaveDownNode [5:24]
+      LispListNode [7:3]
+        LispSymbolNode [7:4]: "key-signature"
+        LispQuotedFormNode [7:18]
+          LispListNode [7:19]
+            LispSymbolNode [7:20]: "g"
+            LispSymbolNode [7:22]: "minor"
+      NoteNode [8:3]
+        NoteLetterAndAccidentalsNode [8:3]
+          NoteLetterNode [8:3]: "g"
+      NoteNode [8:5]
+        NoteLetterAndAccidentalsNode [8:5]
+          NoteLetterNode [8:5]: "a"
+      NoteNode [8:7]
+        NoteLetterAndAccidentalsNode [8:7]
+          NoteLetterNode [8:7]: "b"
+      OctaveUpNode [8:9]
+      NoteNode [8:11]
+        NoteLetterAndAccidentalsNode [8:11]
+          NoteLetterNode [8:11]: "c"
+          NoteAccidentalsNode [8:12]
+            SharpNode [8:12]
+      NoteNode [8:14]
+        NoteLetterAndAccidentalsNode [8:14]
+          NoteLetterNode [8:14]: "d"
+      NoteNode [8:16]
+        NoteLetterAndAccidentalsNode [8:16]
+          NoteLetterNode [8:16]: "e"
+      NoteNode [8:18]
+        NoteLetterAndAccidentalsNode [8:18]
+          NoteLetterNode [8:18]: "f"
+          NoteAccidentalsNode [8:19]
+            SharpNode [8:19]
+      NoteNode [8:21]
+        NoteLetterAndAccidentalsNode [8:21]
+          NoteLetterNode [8:21]: "g"
+      OctaveDownNode [8:23]
+      LispListNode [10:3]
+        LispSymbolNode [10:4]: "key-signature"
+        LispQuotedFormNode [10:18]
+          LispListNode [10:19]
+            LispSymbolNode [10:20]: "e"
+            LispListNode [10:22]
+              LispSymbolNode [10:23]: "flat"
+            LispSymbolNode [10:29]: "b"
+            LispListNode [10:31]
+              LispSymbolNode [10:32]: "flat"
+      ChordNode [11:3]
+        NoteNode [11:3]
+          NoteLetterAndAccidentalsNode [11:3]
+            NoteLetterNode [11:3]: "g"
+          DurationNode [11:4]
+            NoteLengthNode [11:4]
+              DenominatorNode: 1
+            NoteLengthNode [11:6]
+              DenominatorNode: 1
+        NoteNode [11:8]
+          NoteLetterAndAccidentalsNode [11:8]
+            NoteLetterNode [11:8]: "b"
+        NoteNode [11:10]
+          NoteLetterAndAccidentalsNode [11:10]
+            NoteLetterNode [11:10]: "d"

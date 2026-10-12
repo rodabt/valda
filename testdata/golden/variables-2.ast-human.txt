@@ -1,0 +1,44 @@
+RootNode
+  ImplicitPartNode [1:1]
+    EventSequenceNode [1:1]
+      VariableDefinitionNode [1:8]
+        VariableNameNode [1:1]: "quiet"
+        EventSequenceNode [1:10]
+          LispListNode [1:10]
+            LispSymbolNode [1:11]: "vol"
+            LispNumberNode [1:15]: 25
+      VariableDefinitionNode [2:8]
+        VariableNameNode [2:1]: "loud"
+        EventSequenceNode [2:10]
+          LispListNode [2:10]
+            LispSymbolNode [2:11]: "vol"
+            LispNumberNode [2:15]: 50
+      VariableDefinitionNode [3:8]
+        VariableNameNode [3:1]: "louder"
+        EventSequenceNode [3:10]
+          LispListNode [3:10]
+            LispSymbolNode [3:11]: "vol"
+            LispNumberNode [3:15]: 75
+      VariableDefinitionNode [5:8]
+        VariableNameNode [5:1]: "notes"
+        EventSequenceNode [5:10]
+          NoteNode [5:10]
+            NoteLetterAndAccidentalsNode [5:10]
+              NoteLetterNode [5:10]: "c"
+          NoteNode [5:12]
+            NoteLetterAndAccidentalsNode [5:12]
+              NoteLetterNode [5:12]: "d"
+          NoteNode [5:14]
+            NoteLetterAndAccidentalsNode [5:14]
+              NoteLetterNode [5:14]: "e"
+  PartNode [7:1]
+    PartDeclarationNode [7:1]
+      PartNamesNode [7:1]
+        PartNameNode [7:1]: "piano"
+    EventSequenceNode [8:3]
+      VariableReferenceNode [8:3]: "quiet"
+      VariableReferenceNode [8:9]: "notes"
+      VariableReferenceNode [9:3]: "loud"
+      VariableReferenceNode [9:8]: "notes"
+      VariableReferenceNode [10:3]: "louder"
+      VariableReferenceNode [10:10]: "notes"

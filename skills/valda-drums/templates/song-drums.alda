@@ -1,0 +1,176 @@
+# Rock song drum track, 128 BPM, 4/4. 64 bars, about 2:00.
+#
+# | section  | bars | groove                    | bar 4 / phrase end     | into next  |
+# |----------|------|---------------------------|------------------------|------------|
+# | count-in | 1    | sticks                    |                        |            |
+# | intro    | 4    | chorusA (ride)            |                        | fillToms   |
+# | verse 1  | 8    | verseA (hats, softer)     | verseB (open hat)      | fillBeat4  |
+# | pre 1    | 4    | preGroove (floor tom)     |                        | fillToms   |
+# | chorus 1 | 8    | chorusA (ride, accents)   | chorusB                | fillTriplets |
+# | verse 2  | 8    | verseA                    | verseB                 | fillBeat4  |
+# | pre 2    | 4    | preGroove                 |                        | fillToms   |
+# | chorus 2 | 8    | chorusA                   | chorusB                | fillToms   |
+# | bridge   | 8    | bridgeGroove (half-time)  |                        | buildUp (4 bars) |
+# | chorus 3 | 8    | chorusA                   | chorusB                | fillTriplets |
+# | ending   | 3    | endingBig                 |                        |            |
+#
+# Crashes come from the "crashes" part, which jumps to markers set in the "kit" part.
+# Audition a section: valda play -f song-drums.alda --from chorus2
+# Tab symbols: x normal, X accent, g ghost, . rest
+
+(tempo! 128)
+
+countIn = (vol 90) o1 g4 g g g
+
+#     1 & 2 & 3 & 4 &
+# HH  x x x x x x x x
+# SN  . . x . . . x .
+# BD  x . . . x x . .
+verseA = [
+  V1: (vol 60) o2 f+8 f+ f+ f+ f+ f+ f+ f+
+  V2: r8 r (vol 80) o2 d r r r d r
+  V3: (vol 88) o2 c8 r r r c c r r
+  V0:
+]
+
+#     1 & 2 & 3 & 4 &
+# HH  x x x x x x x .
+# HO  . . . . . . . x
+# SN  . . x . . . x .
+# BD  x . . . x x . x
+verseB = [
+  V1: (vol 60) o2 f+8 f+ f+ f+ f+ f+ f+ a+
+  V2: r8 r (vol 80) o2 d r r r d r
+  V3: (vol 88) o2 c8 r r r c c r c
+  V0:
+]
+
+#     1 & 2 & 3 & 4 &
+# FT  x x x x x x x x
+# SN  . . X . . . X .
+# BD  x . x . x . x .
+preGroove = [
+  V1: (vol 65) o2 f8 f f f f f f f
+  V2: r8 r (vol 100) o2 d r r r d r
+  V3: (vol 92) o2 c8 r c r c r c r
+  V0:
+]
+
+#     1 & 2 & 3 & 4 &
+# RD  X x X x X x X x
+# SN  . . x . . . x .
+# BD  x . . x x . . .
+chorusA = [
+  V1: (vol 90) o3 d+8 (vol 70) d+ (vol 90) d+ (vol 70) d+ (vol 90) d+ (vol 70) d+ (vol 90) d+ (vol 70) d+
+  V2: r8 r (vol 90) o2 d r r r d r
+  V3: (vol 92) o2 c8 r r c c r r r
+  V0:
+]
+
+#     1 & 2 & 3 & 4 &
+# RD  X x X x X x X .
+# HO  . . . . . . . x
+# SN  . . x . . . x .
+# BD  x . . x x . . x
+chorusB = [
+  V1: (vol 90) o3 d+8 (vol 70) d+ (vol 90) d+ (vol 70) d+ (vol 90) d+ (vol 70) d+ (vol 90) d+ (vol 70) o2 a+
+  V2: r8 r (vol 90) o2 d r r r d r
+  V3: (vol 92) o2 c8 r r c c r r c
+  V0:
+]
+
+#     1 & 2 & 3 & 4 &
+# RD  x . x . x . x .
+# SN  . . . . x . . .
+# BD  x . . . . . x .
+bridgeGroove = [
+  V1: (vol 70) o3 d+8 r d+ r d+ r d+ r
+  V2: r8 r r r (vol 90) o2 d r r r
+  V3: (vol 92) o2 c8 r r r r r c r
+  V0:
+]
+
+#     1 e & a 2 e & a 3 e & a 4 e & a
+# HH  x . x . x . x . x . x . . . . .
+# SN  . . . . x . . . . . . . x x x X
+# BD  x . . . . . . . x . x . . . . .
+fillBeat4 = [
+  V1: (vol 70) o2 f+16 r f+ r f+ r f+ r f+ r f+ r r r r r
+  V2: r16 r r r (vol 90) o2 d r r r r r r r d d d (vol 100) d
+  V3: (vol 92) o2 c16 r r r r r r r c r c r r r r r
+  V0:
+]
+
+#     1 e & a 2 e & a 3 e & a 4 e & a
+# SN  X x x x . . . . . . . . . . . .
+# T1  . . . . X x x x . . . . . . . .
+# T2  . . . . . . . . X x x x . . . .
+# FT  . . . . . . . . . . . . X x x x
+# BD  x . . . x . . . x . . . x . . .
+fillToms = [
+  V1: (vol 100) o2 d16 (vol 90) d d d (vol 100) o3 d (vol 90) d d d (vol 100) c (vol 90) c c c (vol 100) o2 f (vol 90) f f f
+  V2: (vol 92) o2 c16 r r r c r r r c r r r c r r r
+  V0:
+]
+
+#     1 & a 2 & a 3 & a 4 & a
+# SN  X x x . . . . . . . . .
+# T1  . . . X x x . . . . . .
+# T2  . . . . . . X x x . . .
+# FT  . . . . . . . . . X x x
+# BD  x . . x . . x . . x . .
+fillTriplets = [
+  V1: (vol 100) o2 d12 (vol 90) d d (vol 100) o3 d (vol 90) d d (vol 100) c (vol 90) c c (vol 100) o2 f (vol 90) f f
+  V2: (vol 92) o2 c12 r r c r r c r r c r r
+  V0:
+]
+
+# 4-bar crescendo: snare 8ths -> 16ths -> 32nds, kick on quarters
+buildUp = [
+  V1: (vol 50) o2 d8 d d d d d d d | (vol 65) d d d d d d d d |
+      (vol 80) d16 d d d d d d d d d d d d d d d |
+      (vol 90) d32 d d d d d d d d d d d (vol 95) d d d d d d d d d d d d (vol 100) d d d d d d d d
+  V2: (vol 80) o2 c4 c c c | c c c c | c c c c | c c c c
+  V0:
+]
+
+# tom run, then kick + crash + floor tom ringing for 2 bars
+endingBig = [
+  V1: (vol 100) o2 r1 | o3 c+1 | r1
+  V2: (vol 95) o2 d16 d d d o3 d d d d c c c c o2 f f f f | f1 | r1
+  V3: (vol 100) o2 c4 c c c | c1 | r1
+  V0:
+]
+
+midi-percussion "kit":
+  %countin  countIn
+  %intro    chorusA*3 fillToms
+  %verse1   verseA*3 verseB
+  %verse1b  verseA*3 fillBeat4
+  %pre1     preGroove*3 fillToms
+  %chorus1  chorusA*3 chorusB
+  %chorus1b chorusA*3 fillTriplets
+  %verse2   verseA*3 verseB
+  %verse2b  verseA*3 fillBeat4
+  %pre2     preGroove*3 fillToms
+  %chorus2  chorusA*3 chorusB
+  %chorus2b chorusA*3 fillToms
+  %bridge   bridgeGroove*4 buildUp
+  %chorus3  chorusA*3 chorusB
+  %chorus3b chorusA*3 fillTriplets
+  %ending   endingBig
+
+midi-percussion "crashes":
+  (vol 100) o3
+  @intro    c+1
+  @verse1   c+1
+  @pre1     c+1
+  @chorus1  c+1
+  @chorus1b c+1
+  @verse2   c+1
+  @pre2     c+1
+  @chorus2  c+1
+  @chorus2b c+1
+  @bridge   c+1
+  @chorus3  c+1/a
+  @chorus3b c+1/a

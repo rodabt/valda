@@ -1,0 +1,184 @@
+RootNode
+  PartNode [4:1]
+    PartDeclarationNode [4:1]
+      PartNamesNode [4:1]
+        PartNameNode [4:1]: "vibraphone"
+      PartAliasNode [4:12]: "vibes-1"
+    EventSequenceNode [5:3]
+      LispListNode [5:3]
+        LispSymbolNode [5:4]: "panning"
+        LispNumberNode [5:12]: 10
+      RepeatNode [9:5]
+        EventSequenceNode [6:3]
+          NoteNode [6:5]
+            NoteLetterAndAccidentalsNode [6:5]
+              NoteLetterNode [6:5]: "a"
+          NoteNode [6:7]
+            NoteLetterAndAccidentalsNode [6:7]
+              NoteLetterNode [6:7]: "b"
+            DurationNode [6:8]
+              NoteLengthNode [6:8]
+                DenominatorNode: 8
+          OctaveUpNode [6:10]
+          NoteNode [6:12]
+            NoteLetterAndAccidentalsNode [6:12]
+              NoteLetterNode [6:12]: "d"
+          OctaveDownNode [6:14]
+          NoteNode [6:16]
+            NoteLetterAndAccidentalsNode [6:16]
+              NoteLetterNode [6:16]: "b"
+          NoteNode [6:18]
+            NoteLetterAndAccidentalsNode [6:18]
+              NoteLetterNode [6:18]: "g"
+          NoteNode [6:20]
+            NoteLetterAndAccidentalsNode [6:20]
+              NoteLetterNode [6:20]: "b"
+          OctaveUpNode [6:22]
+          NoteNode [6:24]
+            NoteLetterAndAccidentalsNode [6:24]
+              NoteLetterNode [6:24]: "c"
+          BarlineNode [6:26]
+          NoteNode [6:28]
+            NoteLetterAndAccidentalsNode [6:28]
+              NoteLetterNode [6:28]: "e"
+            DurationNode [6:29]
+              NoteLengthNode [6:29]
+                DenominatorNode: 4
+          OctaveDownNode [6:31]
+          NoteNode [6:33]
+            NoteLetterAndAccidentalsNode [6:33]
+              NoteLetterNode [6:33]: "a"
+          OctaveUpNode [6:35]
+          NoteNode [6:37]
+            NoteLetterAndAccidentalsNode [6:37]
+              NoteLetterNode [6:37]: "c"
+          OctaveDownNode [6:39]
+          NoteNode [6:41]
+            NoteLetterAndAccidentalsNode [6:41]
+              NoteLetterNode [6:41]: "g"
+          BarlineNode [6:43]
+          OnRepetitionsNode [7:25]
+            EventSequenceNode [7:5]
+              NoteNode [7:6]
+                NoteLetterAndAccidentalsNode [7:6]
+                  NoteLetterNode [7:6]: "g"
+              OctaveUpNode [7:8]
+              NoteNode [7:10]
+                NoteLetterAndAccidentalsNode [7:10]
+                  NoteLetterNode [7:10]: "g"
+                DurationNode [7:11]
+                  NoteLengthNode [7:11]
+                    DenominatorNode: 8
+              NoteNode [7:13]
+                NoteLetterAndAccidentalsNode [7:13]
+                  NoteLetterNode [7:13]: "f"
+              NoteNode [7:15]
+                NoteLetterAndAccidentalsNode [7:15]
+                  NoteLetterNode [7:15]: "e"
+              NoteNode [7:17]
+                NoteLetterAndAccidentalsNode [7:17]
+                  NoteLetterNode [7:17]: "c"
+              OctaveDownNode [7:19]
+              NoteNode [7:21]
+                NoteLetterAndAccidentalsNode [7:21]
+                  NoteLetterNode [7:21]: "a"
+                DurationNode [7:22]
+                  NoteLengthNode [7:22]
+                    DenominatorNode: 4
+            RepetitionsNode [7:25]
+              RepetitionRangeNode
+                FirstRepetitionNode: 1
+                LastRepetitionNode: 2
+          OnRepetitionsNode [8:25]
+            EventSequenceNode [8:5]
+              NoteNode [8:6]
+                NoteLetterAndAccidentalsNode [8:6]
+                  NoteLetterNode [8:6]: "b"
+                DurationNode [8:7]
+                  NoteLengthNode [8:7]
+                    DenominatorNode: 8
+              OctaveUpNode [8:9]
+              NoteNode [8:11]
+                NoteLetterAndAccidentalsNode [8:11]
+                  NoteLetterNode [8:11]: "d"
+              NoteNode [8:13]
+                NoteLetterAndAccidentalsNode [8:13]
+                  NoteLetterNode [8:13]: "g"
+                DurationNode [8:14]
+                  NoteLengthNode [8:14]
+                    DenominatorNode: 2
+                    DotsNode: 1
+            RepetitionsNode [8:25]
+              RepetitionRangeNode
+                FirstRepetitionNode: 3
+                LastRepetitionNode: 3
+        TimesNode: 3
+  PartNode [11:1]
+    PartDeclarationNode [11:1]
+      PartNamesNode [11:1]
+        PartNameNode [11:1]: "vibraphone"
+      PartAliasNode [11:12]: "vibes-2"
+    EventSequenceNode [12:3]
+      LispListNode [12:3]
+        LispSymbolNode [12:4]: "panning"
+        LispNumberNode [12:12]: 90
+      RepeatNode [16:5]
+        EventSequenceNode [13:3]
+          NoteNode [13:5]
+            NoteLetterAndAccidentalsNode [13:5]
+              NoteLetterNode [13:5]: "a"
+          OctaveUpNode [13:7]
+          NoteNode [13:9]
+            NoteLetterAndAccidentalsNode [13:9]
+              NoteLetterNode [13:9]: "e"
+          OctaveDownNode [13:11]
+          NoteNode [13:13]
+            NoteLetterAndAccidentalsNode [13:13]
+              NoteLetterNode [13:13]: "a"
+          RestNode [13:15]
+          BarlineNode [13:17]
+          NoteNode [13:19]
+            NoteLetterAndAccidentalsNode [13:19]
+              NoteLetterNode [13:19]: "b"
+          RestNode [13:21]
+          NoteNode [13:23]
+            NoteLetterAndAccidentalsNode [13:23]
+              NoteLetterNode [13:23]: "b"
+          RestNode [13:25]
+          BarlineNode [13:27]
+          OnRepetitionsNode [14:19]
+            EventSequenceNode [14:5]
+              NoteNode [14:6]
+                NoteLetterAndAccidentalsNode [14:6]
+                  NoteLetterNode [14:6]: "g"
+              RestNode [14:8]
+              OctaveUpNode [14:10]
+              NoteNode [14:12]
+                NoteLetterAndAccidentalsNode [14:12]
+                  NoteLetterNode [14:12]: "g"
+              OctaveDownNode [14:14]
+              NoteNode [14:16]
+                NoteLetterAndAccidentalsNode [14:16]
+                  NoteLetterNode [14:16]: "g"
+            RepetitionsNode [14:19]
+              RepetitionRangeNode
+                FirstRepetitionNode: 1
+                LastRepetitionNode: 2
+          OnRepetitionsNode [15:19]
+            EventSequenceNode [15:5]
+              OctaveUpNode [15:6]
+              NoteNode [15:8]
+                NoteLetterAndAccidentalsNode [15:8]
+                  NoteLetterNode [15:8]: "d"
+              RestNode [15:10]
+              NoteNode [15:12]
+                NoteLetterAndAccidentalsNode [15:12]
+                  NoteLetterNode [15:12]: "a"
+              NoteNode [15:14]
+                NoteLetterAndAccidentalsNode [15:14]
+                  NoteLetterNode [15:14]: "g"
+            RepetitionsNode [15:19]
+              RepetitionRangeNode
+                FirstRepetitionNode: 3
+                LastRepetitionNode: 3
+        TimesNode: 3

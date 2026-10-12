@@ -1,0 +1,80 @@
+# Pop-rock backing track in G major. The user plays the melody or lead on top.
+# Form (40 bars @ 112 BPM, ~1:26):
+#   intro 4 | verse 8 | chorus 8 | verse 8 | chorus 8 | outro 4
+# Verse:  G  | D  | Em | C   (I–V–vi–IV)
+# Chorus: C  | G  | D  | Em  (IV–I–V–vi)
+# Outro:  C  | D  | G (hit, let ring 2 bars)
+#
+# Conventions: one variable per section per instrument, each starting with an
+# explicit octave + duration; %markers live in the first part (drums) only.
+# Audition a section with: valda play -f backing-track.alda --from chorus1
+
+(tempo! 112)
+
+# ---------- drums (simple; see the valda-drums skill for full arrangements)
+rockBeat   = o2 c8/f+ f+ d/f+ f+ c/f+ c/f+ d/f+ f+
+crashBeat  = o2 c8/>c+< f+ d/f+ f+ c/f+ c/f+ d/f+ f+
+rideBeat   = o2 c8/>d+< >d+< d/>d+< >d+< c/>d+< c/>d+< d/>d+< >d+<
+crashRide  = o2 c8/>c+< >d+< d/>d+< >d+< c/>d+< c/>d+< d/>d+< >d+<
+fillBar    = o2 c8/f+ f+ d/f+ f+ d16 d > d d < b b a a
+
+introDrums  = rockBeat*3 fillBar
+verseDrums  = crashBeat rockBeat*6 fillBar
+chorusDrums = crashRide rideBeat*6 fillBar
+outroDrums  = crashBeat fillBar o2 c1/>c+< r1
+
+# ---------- bass
+verseBass  = o2 g4. g8 g4 d8 e8 | d4. d8 d4 a8 f+8 | e4. e8 e4 b8 d8 | c4. c8 c4 g8 a8
+chorusBass = o2 c8*8 | g*8 | d*8 | e*8
+outroBass  = o2 c4. c8 c4 g8 a8 | d4. d8 d4 a8 f+8 | g1~1
+
+# ---------- keys (voice-led triads around o3–o4)
+verseKeys  = o3 g2/b/>d< g/b/>d< | f+/a/>d< f+/a/>d< | g/b/>e< g/b/>e< | g/>c/e< g/>c/e<
+chorusKeys = [
+  o3 g4/>c/e< g8/>c/e< g/>c/e< r g/>c/e< g4/>c/e< |
+  g4/b/>d< g8/b/>d< g/b/>d< r g/b/>d< g4/b/>d< |
+  f+4/a/>d< f+8/a/>d< f+/a/>d< r f+/a/>d< f+4/a/>d< |
+  g4/b/>e< g8/b/>e< g/b/>e< r g/b/>e< g4/b/>e<
+]
+outroKeys  = o3 g2/>c/e< g/>c/e< | f+/a/>d< f+/a/>d< | g1~1/b/>d<
+
+# ---------- pad
+versePad  = o4 d1/g/b | d/f+/a | e/g/b | e/g/>c<
+chorusPad = o4 e1/g/>c< | d/g/b | d/f+/a | e/g/b
+outroPad  = o4 e1/g/>c< | d/f+/a | d1~1/g/b
+
+midi-percussion:
+  (track-vol 90)
+  %intro   introDrums
+  %verse1  verseDrums
+  %chorus1 chorusDrums
+  %verse2  verseDrums
+  %chorus2 chorusDrums
+  %outro   outroDrums
+
+electric-bass:
+  (track-vol 85) (quant 85)
+  verseBass                     # intro
+  verseBass*2
+  chorusBass*2
+  verseBass*2
+  chorusBass*2
+  outroBass
+
+piano:
+  (track-vol 70) (pan 40)
+  verseKeys                     # intro
+  verseKeys*2
+  chorusKeys*2
+  verseKeys*2
+  chorusKeys*2
+  outroKeys
+
+midi-synth-pad-warm:
+  (track-vol 50) (pan 60) (quant 100) (vol 55)
+  versePad                      # intro
+  versePad*2
+  chorusPad*2
+  versePad*2
+  chorusPad*2
+  outroPad

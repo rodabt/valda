@@ -1,0 +1,1053 @@
+RootNode
+  ImplicitPartNode [12:1]
+    EventSequenceNode [12:1]
+      LispListNode [12:1]
+        LispSymbolNode [12:2]: "tempo!"
+        LispNumberNode [12:9]: 180
+      VariableDefinitionNode [26:6]
+        VariableNameNode [26:1]: "bass"
+        EventSequenceNode [26:8]
+          NoteNode [26:8]
+            NoteLetterAndAccidentalsNode [26:8]
+              NoteLetterNode [26:8]: "b"
+            DurationNode [26:9]
+              NoteLengthNode [26:9]
+                DenominatorNode: 2
+          NoteNode [26:11]
+            NoteLetterAndAccidentalsNode [26:11]
+              NoteLetterNode [26:11]: "b"
+              NoteAccidentalsNode [26:12]
+                FlatNode [26:12]
+          NoteNode [26:14]
+            NoteLetterAndAccidentalsNode [26:14]
+              NoteLetterNode [26:14]: "a"
+          NoteNode [26:16]
+            NoteLetterAndAccidentalsNode [26:16]
+              NoteLetterNode [26:16]: "a"
+              NoteAccidentalsNode [26:17]
+                FlatNode [26:17]
+      VariableDefinitionNode [27:7]
+        VariableNameNode [27:1]: "harmA"
+        EventSequenceNode [27:9]
+          NoteNode [27:9]
+            NoteLetterAndAccidentalsNode [27:9]
+              NoteLetterNode [27:9]: "a"
+            DurationNode [27:10]
+              NoteLengthNode [27:10]
+                DenominatorNode: 2
+          NoteNode [27:12]
+            NoteLetterAndAccidentalsNode [27:12]
+              NoteLetterNode [27:12]: "a"
+              NoteAccidentalsNode [27:13]
+                FlatNode [27:13]
+          NoteNode [27:15]
+            NoteLetterAndAccidentalsNode [27:15]
+              NoteLetterNode [27:15]: "g"
+          NoteNode [27:17]
+            NoteLetterAndAccidentalsNode [27:17]
+              NoteLetterNode [27:17]: "e"
+              NoteAccidentalsNode [27:18]
+                FlatNode [27:18]
+      VariableDefinitionNode [28:7]
+        VariableNameNode [28:1]: "harmB"
+        EventSequenceNode [28:9]
+          NoteNode [28:9]
+            NoteLetterAndAccidentalsNode [28:9]
+              NoteLetterNode [28:9]: "d"
+            DurationNode [28:10]
+              NoteLengthNode [28:10]
+                DenominatorNode: 2
+          NoteNode [28:12]
+            NoteLetterAndAccidentalsNode [28:12]
+              NoteLetterNode [28:12]: "d"
+              NoteAccidentalsNode [28:13]
+                FlatNode [28:13]
+          NoteNode [28:15]
+            NoteLetterAndAccidentalsNode [28:15]
+              NoteLetterNode [28:15]: "c"
+          NoteNode [28:17]
+            NoteLetterAndAccidentalsNode [28:17]
+              NoteLetterNode [28:17]: "c"
+      VariableDefinitionNode [29:8]
+        VariableNameNode [29:1]: "harmCa"
+        EventSequenceNode [29:10]
+          NoteNode [29:10]
+            NoteLetterAndAccidentalsNode [29:10]
+              NoteLetterNode [29:10]: "f"
+              NoteAccidentalsNode [29:11]
+                SharpNode [29:11]
+            DurationNode [29:12]
+              NoteLengthNode [29:12]
+                DenominatorNode: 2
+          NoteNode [29:14]
+            NoteLetterAndAccidentalsNode [29:14]
+              NoteLetterNode [29:14]: "f"
+              NoteAccidentalsNode [29:15]
+                NaturalNode [29:15]
+          NoteNode [29:17]
+            NoteLetterAndAccidentalsNode [29:17]
+              NoteLetterNode [29:17]: "e"
+          NoteNode [29:19]
+            NoteLetterAndAccidentalsNode [29:19]
+              NoteLetterNode [29:19]: "f"
+              NoteAccidentalsNode [29:20]
+                SharpNode [29:20]
+      VariableDefinitionNode [30:8]
+        VariableNameNode [30:1]: "harmCb"
+        EventSequenceNode [30:10]
+          NoteNode [30:10]
+            NoteLetterAndAccidentalsNode [30:10]
+              NoteLetterNode [30:10]: "f"
+              NoteAccidentalsNode [30:11]
+                SharpNode [30:11]
+            DurationNode [30:12]
+              NoteLengthNode [30:12]
+                DenominatorNode: 2
+          NoteNode [30:14]
+            NoteLetterAndAccidentalsNode [30:14]
+              NoteLetterNode [30:14]: "f"
+              NoteAccidentalsNode [30:15]
+                NaturalNode [30:15]
+          NoteNode [30:17]
+            NoteLetterAndAccidentalsNode [30:17]
+              NoteLetterNode [30:17]: "e"
+          NoteNode [30:19]
+            NoteLetterAndAccidentalsNode [30:19]
+              NoteLetterNode [30:19]: "b"
+      VariableDefinitionNode [31:10]
+        VariableNameNode [31:1]: "counterA"
+        EventSequenceNode [31:12]
+          RestNode [31:12]
+            DurationNode [31:13]
+              NoteLengthNode [31:13]
+                DenominatorNode: 4
+          NoteNode [31:15]
+            NoteLetterAndAccidentalsNode [31:15]
+              NoteLetterNode [31:15]: "f"
+              NoteAccidentalsNode [31:16]
+                SharpNode [31:16]
+            DurationNode [31:17]
+              NoteLengthNode [31:17]
+                DenominatorNode: 6
+          RestNode [31:19]
+            DurationNode [31:20]
+              NoteLengthNode [31:20]
+                DenominatorNode: 12
+          RestNode [31:23]
+            DurationNode [31:24]
+              NoteLengthNode [31:24]
+                DenominatorNode: 6
+          NoteNode [31:26]
+            NoteLetterAndAccidentalsNode [31:26]
+              NoteLetterNode [31:26]: "f"
+            DurationNode [31:27]
+              NoteLengthNode [31:27]
+                DenominatorNode: 12
+          RestNode [31:32]
+            DurationNode [31:33]
+              NoteLengthNode [31:33]
+                DenominatorNode: 4
+          NoteNode [31:35]
+            NoteLetterAndAccidentalsNode [31:35]
+              NoteLetterNode [31:35]: "e"
+            DurationNode [31:36]
+              NoteLengthNode [31:36]
+                DenominatorNode: 6
+          NoteNode [31:38]
+            NoteLetterAndAccidentalsNode [31:38]
+              NoteLetterNode [31:38]: "e"
+            DurationNode [31:39]
+              NoteLengthNode [31:39]
+                DenominatorNode: 12
+          RestNode [31:42]
+            DurationNode [31:43]
+              NoteLengthNode [31:43]
+                DenominatorNode: 6
+          NoteNode [31:45]
+            NoteLetterAndAccidentalsNode [31:45]
+              NoteLetterNode [31:45]: "f"
+              NoteAccidentalsNode [31:46]
+                SharpNode [31:46]
+            DurationNode [31:47]
+              NoteLengthNode [31:47]
+                DenominatorNode: 12
+              NoteLengthNode [31:50]
+                DenominatorNode: 4
+          RestNode [31:52]
+            DurationNode [31:53]
+              NoteLengthNode [31:53]
+                DenominatorNode: 4
+      VariableDefinitionNode [32:10]
+        VariableNameNode [32:1]: "counterB"
+        EventSequenceNode [32:12]
+          RestNode [32:12]
+            DurationNode [32:13]
+              NoteLengthNode [32:13]
+                DenominatorNode: 4
+          NoteNode [32:15]
+            NoteLetterAndAccidentalsNode [32:15]
+              NoteLetterNode [32:15]: "b"
+            DurationNode [32:16]
+              NoteLengthNode [32:16]
+                DenominatorNode: 6
+          RestNode [32:19]
+            DurationNode [32:20]
+              NoteLengthNode [32:20]
+                DenominatorNode: 12
+          RestNode [32:23]
+            DurationNode [32:24]
+              NoteLengthNode [32:24]
+                DenominatorNode: 6
+          NoteNode [32:26]
+            NoteLetterAndAccidentalsNode [32:26]
+              NoteLetterNode [32:26]: "b"
+              NoteAccidentalsNode [32:27]
+                FlatNode [32:27]
+            DurationNode [32:28]
+              NoteLengthNode [32:28]
+                DenominatorNode: 12
+          RestNode [32:32]
+            DurationNode [32:33]
+              NoteLengthNode [32:33]
+                DenominatorNode: 4
+          NoteNode [32:35]
+            NoteLetterAndAccidentalsNode [32:35]
+              NoteLetterNode [32:35]: "a"
+            DurationNode [32:36]
+              NoteLengthNode [32:36]
+                DenominatorNode: 6
+          NoteNode [32:38]
+            NoteLetterAndAccidentalsNode [32:38]
+              NoteLetterNode [32:38]: "a"
+            DurationNode [32:39]
+              NoteLengthNode [32:39]
+                DenominatorNode: 12
+          RestNode [32:42]
+            DurationNode [32:43]
+              NoteLengthNode [32:43]
+                DenominatorNode: 6
+          NoteNode [32:45]
+            NoteLetterAndAccidentalsNode [32:45]
+              NoteLetterNode [32:45]: "b"
+            DurationNode [32:46]
+              NoteLengthNode [32:46]
+                DenominatorNode: 12
+              NoteLengthNode [32:49]
+                DenominatorNode: 4
+          RestNode [32:51]
+            DurationNode [32:52]
+              NoteLengthNode [32:52]
+                DenominatorNode: 4
+      VariableDefinitionNode [33:10]
+        VariableNameNode [33:1]: "counterC"
+        EventSequenceNode [33:12]
+          RestNode [33:12]
+            DurationNode [33:13]
+              NoteLengthNode [33:13]
+                DenominatorNode: 4
+          NoteNode [33:15]
+            NoteLetterAndAccidentalsNode [33:15]
+              NoteLetterNode [33:15]: "d"
+            DurationNode [33:16]
+              NoteLengthNode [33:16]
+                DenominatorNode: 6
+          RestNode [33:19]
+            DurationNode [33:20]
+              NoteLengthNode [33:20]
+                DenominatorNode: 12
+          RestNode [33:23]
+            DurationNode [33:24]
+              NoteLengthNode [33:24]
+                DenominatorNode: 6
+          NoteNode [33:26]
+            NoteLetterAndAccidentalsNode [33:26]
+              NoteLetterNode [33:26]: "d"
+              NoteAccidentalsNode [33:27]
+                FlatNode [33:27]
+            DurationNode [33:28]
+              NoteLengthNode [33:28]
+                DenominatorNode: 12
+          RestNode [33:32]
+            DurationNode [33:33]
+              NoteLengthNode [33:33]
+                DenominatorNode: 4
+          NoteNode [33:35]
+            NoteLetterAndAccidentalsNode [33:35]
+              NoteLetterNode [33:35]: "c"
+            DurationNode [33:36]
+              NoteLengthNode [33:36]
+                DenominatorNode: 6
+          NoteNode [33:38]
+            NoteLetterAndAccidentalsNode [33:38]
+              NoteLetterNode [33:38]: "c"
+            DurationNode [33:39]
+              NoteLengthNode [33:39]
+                DenominatorNode: 12
+          RestNode [33:42]
+            DurationNode [33:43]
+              NoteLengthNode [33:43]
+                DenominatorNode: 6
+          NoteNode [33:45]
+            NoteLetterAndAccidentalsNode [33:45]
+              NoteLetterNode [33:45]: "c"
+            DurationNode [33:46]
+              NoteLengthNode [33:46]
+                DenominatorNode: 12
+              NoteLengthNode [33:49]
+                DenominatorNode: 4
+          RestNode [33:51]
+            DurationNode [33:52]
+              NoteLengthNode [33:52]
+                DenominatorNode: 4
+      VariableDefinitionNode [35:9]
+        VariableNameNode [35:1]: "bassEnd"
+        EventSequenceNode [35:11]
+          NoteNode [35:11]
+            NoteLetterAndAccidentalsNode [35:11]
+              NoteLetterNode [35:11]: "g"
+            DurationNode [35:12]
+              NoteLengthNode [35:12]
+                DenominatorNode: 1
+              NoteLengthNode [35:14]
+                DenominatorNode: 1
+      VariableDefinitionNode [36:10]
+        VariableNameNode [36:1]: "harmAEnd"
+        EventSequenceNode [36:12]
+          NoteNode [36:12]
+            NoteLetterAndAccidentalsNode [36:12]
+              NoteLetterNode [36:12]: "d"
+            DurationNode [36:13]
+              NoteLengthNode [36:13]
+                DenominatorNode: 1
+              NoteLengthNode [36:15]
+                DenominatorNode: 1
+      VariableDefinitionNode [37:10]
+        VariableNameNode [37:1]: "harmBEnd"
+        EventSequenceNode [37:12]
+          NoteNode [37:12]
+            NoteLetterAndAccidentalsNode [37:12]
+              NoteLetterNode [37:12]: "b"
+            DurationNode [37:13]
+              NoteLengthNode [37:13]
+                DenominatorNode: 1
+              NoteLengthNode [37:15]
+                DenominatorNode: 1
+      VariableDefinitionNode [38:11]
+        VariableNameNode [38:1]: "harmCaEnd"
+        EventSequenceNode [38:13]
+          NoteNode [38:13]
+            NoteLetterAndAccidentalsNode [38:13]
+              NoteLetterNode [38:13]: "f"
+              NoteAccidentalsNode [38:14]
+                SharpNode [38:14]
+            DurationNode [38:15]
+              NoteLengthNode [38:15]
+                DenominatorNode: 1
+              NoteLengthNode [38:17]
+                DenominatorNode: 1
+      VariableDefinitionNode [39:11]
+        VariableNameNode [39:1]: "harmCbEnd"
+        EventSequenceNode [39:13]
+          NoteNode [39:13]
+            NoteLetterAndAccidentalsNode [39:13]
+              NoteLetterNode [39:13]: "b"
+            DurationNode [39:14]
+              NoteLengthNode [39:14]
+                DenominatorNode: 1
+              NoteLengthNode [39:16]
+                DenominatorNode: 1
+      VariableDefinitionNode [40:13]
+        VariableNameNode [40:1]: "counterAEnd"
+        EventSequenceNode [40:15]
+          NoteNode [40:15]
+            NoteLetterAndAccidentalsNode [40:15]
+              NoteLetterNode [40:15]: "e"
+            DurationNode [40:16]
+              NoteLengthNode [40:16]
+                DenominatorNode: 1
+              NoteLengthNode [40:18]
+                DenominatorNode: 1
+      VariableDefinitionNode [41:13]
+        VariableNameNode [41:1]: "counterBEnd"
+        EventSequenceNode [41:15]
+          NoteNode [41:15]
+            NoteLetterAndAccidentalsNode [41:15]
+              NoteLetterNode [41:15]: "b"
+            DurationNode [41:16]
+              NoteLengthNode [41:16]
+                DenominatorNode: 1
+              NoteLengthNode [41:18]
+                DenominatorNode: 1
+      VariableDefinitionNode [42:13]
+        VariableNameNode [42:1]: "counterCEnd"
+        EventSequenceNode [42:15]
+          NoteNode [42:15]
+            NoteLetterAndAccidentalsNode [42:15]
+              NoteLetterNode [42:15]: "b"
+            DurationNode [42:16]
+              NoteLengthNode [42:16]
+                DenominatorNode: 1
+              NoteLengthNode [42:18]
+                DenominatorNode: 1
+  PartNode [47:1]
+    PartDeclarationNode [47:1]
+      PartNamesNode [47:1]
+        PartNameNode [47:1]: "percussion"
+    EventSequenceNode [48:3]
+      VariableDefinitionNode [48:13]
+        VariableNameNode [48:3]: "jazzyBeat"
+        EventSequenceNode [48:15]
+          EventSequenceNode [48:15]
+            VoiceGroupNode [49:5]
+              VoiceNode [49:5]
+                VoiceNumberNode [49:5]: 1
+                EventSequenceNode [49:9]
+                  OctaveSetNode [49:9]: 2
+                  LispListNode [49:12]
+                    LispSymbolNode [49:13]: "p"
+                  RepeatNode [49:19]
+                    NoteNode [49:16]
+                      NoteLetterAndAccidentalsNode [49:16]
+                        NoteLetterNode [49:16]: "c"
+                      DurationNode [49:17]
+                        NoteLengthNode [49:17]
+                          DenominatorNode: 4
+                    TimesNode: 8
+              VoiceNode [50:5]
+                VoiceNumberNode [50:5]: 2
+                EventSequenceNode [50:9]
+                  OctaveSetNode [50:9]: 2
+                  LispListNode [50:12]
+                    LispSymbolNode [50:13]: "mf"
+                  RepeatNode [50:31]
+                    EventSequenceNode [50:17]
+                      RestNode [50:19]
+                        DurationNode [50:20]
+                          NoteLengthNode [50:20]
+                            DenominatorNode: 4
+                      NoteNode [50:22]
+                        NoteLetterAndAccidentalsNode [50:22]
+                          NoteLetterNode [50:22]: "g"
+                          NoteAccidentalsNode [50:23]
+                            SharpNode [50:23]
+                      RestNode [50:25]
+                      NoteNode [50:27]
+                        NoteLetterAndAccidentalsNode [50:27]
+                          NoteLetterNode [50:27]: "g"
+                          NoteAccidentalsNode [50:28]
+                            SharpNode [50:28]
+                    TimesNode: 2
+              VoiceNode [51:5]
+                VoiceNumberNode [51:5]: 3
+                EventSequenceNode [51:9]
+                  OctaveSetNode [51:9]: 3
+                  LispListNode [51:12]
+                    LispSymbolNode [51:13]: "mf"
+                  RepeatNode [51:30]
+                    EventSequenceNode [51:17]
+                      NoteNode [51:19]
+                        NoteLetterAndAccidentalsNode [51:19]
+                          NoteLetterNode [51:19]: "b"
+                        DurationNode [51:20]
+                          NoteLengthNode [51:20]
+                            DenominatorNode: 4
+                      NoteNode [51:22]
+                        NoteLetterAndAccidentalsNode [51:22]
+                          NoteLetterNode [51:22]: "b"
+                        DurationNode [51:23]
+                          NoteLengthNode [51:23]
+                            DenominatorNode: 6
+                      NoteNode [51:25]
+                        NoteLetterAndAccidentalsNode [51:25]
+                          NoteLetterNode [51:25]: "b"
+                        DurationNode [51:26]
+                          NoteLengthNode [51:26]
+                            DenominatorNode: 12
+                    TimesNode: 4
+              VoiceNode [52:5]
+                VoiceNumberNode [52:5]: 4
+                EventSequenceNode [52:9]
+                  OctaveSetNode [52:9]: 2
+                  LispListNode [52:12]
+                    LispSymbolNode [52:13]: "p"
+                  RepeatNode [52:32]
+                    EventSequenceNode [52:16]
+                      RestNode [52:18]
+                        DurationNode [52:19]
+                          NoteLengthNode [52:19]
+                            DenominatorNode: 2
+                      RestNode [52:21]
+                        DurationNode [52:22]
+                          NoteLengthNode [52:22]
+                            DenominatorNode: 6
+                      NoteNode [52:24]
+                        NoteLetterAndAccidentalsNode [52:24]
+                          NoteLetterNode [52:24]: "d"
+                        DurationNode [52:25]
+                          NoteLengthNode [52:25]
+                            DenominatorNode: 12
+                      RestNode [52:28]
+                        DurationNode [52:29]
+                          NoteLengthNode [52:29]
+                            DenominatorNode: 4
+                    TimesNode: 2
+      RepeatNode [55:12]
+        VariableReferenceNode [55:3]: "jazzyBeat"
+        TimesNode: 4
+  PartNode [61:1]
+    PartDeclarationNode [61:1]
+      PartNamesNode [61:1]
+        PartNameNode [61:1]: "midi-electric-bass-finger"
+    EventSequenceNode [61:28]
+      OctaveSetNode [61:28]: 1
+      RepeatNode [61:35]
+        VariableReferenceNode [61:31]: "bass"
+        TimesNode: 2
+  PartNode [62:1]
+    PartDeclarationNode [62:1]
+      PartNamesNode [62:1]
+        PartNameNode [62:1]: "midi-acoustic-guitar-steel"
+    EventSequenceNode [62:29]
+      OctaveSetNode [62:29]: 2
+      RepeatNode [62:36]
+        VariableReferenceNode [62:32]: "bass"
+        TimesNode: 2
+  PartNode [63:1]
+    PartDeclarationNode [63:1]
+      PartNamesNode [63:1]
+        PartNameNode [63:1]: "midi-tuba"
+    EventSequenceNode [63:12]
+      OctaveSetNode [63:12]: 1
+      RepeatNode [63:19]
+        VariableReferenceNode [63:15]: "bass"
+        TimesNode: 2
+  PartNode [64:1]
+    PartDeclarationNode [64:1]
+      PartNamesNode [64:1]
+        PartNameNode [64:1]: "midi-bassoon"
+    EventSequenceNode [64:15]
+      OctaveSetNode [64:15]: 3
+      RepeatNode [64:23]
+        VariableReferenceNode [64:18]: "harmA"
+        TimesNode: 2
+  PartNode [65:1]
+    PartDeclarationNode [65:1]
+      PartNamesNode [65:1]
+        PartNameNode [65:1]: "midi-french-horn"
+    EventSequenceNode [65:19]
+      OctaveSetNode [65:19]: 3
+      RepeatNode [65:27]
+        VariableReferenceNode [65:22]: "harmA"
+        TimesNode: 2
+  PartNode [66:1]
+    PartDeclarationNode [66:1]
+      PartNamesNode [66:1]
+        PartNameNode [66:1]: "midi-trombone"
+    EventSequenceNode [66:16]
+      OctaveSetNode [66:16]: 3
+      RepeatNode [66:24]
+        VariableReferenceNode [66:19]: "harmA"
+        TimesNode: 2
+  PartNode [67:1]
+    PartDeclarationNode [67:1]
+      PartNamesNode [67:1]
+        PartNameNode [67:1]: "midi-rock-organ"
+    EventSequenceNode [67:18]
+      OctaveSetNode [67:18]: 4
+      RepeatNode [67:26]
+        VariableReferenceNode [67:21]: "harmB"
+        TimesNode: 2
+  PartNode [68:1]
+    PartDeclarationNode [68:1]
+      PartNamesNode [68:1]
+        PartNameNode [68:1]: "midi-tango-accordion"
+    EventSequenceNode [68:23]
+      OctaveSetNode [68:23]: 4
+      RepeatNode [68:31]
+        VariableReferenceNode [68:26]: "harmB"
+        TimesNode: 2
+  PartNode [69:1]
+    PartDeclarationNode [69:1]
+      PartNamesNode [69:1]
+        PartNameNode [69:1]: "midi-tenor-sax"
+    EventSequenceNode [69:17]
+      OctaveSetNode [69:17]: 4
+      RepeatNode [69:25]
+        VariableReferenceNode [69:20]: "harmB"
+        TimesNode: 2
+  PartNode [70:1]
+    PartDeclarationNode [70:1]
+      PartNamesNode [70:1]
+        PartNameNode [70:1]: "midi-alto-sax"
+    EventSequenceNode [70:16]
+      OctaveSetNode [70:16]: 4
+      RepeatNode [70:25]
+        VariableReferenceNode [70:19]: "harmCa"
+        TimesNode: 2
+  PartNode [71:1]
+    PartDeclarationNode [71:1]
+      PartNamesNode [71:1]
+        PartNameNode [71:1]: "midi-vibraphone"
+    EventSequenceNode [71:18]
+      OctaveSetNode [71:18]: 4
+      RepeatNode [71:27]
+        VariableReferenceNode [71:21]: "harmCb"
+        TimesNode: 2
+  PartNode [72:1]
+    PartDeclarationNode [72:1]
+      PartNamesNode [72:1]
+        PartNameNode [72:1]: "midi-trumpet"
+    EventSequenceNode [72:15]
+      OctaveSetNode [72:15]: 4
+      RepeatNode [72:24]
+        VariableReferenceNode [72:18]: "harmCb"
+        TimesNode: 2
+  PartNode [73:1]
+    PartDeclarationNode [73:1]
+      PartNamesNode [73:1]
+        PartNameNode [73:1]: "midi-bright-acoustic-piano"
+    EventSequenceNode [73:29]
+      OctaveSetNode [73:29]: 6
+      RepeatNode [73:40]
+        VariableReferenceNode [73:32]: "counterA"
+        TimesNode: 2
+  PartNode [74:1]
+    PartDeclarationNode [74:1]
+      PartNamesNode [74:1]
+        PartNameNode [74:1]: "midi-glockenspiel"
+    EventSequenceNode [74:20]
+      OctaveSetNode [74:20]: 6
+      RepeatNode [74:31]
+        VariableReferenceNode [74:23]: "counterB"
+        TimesNode: 2
+  PartNode [75:1]
+    PartDeclarationNode [75:1]
+      PartNamesNode [75:1]
+        PartNameNode [75:1]: "midi-celesta"
+    EventSequenceNode [75:15]
+      OctaveSetNode [75:15]: 7
+      RepeatNode [75:26]
+        VariableReferenceNode [75:18]: "counterC"
+        TimesNode: 2
+  PartNode [81:1]
+    PartDeclarationNode [81:1]
+      PartNamesNode [81:1]
+        PartNameNode [81:1]: "midi-synth-bass-1"
+    EventSequenceNode [81:20]
+      RepeatNode [81:22]
+        RestNode [81:20]
+          DurationNode [81:21]
+            NoteLengthNode [81:21]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [81:25]: 1
+      RepeatNode [81:32]
+        VariableReferenceNode [81:28]: "bass"
+        TimesNode: 2
+  PartNode [82:1]
+    PartDeclarationNode [82:1]
+      PartNamesNode [82:1]
+        PartNameNode [82:1]: "midi-synth-bass-2"
+    EventSequenceNode [82:20]
+      RepeatNode [82:22]
+        RestNode [82:20]
+          DurationNode [82:21]
+            NoteLengthNode [82:21]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [82:25]: 1
+      RepeatNode [82:32]
+        VariableReferenceNode [82:28]: "bass"
+        TimesNode: 2
+  PartNode [83:1]
+    PartDeclarationNode [83:1]
+      PartNamesNode [83:1]
+        PartNameNode [83:1]: "midi-bass-and-lead"
+    EventSequenceNode [83:21]
+      RepeatNode [83:23]
+        RestNode [83:21]
+          DurationNode [83:22]
+            NoteLengthNode [83:22]
+              DenominatorNode: 1
+        TimesNode: 4
+      LispListNode [83:26]
+        LispSymbolNode [83:27]: "p"
+      OctaveSetNode [83:30]: 2
+      RepeatNode [83:37]
+        VariableReferenceNode [83:33]: "bass"
+        TimesNode: 2
+  PartNode [84:1]
+    PartDeclarationNode [84:1]
+      PartNamesNode [84:1]
+        PartNameNode [84:1]: "midi-cello"
+    EventSequenceNode [84:13]
+      RepeatNode [84:15]
+        RestNode [84:13]
+          DurationNode [84:14]
+            NoteLengthNode [84:14]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [84:18]: 3
+      RepeatNode [84:26]
+        VariableReferenceNode [84:21]: "harmA"
+        TimesNode: 2
+  PartNode [85:1]
+    PartDeclarationNode [85:1]
+      PartNamesNode [85:1]
+        PartNameNode [85:1]: "midi-saw-wave"
+    EventSequenceNode [85:16]
+      RepeatNode [85:18]
+        RestNode [85:16]
+          DurationNode [85:17]
+            NoteLengthNode [85:17]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [85:21]: 3
+      RepeatNode [85:29]
+        VariableReferenceNode [85:24]: "harmA"
+        TimesNode: 2
+  PartNode [86:1]
+    PartDeclarationNode [86:1]
+      PartNamesNode [86:1]
+        PartNameNode [86:1]: "midi-synth-pad-choir"
+    EventSequenceNode [86:23]
+      RepeatNode [86:25]
+        RestNode [86:23]
+          DurationNode [86:24]
+            NoteLengthNode [86:24]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [86:28]: 3
+      RepeatNode [86:36]
+        VariableReferenceNode [86:31]: "harmA"
+        TimesNode: 2
+  PartNode [87:1]
+    PartDeclarationNode [87:1]
+      PartNamesNode [87:1]
+        PartNameNode [87:1]: "midi-viola"
+    EventSequenceNode [87:13]
+      RepeatNode [87:15]
+        RestNode [87:13]
+          DurationNode [87:14]
+            NoteLengthNode [87:14]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [87:18]: 4
+      RepeatNode [87:26]
+        VariableReferenceNode [87:21]: "harmB"
+        TimesNode: 2
+  PartNode [88:1]
+    PartDeclarationNode [88:1]
+      PartNamesNode [88:1]
+        PartNameNode [88:1]: "midi-shamisen"
+    EventSequenceNode [88:16]
+      RepeatNode [88:18]
+        RestNode [88:16]
+          DurationNode [88:17]
+            NoteLengthNode [88:17]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [88:21]: 4
+      RepeatNode [88:29]
+        VariableReferenceNode [88:24]: "harmB"
+        TimesNode: 2
+  PartNode [89:1]
+    PartDeclarationNode [89:1]
+      PartNamesNode [89:1]
+        PartNameNode [89:1]: "midi-sitar"
+    EventSequenceNode [89:13]
+      RepeatNode [89:15]
+        RestNode [89:13]
+          DurationNode [89:14]
+            NoteLengthNode [89:14]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [89:18]: 4
+      RepeatNode [89:26]
+        VariableReferenceNode [89:21]: "harmB"
+        TimesNode: 2
+  PartNode [90:1]
+    PartDeclarationNode [90:1]
+      PartNamesNode [90:1]
+        PartNameNode [90:1]: "midi-banjo"
+    EventSequenceNode [90:13]
+      RepeatNode [90:15]
+        RestNode [90:13]
+          DurationNode [90:14]
+            NoteLengthNode [90:14]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [90:18]: 4
+      RepeatNode [90:27]
+        VariableReferenceNode [90:21]: "harmCa"
+        TimesNode: 2
+  PartNode [91:1]
+    PartDeclarationNode [91:1]
+      PartNamesNode [91:1]
+        PartNameNode [91:1]: "midi-violin"
+    EventSequenceNode [91:14]
+      RepeatNode [91:16]
+        RestNode [91:14]
+          DurationNode [91:15]
+            NoteLengthNode [91:15]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [91:19]: 4
+      RepeatNode [91:28]
+        VariableReferenceNode [91:22]: "harmCb"
+        TimesNode: 2
+  PartNode [92:1]
+    PartDeclarationNode [92:1]
+      PartNamesNode [92:1]
+        PartNameNode [92:1]: "midi-kalimba"
+    EventSequenceNode [92:15]
+      RepeatNode [92:17]
+        RestNode [92:15]
+          DurationNode [92:16]
+            NoteLengthNode [92:16]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [92:20]: 4
+      RepeatNode [92:29]
+        VariableReferenceNode [92:23]: "harmCb"
+        TimesNode: 2
+  PartNode [93:1]
+    PartDeclarationNode [93:1]
+      PartNamesNode [93:1]
+        PartNameNode [93:1]: "midi-tinkle-bell"
+    EventSequenceNode [93:19]
+      RepeatNode [93:21]
+        RestNode [93:19]
+          DurationNode [93:20]
+            NoteLengthNode [93:20]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [93:24]: 6
+      RepeatNode [93:35]
+        VariableReferenceNode [93:27]: "counterA"
+        TimesNode: 2
+  PartNode [94:1]
+    PartDeclarationNode [94:1]
+      PartNamesNode [94:1]
+        PartNameNode [94:1]: "midi-fx-crystal"
+    EventSequenceNode [94:18]
+      RepeatNode [94:20]
+        RestNode [94:18]
+          DurationNode [94:19]
+            NoteLengthNode [94:19]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [94:23]: 6
+      RepeatNode [94:34]
+        VariableReferenceNode [94:26]: "counterB"
+        TimesNode: 2
+  PartNode [95:1]
+    PartDeclarationNode [95:1]
+      PartNamesNode [95:1]
+        PartNameNode [95:1]: "midi-whistle"
+    EventSequenceNode [95:15]
+      RepeatNode [95:17]
+        RestNode [95:15]
+          DurationNode [95:16]
+            NoteLengthNode [95:16]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [95:20]: 7
+      RepeatNode [95:31]
+        VariableReferenceNode [95:23]: "counterC"
+        TimesNode: 2
+  PartNode [101:1]
+    PartDeclarationNode [101:1]
+      PartNamesNode [101:1]
+        PartNameNode [101:1]: "midi-electric-bass-finger"
+    EventSequenceNode [101:28]
+      RepeatNode [101:30]
+        RestNode [101:28]
+          DurationNode [101:29]
+            NoteLengthNode [101:29]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [101:33]: 1
+      VariableReferenceNode [101:36]: "bassEnd"
+  PartNode [102:1]
+    PartDeclarationNode [102:1]
+      PartNamesNode [102:1]
+        PartNameNode [102:1]: "midi-acoustic-guitar-steel"
+    EventSequenceNode [102:29]
+      RepeatNode [102:31]
+        RestNode [102:29]
+          DurationNode [102:30]
+            NoteLengthNode [102:30]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [102:34]: 2
+      VariableReferenceNode [102:37]: "bassEnd"
+  PartNode [103:1]
+    PartDeclarationNode [103:1]
+      PartNamesNode [103:1]
+        PartNameNode [103:1]: "midi-tuba"
+    EventSequenceNode [103:12]
+      RepeatNode [103:14]
+        RestNode [103:12]
+          DurationNode [103:13]
+            NoteLengthNode [103:13]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [103:18]: 1
+      VariableReferenceNode [103:21]: "bassEnd"
+  PartNode [104:1]
+    PartDeclarationNode [104:1]
+      PartNamesNode [104:1]
+        PartNameNode [104:1]: "midi-bassoon"
+    EventSequenceNode [104:15]
+      RepeatNode [104:17]
+        RestNode [104:15]
+          DurationNode [104:16]
+            NoteLengthNode [104:16]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [104:21]: 3
+      VariableReferenceNode [104:24]: "harmAEnd"
+  PartNode [105:1]
+    PartDeclarationNode [105:1]
+      PartNamesNode [105:1]
+        PartNameNode [105:1]: "midi-french-horn"
+    EventSequenceNode [105:19]
+      RepeatNode [105:21]
+        RestNode [105:19]
+          DurationNode [105:20]
+            NoteLengthNode [105:20]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [105:24]: 3
+      VariableReferenceNode [105:27]: "harmAEnd"
+  PartNode [106:1]
+    PartDeclarationNode [106:1]
+      PartNamesNode [106:1]
+        PartNameNode [106:1]: "midi-trombone"
+    EventSequenceNode [106:16]
+      RepeatNode [106:18]
+        RestNode [106:16]
+          DurationNode [106:17]
+            NoteLengthNode [106:17]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [106:21]: 3
+      VariableReferenceNode [106:24]: "harmAEnd"
+  PartNode [107:1]
+    PartDeclarationNode [107:1]
+      PartNamesNode [107:1]
+        PartNameNode [107:1]: "midi-rock-organ"
+    EventSequenceNode [107:18]
+      RepeatNode [107:20]
+        RestNode [107:18]
+          DurationNode [107:19]
+            NoteLengthNode [107:19]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [107:23]: 4
+      VariableReferenceNode [107:26]: "harmBEnd"
+  PartNode [108:1]
+    PartDeclarationNode [108:1]
+      PartNamesNode [108:1]
+        PartNameNode [108:1]: "midi-tango-accordion"
+    EventSequenceNode [108:23]
+      RepeatNode [108:25]
+        RestNode [108:23]
+          DurationNode [108:24]
+            NoteLengthNode [108:24]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [108:28]: 4
+      VariableReferenceNode [108:31]: "harmBEnd"
+  PartNode [109:1]
+    PartDeclarationNode [109:1]
+      PartNamesNode [109:1]
+        PartNameNode [109:1]: "midi-tenor-sax"
+    EventSequenceNode [109:17]
+      RepeatNode [109:19]
+        RestNode [109:17]
+          DurationNode [109:18]
+            NoteLengthNode [109:18]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [109:22]: 4
+      VariableReferenceNode [109:25]: "harmBEnd"
+  PartNode [110:1]
+    PartDeclarationNode [110:1]
+      PartNamesNode [110:1]
+        PartNameNode [110:1]: "midi-alto-sax"
+    EventSequenceNode [110:16]
+      RepeatNode [110:18]
+        RestNode [110:16]
+          DurationNode [110:17]
+            NoteLengthNode [110:17]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [110:21]: 4
+      VariableReferenceNode [110:24]: "harmCaEnd"
+  PartNode [111:1]
+    PartDeclarationNode [111:1]
+      PartNamesNode [111:1]
+        PartNameNode [111:1]: "midi-vibraphone"
+    EventSequenceNode [111:18]
+      RepeatNode [111:20]
+        RestNode [111:18]
+          DurationNode [111:19]
+            NoteLengthNode [111:19]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [111:23]: 4
+      VariableReferenceNode [111:26]: "harmCbEnd"
+  PartNode [112:1]
+    PartDeclarationNode [112:1]
+      PartNamesNode [112:1]
+        PartNameNode [112:1]: "midi-trumpet"
+    EventSequenceNode [112:15]
+      RepeatNode [112:17]
+        RestNode [112:15]
+          DurationNode [112:16]
+            NoteLengthNode [112:16]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [112:20]: 4
+      VariableReferenceNode [112:23]: "harmCbEnd"
+  PartNode [113:1]
+    PartDeclarationNode [113:1]
+      PartNamesNode [113:1]
+        PartNameNode [113:1]: "midi-bright-acoustic-piano"
+    EventSequenceNode [113:29]
+      RepeatNode [113:31]
+        RestNode [113:29]
+          DurationNode [113:30]
+            NoteLengthNode [113:30]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [113:34]: 6
+      VariableReferenceNode [113:37]: "counterAEnd"
+  PartNode [114:1]
+    PartDeclarationNode [114:1]
+      PartNamesNode [114:1]
+        PartNameNode [114:1]: "midi-glockenspiel"
+    EventSequenceNode [114:20]
+      RepeatNode [114:22]
+        RestNode [114:20]
+          DurationNode [114:21]
+            NoteLengthNode [114:21]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [114:25]: 6
+      VariableReferenceNode [114:28]: "counterBEnd"
+  PartNode [115:1]
+    PartDeclarationNode [115:1]
+      PartNamesNode [115:1]
+        PartNameNode [115:1]: "midi-celesta"
+    EventSequenceNode [115:15]
+      RepeatNode [115:17]
+        RestNode [115:15]
+          DurationNode [115:16]
+            NoteLengthNode [115:16]
+              DenominatorNode: 1
+        TimesNode: 4
+      OctaveSetNode [115:20]: 7
+      VariableReferenceNode [115:23]: "counterCEnd"

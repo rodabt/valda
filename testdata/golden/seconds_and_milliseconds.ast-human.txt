@@ -1,0 +1,42 @@
+RootNode
+  PartNode [1:1]
+    PartDeclarationNode [1:1]
+      PartNamesNode [1:1]
+        PartNameNode [1:1]: "accordion"
+    EventSequenceNode [2:3]
+      ChordNode [2:3]
+        NoteNode [2:3]
+          NoteLetterAndAccidentalsNode [2:3]
+            NoteLetterNode [2:3]: "c"
+          DurationNode [2:4]
+            NoteLengthMsNode [2:4]: 500
+        NoteNode [2:10]
+          NoteLetterAndAccidentalsNode [2:10]
+            NoteLetterNode [2:10]: "e"
+        NoteNode [2:12]
+          NoteLetterAndAccidentalsNode [2:12]
+            NoteLetterNode [2:12]: "g"
+      ChordNode [3:3]
+        NoteNode [3:3]
+          NoteLetterAndAccidentalsNode [3:3]
+            NoteLetterNode [3:3]: "c"
+          DurationNode [3:4]
+            NoteLengthSecondsNode [3:4]: 1
+        NoteNode [3:7]
+          NoteLetterAndAccidentalsNode [3:7]
+            NoteLetterNode [3:7]: "f"
+        NoteNode [3:9]
+          NoteLetterAndAccidentalsNode [3:9]
+            NoteLetterNode [3:9]: "a"
+      ChordNode [4:3]
+        NoteNode [4:3]
+          NoteLetterAndAccidentalsNode [4:3]
+            NoteLetterNode [4:3]: "c"
+          DurationNode [4:4]
+            NoteLengthSecondsNode [4:4]: 2
+        NoteNode [4:7]
+          NoteLetterAndAccidentalsNode [4:7]
+            NoteLetterNode [4:7]: "e"
+        NoteNode [4:9]
+          NoteLetterAndAccidentalsNode [4:9]
+            NoteLetterNode [4:9]: "g"

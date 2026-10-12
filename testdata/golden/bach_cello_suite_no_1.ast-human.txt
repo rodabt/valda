@@ -1,0 +1,2543 @@
+RootNode
+  ImplicitPartNode [4:1]
+    EventSequenceNode [4:1]
+      LispListNode [4:1]
+        LispSymbolNode [4:2]: "tempo!"
+        LispNumberNode [4:9]: 60
+      LispListNode [5:1]
+        LispSymbolNode [5:2]: "quant!"
+        LispNumberNode [5:9]: 100
+  PartNode [7:1]
+    PartDeclarationNode [7:1]
+      PartNamesNode [7:1]
+        PartNameNode [7:1]: "cello"
+      PartAliasNode [7:7]: "main"
+    EventSequenceNode [8:3]
+      OctaveSetNode [8:3]: 2
+      NoteNode [8:6]
+        NoteLetterAndAccidentalsNode [8:6]
+          NoteLetterNode [8:6]: "g"
+        DurationNode [8:7]
+          NoteLengthNode [8:7]
+            DenominatorNode: 16
+      OctaveUpNode [8:10]
+      NoteNode [8:12]
+        NoteLetterAndAccidentalsNode [8:12]
+          NoteLetterNode [8:12]: "d"
+      NoteNode [8:14]
+        NoteLetterAndAccidentalsNode [8:14]
+          NoteLetterNode [8:14]: "b"
+      NoteNode [8:16]
+        NoteLetterAndAccidentalsNode [8:16]
+          NoteLetterNode [8:16]: "a"
+      NoteNode [8:18]
+        NoteLetterAndAccidentalsNode [8:18]
+          NoteLetterNode [8:18]: "b"
+      NoteNode [8:20]
+        NoteLetterAndAccidentalsNode [8:20]
+          NoteLetterNode [8:20]: "d"
+      NoteNode [8:22]
+        NoteLetterAndAccidentalsNode [8:22]
+          NoteLetterNode [8:22]: "b"
+      NoteNode [8:24]
+        NoteLetterAndAccidentalsNode [8:24]
+          NoteLetterNode [8:24]: "d"
+      OctaveDownNode [8:26]
+      NoteNode [8:28]
+        NoteLetterAndAccidentalsNode [8:28]
+          NoteLetterNode [8:28]: "g"
+      OctaveUpNode [8:30]
+      NoteNode [8:32]
+        NoteLetterAndAccidentalsNode [8:32]
+          NoteLetterNode [8:32]: "d"
+      NoteNode [8:34]
+        NoteLetterAndAccidentalsNode [8:34]
+          NoteLetterNode [8:34]: "b"
+      NoteNode [8:36]
+        NoteLetterAndAccidentalsNode [8:36]
+          NoteLetterNode [8:36]: "a"
+      NoteNode [8:38]
+        NoteLetterAndAccidentalsNode [8:38]
+          NoteLetterNode [8:38]: "b"
+      NoteNode [8:40]
+        NoteLetterAndAccidentalsNode [8:40]
+          NoteLetterNode [8:40]: "d"
+      NoteNode [8:42]
+        NoteLetterAndAccidentalsNode [8:42]
+          NoteLetterNode [8:42]: "b"
+      NoteNode [8:44]
+        NoteLetterAndAccidentalsNode [8:44]
+          NoteLetterNode [8:44]: "d"
+      OctaveSetNode [9:3]: 2
+      NoteNode [9:6]
+        NoteLetterAndAccidentalsNode [9:6]
+          NoteLetterNode [9:6]: "g"
+      OctaveUpNode [9:8]
+      NoteNode [9:10]
+        NoteLetterAndAccidentalsNode [9:10]
+          NoteLetterNode [9:10]: "e"
+      OctaveUpNode [9:12]
+      NoteNode [9:14]
+        NoteLetterAndAccidentalsNode [9:14]
+          NoteLetterNode [9:14]: "c"
+      OctaveDownNode [9:16]
+      NoteNode [9:18]
+        NoteLetterAndAccidentalsNode [9:18]
+          NoteLetterNode [9:18]: "b"
+      OctaveUpNode [9:20]
+      NoteNode [9:22]
+        NoteLetterAndAccidentalsNode [9:22]
+          NoteLetterNode [9:22]: "c"
+      OctaveDownNode [9:24]
+      NoteNode [9:26]
+        NoteLetterAndAccidentalsNode [9:26]
+          NoteLetterNode [9:26]: "e"
+      OctaveUpNode [9:28]
+      NoteNode [9:30]
+        NoteLetterAndAccidentalsNode [9:30]
+          NoteLetterNode [9:30]: "c"
+      OctaveDownNode [9:32]
+      NoteNode [9:34]
+        NoteLetterAndAccidentalsNode [9:34]
+          NoteLetterNode [9:34]: "e"
+      OctaveDownNode [9:36]
+      NoteNode [9:38]
+        NoteLetterAndAccidentalsNode [9:38]
+          NoteLetterNode [9:38]: "g"
+      OctaveUpNode [9:40]
+      NoteNode [9:42]
+        NoteLetterAndAccidentalsNode [9:42]
+          NoteLetterNode [9:42]: "e"
+      OctaveUpNode [9:44]
+      NoteNode [9:46]
+        NoteLetterAndAccidentalsNode [9:46]
+          NoteLetterNode [9:46]: "c"
+      OctaveDownNode [9:48]
+      NoteNode [9:50]
+        NoteLetterAndAccidentalsNode [9:50]
+          NoteLetterNode [9:50]: "b"
+      OctaveUpNode [9:52]
+      NoteNode [9:54]
+        NoteLetterAndAccidentalsNode [9:54]
+          NoteLetterNode [9:54]: "c"
+      OctaveDownNode [9:56]
+      NoteNode [9:58]
+        NoteLetterAndAccidentalsNode [9:58]
+          NoteLetterNode [9:58]: "e"
+      OctaveUpNode [9:60]
+      NoteNode [9:62]
+        NoteLetterAndAccidentalsNode [9:62]
+          NoteLetterNode [9:62]: "c"
+      OctaveDownNode [9:64]
+      NoteNode [9:66]
+        NoteLetterAndAccidentalsNode [9:66]
+          NoteLetterNode [9:66]: "e"
+      OctaveSetNode [10:3]: 2
+      NoteNode [10:6]
+        NoteLetterAndAccidentalsNode [10:6]
+          NoteLetterNode [10:6]: "g"
+      OctaveUpNode [10:8]
+      NoteNode [10:10]
+        NoteLetterAndAccidentalsNode [10:10]
+          NoteLetterNode [10:10]: "f"
+          NoteAccidentalsNode [10:11]
+            SharpNode [10:11]
+      OctaveUpNode [10:13]
+      NoteNode [10:15]
+        NoteLetterAndAccidentalsNode [10:15]
+          NoteLetterNode [10:15]: "c"
+      OctaveDownNode [10:17]
+      NoteNode [10:19]
+        NoteLetterAndAccidentalsNode [10:19]
+          NoteLetterNode [10:19]: "b"
+      OctaveUpNode [10:21]
+      NoteNode [10:23]
+        NoteLetterAndAccidentalsNode [10:23]
+          NoteLetterNode [10:23]: "c"
+      OctaveDownNode [10:25]
+      NoteNode [10:27]
+        NoteLetterAndAccidentalsNode [10:27]
+          NoteLetterNode [10:27]: "f"
+          NoteAccidentalsNode [10:28]
+            SharpNode [10:28]
+      OctaveUpNode [10:30]
+      NoteNode [10:32]
+        NoteLetterAndAccidentalsNode [10:32]
+          NoteLetterNode [10:32]: "c"
+      OctaveDownNode [10:34]
+      NoteNode [10:36]
+        NoteLetterAndAccidentalsNode [10:36]
+          NoteLetterNode [10:36]: "f"
+          NoteAccidentalsNode [10:37]
+            SharpNode [10:37]
+      OctaveDownNode [10:39]
+      NoteNode [10:41]
+        NoteLetterAndAccidentalsNode [10:41]
+          NoteLetterNode [10:41]: "g"
+      OctaveUpNode [10:43]
+      NoteNode [10:45]
+        NoteLetterAndAccidentalsNode [10:45]
+          NoteLetterNode [10:45]: "f"
+          NoteAccidentalsNode [10:46]
+            SharpNode [10:46]
+      OctaveUpNode [10:48]
+      NoteNode [10:50]
+        NoteLetterAndAccidentalsNode [10:50]
+          NoteLetterNode [10:50]: "c"
+      OctaveDownNode [10:52]
+      NoteNode [10:54]
+        NoteLetterAndAccidentalsNode [10:54]
+          NoteLetterNode [10:54]: "b"
+      OctaveUpNode [10:56]
+      NoteNode [10:58]
+        NoteLetterAndAccidentalsNode [10:58]
+          NoteLetterNode [10:58]: "c"
+      OctaveDownNode [10:60]
+      NoteNode [10:62]
+        NoteLetterAndAccidentalsNode [10:62]
+          NoteLetterNode [10:62]: "f"
+          NoteAccidentalsNode [10:63]
+            SharpNode [10:63]
+      OctaveUpNode [10:65]
+      NoteNode [10:67]
+        NoteLetterAndAccidentalsNode [10:67]
+          NoteLetterNode [10:67]: "c"
+      OctaveDownNode [10:69]
+      NoteNode [10:71]
+        NoteLetterAndAccidentalsNode [10:71]
+          NoteLetterNode [10:71]: "f"
+          NoteAccidentalsNode [10:72]
+            SharpNode [10:72]
+      OctaveSetNode [11:3]: 2
+      NoteNode [11:6]
+        NoteLetterAndAccidentalsNode [11:6]
+          NoteLetterNode [11:6]: "g"
+      OctaveUpNode [11:8]
+      NoteNode [11:10]
+        NoteLetterAndAccidentalsNode [11:10]
+          NoteLetterNode [11:10]: "g"
+      NoteNode [11:12]
+        NoteLetterAndAccidentalsNode [11:12]
+          NoteLetterNode [11:12]: "b"
+      NoteNode [11:14]
+        NoteLetterAndAccidentalsNode [11:14]
+          NoteLetterNode [11:14]: "a"
+      NoteNode [11:16]
+        NoteLetterAndAccidentalsNode [11:16]
+          NoteLetterNode [11:16]: "b"
+      NoteNode [11:18]
+        NoteLetterAndAccidentalsNode [11:18]
+          NoteLetterNode [11:18]: "g"
+      NoteNode [11:20]
+        NoteLetterAndAccidentalsNode [11:20]
+          NoteLetterNode [11:20]: "b"
+      NoteNode [11:22]
+        NoteLetterAndAccidentalsNode [11:22]
+          NoteLetterNode [11:22]: "g"
+      OctaveDownNode [11:24]
+      NoteNode [11:26]
+        NoteLetterAndAccidentalsNode [11:26]
+          NoteLetterNode [11:26]: "g"
+      OctaveUpNode [11:28]
+      NoteNode [11:30]
+        NoteLetterAndAccidentalsNode [11:30]
+          NoteLetterNode [11:30]: "g"
+      NoteNode [11:32]
+        NoteLetterAndAccidentalsNode [11:32]
+          NoteLetterNode [11:32]: "b"
+      NoteNode [11:34]
+        NoteLetterAndAccidentalsNode [11:34]
+          NoteLetterNode [11:34]: "a"
+      NoteNode [11:36]
+        NoteLetterAndAccidentalsNode [11:36]
+          NoteLetterNode [11:36]: "b"
+      NoteNode [11:38]
+        NoteLetterAndAccidentalsNode [11:38]
+          NoteLetterNode [11:38]: "g"
+      NoteNode [11:40]
+        NoteLetterAndAccidentalsNode [11:40]
+          NoteLetterNode [11:40]: "b"
+      NoteNode [11:42]
+        NoteLetterAndAccidentalsNode [11:42]
+          NoteLetterNode [11:42]: "f"
+          NoteAccidentalsNode [11:43]
+            SharpNode [11:43]
+      OctaveSetNode [12:3]: 2
+      NoteNode [12:6]
+        NoteLetterAndAccidentalsNode [12:6]
+          NoteLetterNode [12:6]: "g"
+      OctaveUpNode [12:8]
+      NoteNode [12:10]
+        NoteLetterAndAccidentalsNode [12:10]
+          NoteLetterNode [12:10]: "e"
+      NoteNode [12:12]
+        NoteLetterAndAccidentalsNode [12:12]
+          NoteLetterNode [12:12]: "b"
+      NoteNode [12:14]
+        NoteLetterAndAccidentalsNode [12:14]
+          NoteLetterNode [12:14]: "a"
+      NoteNode [12:16]
+        NoteLetterAndAccidentalsNode [12:16]
+          NoteLetterNode [12:16]: "b"
+      NoteNode [12:18]
+        NoteLetterAndAccidentalsNode [12:18]
+          NoteLetterNode [12:18]: "g"
+      NoteNode [12:20]
+        NoteLetterAndAccidentalsNode [12:20]
+          NoteLetterNode [12:20]: "f"
+          NoteAccidentalsNode [12:21]
+            SharpNode [12:21]
+      NoteNode [12:23]
+        NoteLetterAndAccidentalsNode [12:23]
+          NoteLetterNode [12:23]: "g"
+      NoteNode [12:25]
+        NoteLetterAndAccidentalsNode [12:25]
+          NoteLetterNode [12:25]: "e"
+      NoteNode [12:27]
+        NoteLetterAndAccidentalsNode [12:27]
+          NoteLetterNode [12:27]: "g"
+      NoteNode [12:29]
+        NoteLetterAndAccidentalsNode [12:29]
+          NoteLetterNode [12:29]: "f"
+          NoteAccidentalsNode [12:30]
+            SharpNode [12:30]
+      NoteNode [12:32]
+        NoteLetterAndAccidentalsNode [12:32]
+          NoteLetterNode [12:32]: "g"
+      OctaveDownNode [12:34]
+      NoteNode [12:36]
+        NoteLetterAndAccidentalsNode [12:36]
+          NoteLetterNode [12:36]: "b"
+      OctaveUpNode [12:38]
+      NoteNode [12:40]
+        NoteLetterAndAccidentalsNode [12:40]
+          NoteLetterNode [12:40]: "d"
+      NoteNode [12:42]
+        NoteLetterAndAccidentalsNode [12:42]
+          NoteLetterNode [12:42]: "c"
+          NoteAccidentalsNode [12:43]
+            SharpNode [12:43]
+      OctaveDownNode [12:45]
+      NoteNode [12:47]
+        NoteLetterAndAccidentalsNode [12:47]
+          NoteLetterNode [12:47]: "b"
+      OctaveSetNode [13:3]: 3
+      NoteNode [13:6]
+        NoteLetterAndAccidentalsNode [13:6]
+          NoteLetterNode [13:6]: "c"
+          NoteAccidentalsNode [13:7]
+            SharpNode [13:7]
+      NoteNode [13:9]
+        NoteLetterAndAccidentalsNode [13:9]
+          NoteLetterNode [13:9]: "g"
+      NoteNode [13:11]
+        NoteLetterAndAccidentalsNode [13:11]
+          NoteLetterNode [13:11]: "a"
+      NoteNode [13:13]
+        NoteLetterAndAccidentalsNode [13:13]
+          NoteLetterNode [13:13]: "g"
+      NoteNode [13:15]
+        NoteLetterAndAccidentalsNode [13:15]
+          NoteLetterNode [13:15]: "a"
+      NoteNode [13:17]
+        NoteLetterAndAccidentalsNode [13:17]
+          NoteLetterNode [13:17]: "g"
+      NoteNode [13:19]
+        NoteLetterAndAccidentalsNode [13:19]
+          NoteLetterNode [13:19]: "a"
+      NoteNode [13:21]
+        NoteLetterAndAccidentalsNode [13:21]
+          NoteLetterNode [13:21]: "g"
+      NoteNode [13:23]
+        NoteLetterAndAccidentalsNode [13:23]
+          NoteLetterNode [13:23]: "c"
+          NoteAccidentalsNode [13:24]
+            SharpNode [13:24]
+      NoteNode [13:26]
+        NoteLetterAndAccidentalsNode [13:26]
+          NoteLetterNode [13:26]: "g"
+      NoteNode [13:28]
+        NoteLetterAndAccidentalsNode [13:28]
+          NoteLetterNode [13:28]: "a"
+      NoteNode [13:30]
+        NoteLetterAndAccidentalsNode [13:30]
+          NoteLetterNode [13:30]: "g"
+      NoteNode [13:32]
+        NoteLetterAndAccidentalsNode [13:32]
+          NoteLetterNode [13:32]: "a"
+      NoteNode [13:34]
+        NoteLetterAndAccidentalsNode [13:34]
+          NoteLetterNode [13:34]: "g"
+      NoteNode [13:36]
+        NoteLetterAndAccidentalsNode [13:36]
+          NoteLetterNode [13:36]: "a"
+      NoteNode [13:38]
+        NoteLetterAndAccidentalsNode [13:38]
+          NoteLetterNode [13:38]: "g"
+      OctaveSetNode [14:3]: 3
+      NoteNode [14:6]
+        NoteLetterAndAccidentalsNode [14:6]
+          NoteLetterNode [14:6]: "f"
+          NoteAccidentalsNode [14:7]
+            SharpNode [14:7]
+      NoteNode [14:9]
+        NoteLetterAndAccidentalsNode [14:9]
+          NoteLetterNode [14:9]: "a"
+      OctaveUpNode [14:11]
+      NoteNode [14:13]
+        NoteLetterAndAccidentalsNode [14:13]
+          NoteLetterNode [14:13]: "d"
+      NoteNode [14:15]
+        NoteLetterAndAccidentalsNode [14:15]
+          NoteLetterNode [14:15]: "c"
+          NoteAccidentalsNode [14:16]
+            SharpNode [14:16]
+      NoteNode [14:18]
+        NoteLetterAndAccidentalsNode [14:18]
+          NoteLetterNode [14:18]: "d"
+      OctaveDownNode [14:20]
+      NoteNode [14:22]
+        NoteLetterAndAccidentalsNode [14:22]
+          NoteLetterNode [14:22]: "a"
+      NoteNode [14:24]
+        NoteLetterAndAccidentalsNode [14:24]
+          NoteLetterNode [14:24]: "g"
+      NoteNode [14:26]
+        NoteLetterAndAccidentalsNode [14:26]
+          NoteLetterNode [14:26]: "a"
+      NoteNode [14:28]
+        NoteLetterAndAccidentalsNode [14:28]
+          NoteLetterNode [14:28]: "f"
+          NoteAccidentalsNode [14:29]
+            SharpNode [14:29]
+      NoteNode [14:31]
+        NoteLetterAndAccidentalsNode [14:31]
+          NoteLetterNode [14:31]: "a"
+      NoteNode [14:33]
+        NoteLetterAndAccidentalsNode [14:33]
+          NoteLetterNode [14:33]: "g"
+      NoteNode [14:35]
+        NoteLetterAndAccidentalsNode [14:35]
+          NoteLetterNode [14:35]: "a"
+      NoteNode [14:37]
+        NoteLetterAndAccidentalsNode [14:37]
+          NoteLetterNode [14:37]: "d"
+      NoteNode [14:39]
+        NoteLetterAndAccidentalsNode [14:39]
+          NoteLetterNode [14:39]: "f"
+          NoteAccidentalsNode [14:40]
+            SharpNode [14:40]
+      NoteNode [14:42]
+        NoteLetterAndAccidentalsNode [14:42]
+          NoteLetterNode [14:42]: "e"
+      NoteNode [14:44]
+        NoteLetterAndAccidentalsNode [14:44]
+          NoteLetterNode [14:44]: "d"
+      OctaveSetNode [15:3]: 2
+      NoteNode [15:6]
+        NoteLetterAndAccidentalsNode [15:6]
+          NoteLetterNode [15:6]: "e"
+      NoteNode [15:8]
+        NoteLetterAndAccidentalsNode [15:8]
+          NoteLetterNode [15:8]: "b"
+      OctaveUpNode [15:10]
+      NoteNode [15:12]
+        NoteLetterAndAccidentalsNode [15:12]
+          NoteLetterNode [15:12]: "g"
+      NoteNode [15:14]
+        NoteLetterAndAccidentalsNode [15:14]
+          NoteLetterNode [15:14]: "f"
+          NoteAccidentalsNode [15:15]
+            SharpNode [15:15]
+      NoteNode [15:17]
+        NoteLetterAndAccidentalsNode [15:17]
+          NoteLetterNode [15:17]: "g"
+      OctaveDownNode [15:19]
+      NoteNode [15:21]
+        NoteLetterAndAccidentalsNode [15:21]
+          NoteLetterNode [15:21]: "b"
+      OctaveUpNode [15:23]
+      NoteNode [15:25]
+        NoteLetterAndAccidentalsNode [15:25]
+          NoteLetterNode [15:25]: "g"
+      OctaveDownNode [15:27]
+      NoteNode [15:29]
+        NoteLetterAndAccidentalsNode [15:29]
+          NoteLetterNode [15:29]: "b"
+      NoteNode [15:31]
+        NoteLetterAndAccidentalsNode [15:31]
+          NoteLetterNode [15:31]: "e"
+      NoteNode [15:33]
+        NoteLetterAndAccidentalsNode [15:33]
+          NoteLetterNode [15:33]: "b"
+      OctaveUpNode [15:35]
+      NoteNode [15:37]
+        NoteLetterAndAccidentalsNode [15:37]
+          NoteLetterNode [15:37]: "g"
+      NoteNode [15:39]
+        NoteLetterAndAccidentalsNode [15:39]
+          NoteLetterNode [15:39]: "f"
+          NoteAccidentalsNode [15:40]
+            SharpNode [15:40]
+      NoteNode [15:42]
+        NoteLetterAndAccidentalsNode [15:42]
+          NoteLetterNode [15:42]: "g"
+      OctaveDownNode [15:44]
+      NoteNode [15:46]
+        NoteLetterAndAccidentalsNode [15:46]
+          NoteLetterNode [15:46]: "b"
+      OctaveUpNode [15:48]
+      NoteNode [15:50]
+        NoteLetterAndAccidentalsNode [15:50]
+          NoteLetterNode [15:50]: "g"
+      OctaveDownNode [15:52]
+      NoteNode [15:54]
+        NoteLetterAndAccidentalsNode [15:54]
+          NoteLetterNode [15:54]: "b"
+      OctaveSetNode [16:3]: 2
+      NoteNode [16:6]
+        NoteLetterAndAccidentalsNode [16:6]
+          NoteLetterNode [16:6]: "e"
+      OctaveUpNode [16:8]
+      NoteNode [16:10]
+        NoteLetterAndAccidentalsNode [16:10]
+          NoteLetterNode [16:10]: "c"
+          NoteAccidentalsNode [16:11]
+            SharpNode [16:11]
+      NoteNode [16:13]
+        NoteLetterAndAccidentalsNode [16:13]
+          NoteLetterNode [16:13]: "d"
+      NoteNode [16:15]
+        NoteLetterAndAccidentalsNode [16:15]
+          NoteLetterNode [16:15]: "e"
+      NoteNode [16:17]
+        NoteLetterAndAccidentalsNode [16:17]
+          NoteLetterNode [16:17]: "d"
+      NoteNode [16:19]
+        NoteLetterAndAccidentalsNode [16:19]
+          NoteLetterNode [16:19]: "c"
+          NoteAccidentalsNode [16:20]
+            SharpNode [16:20]
+      OctaveDownNode [16:22]
+      NoteNode [16:24]
+        NoteLetterAndAccidentalsNode [16:24]
+          NoteLetterNode [16:24]: "b"
+      NoteNode [16:26]
+        NoteLetterAndAccidentalsNode [16:26]
+          NoteLetterNode [16:26]: "a"
+      OctaveUpNode [16:28]
+      NoteNode [16:30]
+        NoteLetterAndAccidentalsNode [16:30]
+          NoteLetterNode [16:30]: "g"
+      NoteNode [16:32]
+        NoteLetterAndAccidentalsNode [16:32]
+          NoteLetterNode [16:32]: "f"
+          NoteAccidentalsNode [16:33]
+            SharpNode [16:33]
+      NoteNode [16:35]
+        NoteLetterAndAccidentalsNode [16:35]
+          NoteLetterNode [16:35]: "e"
+      OctaveUpNode [16:37]
+      NoteNode [16:39]
+        NoteLetterAndAccidentalsNode [16:39]
+          NoteLetterNode [16:39]: "d"
+      NoteNode [16:41]
+        NoteLetterAndAccidentalsNode [16:41]
+          NoteLetterNode [16:41]: "c"
+          NoteAccidentalsNode [16:42]
+            SharpNode [16:42]
+      OctaveDownNode [16:44]
+      NoteNode [16:46]
+        NoteLetterAndAccidentalsNode [16:46]
+          NoteLetterNode [16:46]: "b"
+      NoteNode [16:48]
+        NoteLetterAndAccidentalsNode [16:48]
+          NoteLetterNode [16:48]: "a"
+      NoteNode [16:50]
+        NoteLetterAndAccidentalsNode [16:50]
+          NoteLetterNode [16:50]: "g"
+      OctaveSetNode [17:3]: 3
+      NoteNode [17:6]
+        NoteLetterAndAccidentalsNode [17:6]
+          NoteLetterNode [17:6]: "f"
+          NoteAccidentalsNode [17:7]
+            SharpNode [17:7]
+      NoteNode [17:9]
+        NoteLetterAndAccidentalsNode [17:9]
+          NoteLetterNode [17:9]: "e"
+      NoteNode [17:11]
+        NoteLetterAndAccidentalsNode [17:11]
+          NoteLetterNode [17:11]: "d"
+      OctaveUpNode [17:13]
+      NoteNode [17:15]
+        NoteLetterAndAccidentalsNode [17:15]
+          NoteLetterNode [17:15]: "d"
+      OctaveDownNode [17:17]
+      NoteNode [17:19]
+        NoteLetterAndAccidentalsNode [17:19]
+          NoteLetterNode [17:19]: "a"
+      OctaveUpNode [17:21]
+      NoteNode [17:23]
+        NoteLetterAndAccidentalsNode [17:23]
+          NoteLetterNode [17:23]: "d"
+      OctaveDownNode [17:25]
+      NoteNode [17:27]
+        NoteLetterAndAccidentalsNode [17:27]
+          NoteLetterNode [17:27]: "f"
+          NoteAccidentalsNode [17:28]
+            SharpNode [17:28]
+      NoteNode [17:30]
+        NoteLetterAndAccidentalsNode [17:30]
+          NoteLetterNode [17:30]: "a"
+      NoteNode [17:32]
+        NoteLetterAndAccidentalsNode [17:32]
+          NoteLetterNode [17:32]: "d"
+      NoteNode [17:34]
+        NoteLetterAndAccidentalsNode [17:34]
+          NoteLetterNode [17:34]: "e"
+      NoteNode [17:36]
+        NoteLetterAndAccidentalsNode [17:36]
+          NoteLetterNode [17:36]: "f"
+          NoteAccidentalsNode [17:37]
+            SharpNode [17:37]
+      NoteNode [17:39]
+        NoteLetterAndAccidentalsNode [17:39]
+          NoteLetterNode [17:39]: "a"
+      NoteNode [17:41]
+        NoteLetterAndAccidentalsNode [17:41]
+          NoteLetterNode [17:41]: "g"
+      NoteNode [17:43]
+        NoteLetterAndAccidentalsNode [17:43]
+          NoteLetterNode [17:43]: "f"
+          NoteAccidentalsNode [17:44]
+            SharpNode [17:44]
+      NoteNode [17:46]
+        NoteLetterAndAccidentalsNode [17:46]
+          NoteLetterNode [17:46]: "e"
+      NoteNode [17:48]
+        NoteLetterAndAccidentalsNode [17:48]
+          NoteLetterNode [17:48]: "d"
+      OctaveSetNode [18:3]: 3
+      NoteNode [18:6]
+        NoteLetterAndAccidentalsNode [18:6]
+          NoteLetterNode [18:6]: "g"
+          NoteAccidentalsNode [18:7]
+            SharpNode [18:7]
+      NoteNode [18:9]
+        NoteLetterAndAccidentalsNode [18:9]
+          NoteLetterNode [18:9]: "d"
+      NoteNode [18:11]
+        NoteLetterAndAccidentalsNode [18:11]
+          NoteLetterNode [18:11]: "f"
+      NoteNode [18:13]
+        NoteLetterAndAccidentalsNode [18:13]
+          NoteLetterNode [18:13]: "e"
+      NoteNode [18:15]
+        NoteLetterAndAccidentalsNode [18:15]
+          NoteLetterNode [18:15]: "f"
+      NoteNode [18:17]
+        NoteLetterAndAccidentalsNode [18:17]
+          NoteLetterNode [18:17]: "d"
+      NoteNode [18:19]
+        NoteLetterAndAccidentalsNode [18:19]
+          NoteLetterNode [18:19]: "g"
+          NoteAccidentalsNode [18:20]
+            SharpNode [18:20]
+      NoteNode [18:22]
+        NoteLetterAndAccidentalsNode [18:22]
+          NoteLetterNode [18:22]: "d"
+      NoteNode [18:24]
+        NoteLetterAndAccidentalsNode [18:24]
+          NoteLetterNode [18:24]: "b"
+      NoteNode [18:26]
+        NoteLetterAndAccidentalsNode [18:26]
+          NoteLetterNode [18:26]: "d"
+      NoteNode [18:28]
+        NoteLetterAndAccidentalsNode [18:28]
+          NoteLetterNode [18:28]: "f"
+      NoteNode [18:30]
+        NoteLetterAndAccidentalsNode [18:30]
+          NoteLetterNode [18:30]: "e"
+      NoteNode [18:32]
+        NoteLetterAndAccidentalsNode [18:32]
+          NoteLetterNode [18:32]: "f"
+      NoteNode [18:34]
+        NoteLetterAndAccidentalsNode [18:34]
+          NoteLetterNode [18:34]: "d"
+      NoteNode [18:36]
+        NoteLetterAndAccidentalsNode [18:36]
+          NoteLetterNode [18:36]: "g"
+          NoteAccidentalsNode [18:37]
+            SharpNode [18:37]
+      NoteNode [18:39]
+        NoteLetterAndAccidentalsNode [18:39]
+          NoteLetterNode [18:39]: "d"
+      OctaveSetNode [19:3]: 3
+      NoteNode [19:6]
+        NoteLetterAndAccidentalsNode [19:6]
+          NoteLetterNode [19:6]: "c"
+      NoteNode [19:8]
+        NoteLetterAndAccidentalsNode [19:8]
+          NoteLetterNode [19:8]: "e"
+      NoteNode [19:10]
+        NoteLetterAndAccidentalsNode [19:10]
+          NoteLetterNode [19:10]: "a"
+      NoteNode [19:12]
+        NoteLetterAndAccidentalsNode [19:12]
+          NoteLetterNode [19:12]: "b"
+      OctaveUpNode [19:14]
+      NoteNode [19:16]
+        NoteLetterAndAccidentalsNode [19:16]
+          NoteLetterNode [19:16]: "c"
+      OctaveDownNode [19:18]
+      NoteNode [19:20]
+        NoteLetterAndAccidentalsNode [19:20]
+          NoteLetterNode [19:20]: "a"
+      NoteNode [19:22]
+        NoteLetterAndAccidentalsNode [19:22]
+          NoteLetterNode [19:22]: "e"
+      NoteNode [19:24]
+        NoteLetterAndAccidentalsNode [19:24]
+          NoteLetterNode [19:24]: "d"
+      NoteNode [19:26]
+        NoteLetterAndAccidentalsNode [19:26]
+          NoteLetterNode [19:26]: "c"
+      NoteNode [19:28]
+        NoteLetterAndAccidentalsNode [19:28]
+          NoteLetterNode [19:28]: "e"
+      NoteNode [19:30]
+        NoteLetterAndAccidentalsNode [19:30]
+          NoteLetterNode [19:30]: "a"
+      NoteNode [19:32]
+        NoteLetterAndAccidentalsNode [19:32]
+          NoteLetterNode [19:32]: "b"
+      OctaveUpNode [19:34]
+      NoteNode [19:36]
+        NoteLetterAndAccidentalsNode [19:36]
+          NoteLetterNode [19:36]: "c"
+      OctaveDownNode [19:38]
+      NoteNode [19:40]
+        NoteLetterAndAccidentalsNode [19:40]
+          NoteLetterNode [19:40]: "a"
+      NoteNode [19:42]
+        NoteLetterAndAccidentalsNode [19:42]
+          NoteLetterNode [19:42]: "f"
+          NoteAccidentalsNode [19:43]
+            SharpNode [19:43]
+      NoteNode [19:45]
+        NoteLetterAndAccidentalsNode [19:45]
+          NoteLetterNode [19:45]: "e"
+      OctaveSetNode [20:3]: 3
+      NoteNode [20:6]
+        NoteLetterAndAccidentalsNode [20:6]
+          NoteLetterNode [20:6]: "d"
+          NoteAccidentalsNode [20:7]
+            SharpNode [20:7]
+      NoteNode [20:9]
+        NoteLetterAndAccidentalsNode [20:9]
+          NoteLetterNode [20:9]: "f"
+          NoteAccidentalsNode [20:10]
+            SharpNode [20:10]
+      NoteNode [20:12]
+        NoteLetterAndAccidentalsNode [20:12]
+          NoteLetterNode [20:12]: "d"
+          NoteAccidentalsNode [20:13]
+            SharpNode [20:13]
+      NoteNode [20:15]
+        NoteLetterAndAccidentalsNode [20:15]
+          NoteLetterNode [20:15]: "f"
+          NoteAccidentalsNode [20:16]
+            SharpNode [20:16]
+      NoteNode [20:18]
+        NoteLetterAndAccidentalsNode [20:18]
+          NoteLetterNode [20:18]: "a"
+      NoteNode [20:20]
+        NoteLetterAndAccidentalsNode [20:20]
+          NoteLetterNode [20:20]: "f"
+          NoteAccidentalsNode [20:21]
+            SharpNode [20:21]
+      NoteNode [20:23]
+        NoteLetterAndAccidentalsNode [20:23]
+          NoteLetterNode [20:23]: "a"
+      NoteNode [20:25]
+        NoteLetterAndAccidentalsNode [20:25]
+          NoteLetterNode [20:25]: "f"
+          NoteAccidentalsNode [20:26]
+            SharpNode [20:26]
+      NoteNode [20:28]
+        NoteLetterAndAccidentalsNode [20:28]
+          NoteLetterNode [20:28]: "d"
+          NoteAccidentalsNode [20:29]
+            SharpNode [20:29]
+      NoteNode [20:31]
+        NoteLetterAndAccidentalsNode [20:31]
+          NoteLetterNode [20:31]: "f"
+          NoteAccidentalsNode [20:32]
+            SharpNode [20:32]
+      NoteNode [20:34]
+        NoteLetterAndAccidentalsNode [20:34]
+          NoteLetterNode [20:34]: "d"
+          NoteAccidentalsNode [20:35]
+            SharpNode [20:35]
+      NoteNode [20:37]
+        NoteLetterAndAccidentalsNode [20:37]
+          NoteLetterNode [20:37]: "f"
+          NoteAccidentalsNode [20:38]
+            SharpNode [20:38]
+      NoteNode [20:40]
+        NoteLetterAndAccidentalsNode [20:40]
+          NoteLetterNode [20:40]: "a"
+      NoteNode [20:42]
+        NoteLetterAndAccidentalsNode [20:42]
+          NoteLetterNode [20:42]: "f"
+          NoteAccidentalsNode [20:43]
+            SharpNode [20:43]
+      NoteNode [20:45]
+        NoteLetterAndAccidentalsNode [20:45]
+          NoteLetterNode [20:45]: "a"
+      NoteNode [20:47]
+        NoteLetterAndAccidentalsNode [20:47]
+          NoteLetterNode [20:47]: "f"
+          NoteAccidentalsNode [20:48]
+            SharpNode [20:48]
+      OctaveSetNode [21:3]: 3
+      NoteNode [21:6]
+        NoteLetterAndAccidentalsNode [21:6]
+          NoteLetterNode [21:6]: "g"
+      NoteNode [21:8]
+        NoteLetterAndAccidentalsNode [21:8]
+          NoteLetterNode [21:8]: "f"
+          NoteAccidentalsNode [21:9]
+            SharpNode [21:9]
+      NoteNode [21:11]
+        NoteLetterAndAccidentalsNode [21:11]
+          NoteLetterNode [21:11]: "e"
+      NoteNode [21:13]
+        NoteLetterAndAccidentalsNode [21:13]
+          NoteLetterNode [21:13]: "g"
+      NoteNode [21:15]
+        NoteLetterAndAccidentalsNode [21:15]
+          NoteLetterNode [21:15]: "f"
+          NoteAccidentalsNode [21:16]
+            SharpNode [21:16]
+      NoteNode [21:18]
+        NoteLetterAndAccidentalsNode [21:18]
+          NoteLetterNode [21:18]: "g"
+      NoteNode [21:20]
+        NoteLetterAndAccidentalsNode [21:20]
+          NoteLetterNode [21:20]: "a"
+      NoteNode [21:22]
+        NoteLetterAndAccidentalsNode [21:22]
+          NoteLetterNode [21:22]: "f"
+          NoteAccidentalsNode [21:23]
+            SharpNode [21:23]
+      NoteNode [21:25]
+        NoteLetterAndAccidentalsNode [21:25]
+          NoteLetterNode [21:25]: "g"
+      NoteNode [21:27]
+        NoteLetterAndAccidentalsNode [21:27]
+          NoteLetterNode [21:27]: "f"
+          NoteAccidentalsNode [21:28]
+            SharpNode [21:28]
+      NoteNode [21:30]
+        NoteLetterAndAccidentalsNode [21:30]
+          NoteLetterNode [21:30]: "e"
+      NoteNode [21:32]
+        NoteLetterAndAccidentalsNode [21:32]
+          NoteLetterNode [21:32]: "d"
+      NoteNode [21:34]
+        NoteLetterAndAccidentalsNode [21:34]
+          NoteLetterNode [21:34]: "c"
+      OctaveDownNode [21:36]
+      NoteNode [21:38]
+        NoteLetterAndAccidentalsNode [21:38]
+          NoteLetterNode [21:38]: "b"
+      NoteNode [21:40]
+        NoteLetterAndAccidentalsNode [21:40]
+          NoteLetterNode [21:40]: "a"
+      NoteNode [21:42]
+        NoteLetterAndAccidentalsNode [21:42]
+          NoteLetterNode [21:42]: "g"
+      OctaveSetNode [22:3]: 2
+      NoteNode [22:6]
+        NoteLetterAndAccidentalsNode [22:6]
+          NoteLetterNode [22:6]: "f"
+          NoteAccidentalsNode [22:7]
+            SharpNode [22:7]
+      OctaveUpNode [22:9]
+      NoteNode [22:11]
+        NoteLetterAndAccidentalsNode [22:11]
+          NoteLetterNode [22:11]: "c"
+      NoteNode [22:13]
+        NoteLetterAndAccidentalsNode [22:13]
+          NoteLetterNode [22:13]: "d"
+      NoteNode [22:15]
+        NoteLetterAndAccidentalsNode [22:15]
+          NoteLetterNode [22:15]: "c"
+      NoteNode [22:17]
+        NoteLetterAndAccidentalsNode [22:17]
+          NoteLetterNode [22:17]: "d"
+      NoteNode [22:19]
+        NoteLetterAndAccidentalsNode [22:19]
+          NoteLetterNode [22:19]: "c"
+      NoteNode [22:21]
+        NoteLetterAndAccidentalsNode [22:21]
+          NoteLetterNode [22:21]: "d"
+      NoteNode [22:23]
+        NoteLetterAndAccidentalsNode [22:23]
+          NoteLetterNode [22:23]: "c"
+      OctaveDownNode [22:25]
+      NoteNode [22:27]
+        NoteLetterAndAccidentalsNode [22:27]
+          NoteLetterNode [22:27]: "f"
+          NoteAccidentalsNode [22:28]
+            SharpNode [22:28]
+      OctaveUpNode [22:30]
+      NoteNode [22:32]
+        NoteLetterAndAccidentalsNode [22:32]
+          NoteLetterNode [22:32]: "c"
+      NoteNode [22:34]
+        NoteLetterAndAccidentalsNode [22:34]
+          NoteLetterNode [22:34]: "d"
+      NoteNode [22:36]
+        NoteLetterAndAccidentalsNode [22:36]
+          NoteLetterNode [22:36]: "c"
+      NoteNode [22:38]
+        NoteLetterAndAccidentalsNode [22:38]
+          NoteLetterNode [22:38]: "d"
+      NoteNode [22:40]
+        NoteLetterAndAccidentalsNode [22:40]
+          NoteLetterNode [22:40]: "c"
+      NoteNode [22:42]
+        NoteLetterAndAccidentalsNode [22:42]
+          NoteLetterNode [22:42]: "d"
+      NoteNode [22:44]
+        NoteLetterAndAccidentalsNode [22:44]
+          NoteLetterNode [22:44]: "c"
+      OctaveSetNode [23:3]: 2
+      NoteNode [23:6]
+        NoteLetterAndAccidentalsNode [23:6]
+          NoteLetterNode [23:6]: "g"
+      NoteNode [23:8]
+        NoteLetterAndAccidentalsNode [23:8]
+          NoteLetterNode [23:8]: "b"
+      OctaveUpNode [23:10]
+      NoteNode [23:12]
+        NoteLetterAndAccidentalsNode [23:12]
+          NoteLetterNode [23:12]: "f"
+      NoteNode [23:14]
+        NoteLetterAndAccidentalsNode [23:14]
+          NoteLetterNode [23:14]: "e"
+      NoteNode [23:16]
+        NoteLetterAndAccidentalsNode [23:16]
+          NoteLetterNode [23:16]: "f"
+      OctaveDownNode [23:18]
+      NoteNode [23:20]
+        NoteLetterAndAccidentalsNode [23:20]
+          NoteLetterNode [23:20]: "b"
+      OctaveUpNode [23:22]
+      NoteNode [23:24]
+        NoteLetterAndAccidentalsNode [23:24]
+          NoteLetterNode [23:24]: "f"
+      OctaveDownNode [23:26]
+      NoteNode [23:28]
+        NoteLetterAndAccidentalsNode [23:28]
+          NoteLetterNode [23:28]: "b"
+      NoteNode [23:30]
+        NoteLetterAndAccidentalsNode [23:30]
+          NoteLetterNode [23:30]: "g"
+      NoteNode [23:32]
+        NoteLetterAndAccidentalsNode [23:32]
+          NoteLetterNode [23:32]: "b"
+      OctaveUpNode [23:34]
+      NoteNode [23:36]
+        NoteLetterAndAccidentalsNode [23:36]
+          NoteLetterNode [23:36]: "f"
+      NoteNode [23:38]
+        NoteLetterAndAccidentalsNode [23:38]
+          NoteLetterNode [23:38]: "e"
+      NoteNode [23:40]
+        NoteLetterAndAccidentalsNode [23:40]
+          NoteLetterNode [23:40]: "f"
+      OctaveDownNode [23:42]
+      NoteNode [23:44]
+        NoteLetterAndAccidentalsNode [23:44]
+          NoteLetterNode [23:44]: "b"
+      OctaveUpNode [23:46]
+      NoteNode [23:48]
+        NoteLetterAndAccidentalsNode [23:48]
+          NoteLetterNode [23:48]: "f"
+      OctaveDownNode [23:50]
+      NoteNode [23:52]
+        NoteLetterAndAccidentalsNode [23:52]
+          NoteLetterNode [23:52]: "b"
+      OctaveSetNode [24:3]: 2
+      NoteNode [24:6]
+        NoteLetterAndAccidentalsNode [24:6]
+          NoteLetterNode [24:6]: "g"
+      OctaveUpNode [24:8]
+      NoteNode [24:10]
+        NoteLetterAndAccidentalsNode [24:10]
+          NoteLetterNode [24:10]: "c"
+      NoteNode [24:12]
+        NoteLetterAndAccidentalsNode [24:12]
+          NoteLetterNode [24:12]: "e"
+      NoteNode [24:14]
+        NoteLetterAndAccidentalsNode [24:14]
+          NoteLetterNode [24:14]: "d"
+      NoteNode [24:16]
+        NoteLetterAndAccidentalsNode [24:16]
+          NoteLetterNode [24:16]: "e"
+      NoteNode [24:18]
+        NoteLetterAndAccidentalsNode [24:18]
+          NoteLetterNode [24:18]: "c"
+      NoteNode [24:20]
+        NoteLetterAndAccidentalsNode [24:20]
+          NoteLetterNode [24:20]: "e"
+      NoteNode [24:22]
+        NoteLetterAndAccidentalsNode [24:22]
+          NoteLetterNode [24:22]: "c"
+      OctaveDownNode [24:24]
+      NoteNode [24:26]
+        NoteLetterAndAccidentalsNode [24:26]
+          NoteLetterNode [24:26]: "g"
+      OctaveUpNode [24:28]
+      NoteNode [24:30]
+        NoteLetterAndAccidentalsNode [24:30]
+          NoteLetterNode [24:30]: "c"
+      NoteNode [24:32]
+        NoteLetterAndAccidentalsNode [24:32]
+          NoteLetterNode [24:32]: "e"
+      NoteNode [24:34]
+        NoteLetterAndAccidentalsNode [24:34]
+          NoteLetterNode [24:34]: "d"
+      NoteNode [24:36]
+        NoteLetterAndAccidentalsNode [24:36]
+          NoteLetterNode [24:36]: "e"
+      NoteNode [24:38]
+        NoteLetterAndAccidentalsNode [24:38]
+          NoteLetterNode [24:38]: "c"
+      NoteNode [24:40]
+        NoteLetterAndAccidentalsNode [24:40]
+          NoteLetterNode [24:40]: "e"
+      NoteNode [24:42]
+        NoteLetterAndAccidentalsNode [24:42]
+          NoteLetterNode [24:42]: "c"
+      OctaveSetNode [25:3]: 2
+      NoteNode [25:6]
+        NoteLetterAndAccidentalsNode [25:6]
+          NoteLetterNode [25:6]: "g"
+      OctaveUpNode [25:8]
+      NoteNode [25:10]
+        NoteLetterAndAccidentalsNode [25:10]
+          NoteLetterNode [25:10]: "f"
+          NoteAccidentalsNode [25:11]
+            SharpNode [25:11]
+      OctaveUpNode [25:13]
+      NoteNode [25:15]
+        NoteLetterAndAccidentalsNode [25:15]
+          NoteLetterNode [25:15]: "c"
+      OctaveDownNode [25:17]
+      NoteNode [25:19]
+        NoteLetterAndAccidentalsNode [25:19]
+          NoteLetterNode [25:19]: "b"
+      OctaveUpNode [25:21]
+      NoteNode [25:23]
+        NoteLetterAndAccidentalsNode [25:23]
+          NoteLetterNode [25:23]: "c"
+      OctaveDownNode [25:25]
+      NoteNode [25:27]
+        NoteLetterAndAccidentalsNode [25:27]
+          NoteLetterNode [25:27]: "f"
+          NoteAccidentalsNode [25:28]
+            SharpNode [25:28]
+      OctaveUpNode [25:30]
+      NoteNode [25:32]
+        NoteLetterAndAccidentalsNode [25:32]
+          NoteLetterNode [25:32]: "c"
+      OctaveDownNode [25:34]
+      NoteNode [25:36]
+        NoteLetterAndAccidentalsNode [25:36]
+          NoteLetterNode [25:36]: "f"
+          NoteAccidentalsNode [25:37]
+            SharpNode [25:37]
+      OctaveDownNode [25:39]
+      NoteNode [25:41]
+        NoteLetterAndAccidentalsNode [25:41]
+          NoteLetterNode [25:41]: "g"
+      OctaveUpNode [25:43]
+      NoteNode [25:45]
+        NoteLetterAndAccidentalsNode [25:45]
+          NoteLetterNode [25:45]: "f"
+          NoteAccidentalsNode [25:46]
+            SharpNode [25:46]
+      OctaveUpNode [25:48]
+      NoteNode [25:50]
+        NoteLetterAndAccidentalsNode [25:50]
+          NoteLetterNode [25:50]: "c"
+      OctaveDownNode [25:52]
+      NoteNode [25:54]
+        NoteLetterAndAccidentalsNode [25:54]
+          NoteLetterNode [25:54]: "b"
+      OctaveUpNode [25:56]
+      NoteNode [25:58]
+        NoteLetterAndAccidentalsNode [25:58]
+          NoteLetterNode [25:58]: "c"
+      OctaveDownNode [25:60]
+      NoteNode [25:62]
+        NoteLetterAndAccidentalsNode [25:62]
+          NoteLetterNode [25:62]: "f"
+          NoteAccidentalsNode [25:63]
+            SharpNode [25:63]
+      OctaveUpNode [25:65]
+      NoteNode [25:67]
+        NoteLetterAndAccidentalsNode [25:67]
+          NoteLetterNode [25:67]: "c"
+      OctaveDownNode [25:69]
+      NoteNode [25:71]
+        NoteLetterAndAccidentalsNode [25:71]
+          NoteLetterNode [25:71]: "f"
+          NoteAccidentalsNode [25:72]
+            SharpNode [25:72]
+      OctaveSetNode [26:3]: 2
+      NoteNode [26:6]
+        NoteLetterAndAccidentalsNode [26:6]
+          NoteLetterNode [26:6]: "g"
+      OctaveUpNode [26:8]
+      NoteNode [26:10]
+        NoteLetterAndAccidentalsNode [26:10]
+          NoteLetterNode [26:10]: "d"
+      NoteNode [26:12]
+        NoteLetterAndAccidentalsNode [26:12]
+          NoteLetterNode [26:12]: "b"
+      NoteNode [26:14]
+        NoteLetterAndAccidentalsNode [26:14]
+          NoteLetterNode [26:14]: "a"
+      NoteNode [26:16]
+        NoteLetterAndAccidentalsNode [26:16]
+          NoteLetterNode [26:16]: "b"
+      NoteNode [26:18]
+        NoteLetterAndAccidentalsNode [26:18]
+          NoteLetterNode [26:18]: "g"
+      NoteNode [26:20]
+        NoteLetterAndAccidentalsNode [26:20]
+          NoteLetterNode [26:20]: "f"
+          NoteAccidentalsNode [26:21]
+            SharpNode [26:21]
+      NoteNode [26:23]
+        NoteLetterAndAccidentalsNode [26:23]
+          NoteLetterNode [26:23]: "e"
+      NoteNode [26:25]
+        NoteLetterAndAccidentalsNode [26:25]
+          NoteLetterNode [26:25]: "d"
+      NoteNode [26:27]
+        NoteLetterAndAccidentalsNode [26:27]
+          NoteLetterNode [26:27]: "c"
+      OctaveDownNode [26:29]
+      NoteNode [26:31]
+        NoteLetterAndAccidentalsNode [26:31]
+          NoteLetterNode [26:31]: "b"
+      NoteNode [26:33]
+        NoteLetterAndAccidentalsNode [26:33]
+          NoteLetterNode [26:33]: "a"
+      NoteNode [26:35]
+        NoteLetterAndAccidentalsNode [26:35]
+          NoteLetterNode [26:35]: "g"
+      NoteNode [26:37]
+        NoteLetterAndAccidentalsNode [26:37]
+          NoteLetterNode [26:37]: "f"
+          NoteAccidentalsNode [26:38]
+            SharpNode [26:38]
+      NoteNode [26:40]
+        NoteLetterAndAccidentalsNode [26:40]
+          NoteLetterNode [26:40]: "e"
+      NoteNode [26:42]
+        NoteLetterAndAccidentalsNode [26:42]
+          NoteLetterNode [26:42]: "d"
+      OctaveSetNode [27:3]: 2
+      NoteNode [27:6]
+        NoteLetterAndAccidentalsNode [27:6]
+          NoteLetterNode [27:6]: "c"
+          NoteAccidentalsNode [27:7]
+            SharpNode [27:7]
+      NoteNode [27:9]
+        NoteLetterAndAccidentalsNode [27:9]
+          NoteLetterNode [27:9]: "a"
+      OctaveUpNode [27:11]
+      NoteNode [27:13]
+        NoteLetterAndAccidentalsNode [27:13]
+          NoteLetterNode [27:13]: "e"
+      NoteNode [27:15]
+        NoteLetterAndAccidentalsNode [27:15]
+          NoteLetterNode [27:15]: "f"
+          NoteAccidentalsNode [27:16]
+            SharpNode [27:16]
+      NoteNode [27:18]
+        NoteLetterAndAccidentalsNode [27:18]
+          NoteLetterNode [27:18]: "g"
+      NoteNode [27:20]
+        NoteLetterAndAccidentalsNode [27:20]
+          NoteLetterNode [27:20]: "e"
+      NoteNode [27:22]
+        NoteLetterAndAccidentalsNode [27:22]
+          NoteLetterNode [27:22]: "f"
+          NoteAccidentalsNode [27:23]
+            SharpNode [27:23]
+      NoteNode [27:25]
+        NoteLetterAndAccidentalsNode [27:25]
+          NoteLetterNode [27:25]: "g"
+      OctaveDownNode [27:27]
+      NoteNode [27:29]
+        NoteLetterAndAccidentalsNode [27:29]
+          NoteLetterNode [27:29]: "c"
+          NoteAccidentalsNode [27:30]
+            SharpNode [27:30]
+      NoteNode [27:32]
+        NoteLetterAndAccidentalsNode [27:32]
+          NoteLetterNode [27:32]: "a"
+      OctaveUpNode [27:34]
+      NoteNode [27:36]
+        NoteLetterAndAccidentalsNode [27:36]
+          NoteLetterNode [27:36]: "e"
+      NoteNode [27:38]
+        NoteLetterAndAccidentalsNode [27:38]
+          NoteLetterNode [27:38]: "f"
+          NoteAccidentalsNode [27:39]
+            SharpNode [27:39]
+      NoteNode [27:41]
+        NoteLetterAndAccidentalsNode [27:41]
+          NoteLetterNode [27:41]: "g"
+      NoteNode [27:43]
+        NoteLetterAndAccidentalsNode [27:43]
+          NoteLetterNode [27:43]: "e"
+      NoteNode [27:45]
+        NoteLetterAndAccidentalsNode [27:45]
+          NoteLetterNode [27:45]: "f"
+          NoteAccidentalsNode [27:46]
+            SharpNode [27:46]
+      NoteNode [27:48]
+        NoteLetterAndAccidentalsNode [27:48]
+          NoteLetterNode [27:48]: "g"
+      OctaveSetNode [28:3]: 2
+      NoteNode [28:6]
+        NoteLetterAndAccidentalsNode [28:6]
+          NoteLetterNode [28:6]: "c"
+      NoteNode [28:8]
+        NoteLetterAndAccidentalsNode [28:8]
+          NoteLetterNode [28:8]: "a"
+      OctaveUpNode [28:10]
+      NoteNode [28:12]
+        NoteLetterAndAccidentalsNode [28:12]
+          NoteLetterNode [28:12]: "d"
+      NoteNode [28:14]
+        NoteLetterAndAccidentalsNode [28:14]
+          NoteLetterNode [28:14]: "e"
+      NoteNode [28:16]
+        NoteLetterAndAccidentalsNode [28:16]
+          NoteLetterNode [28:16]: "f"
+          NoteAccidentalsNode [28:17]
+            SharpNode [28:17]
+      NoteNode [28:19]
+        NoteLetterAndAccidentalsNode [28:19]
+          NoteLetterNode [28:19]: "d"
+      NoteNode [28:21]
+        NoteLetterAndAccidentalsNode [28:21]
+          NoteLetterNode [28:21]: "e"
+      NoteNode [28:23]
+        NoteLetterAndAccidentalsNode [28:23]
+          NoteLetterNode [28:23]: "f"
+          NoteAccidentalsNode [28:24]
+            SharpNode [28:24]
+      OctaveDownNode [28:26]
+      NoteNode [28:28]
+        NoteLetterAndAccidentalsNode [28:28]
+          NoteLetterNode [28:28]: "c"
+      NoteNode [28:30]
+        NoteLetterAndAccidentalsNode [28:30]
+          NoteLetterNode [28:30]: "a"
+      OctaveUpNode [28:32]
+      NoteNode [28:34]
+        NoteLetterAndAccidentalsNode [28:34]
+          NoteLetterNode [28:34]: "d"
+      NoteNode [28:36]
+        NoteLetterAndAccidentalsNode [28:36]
+          NoteLetterNode [28:36]: "e"
+      NoteNode [28:38]
+        NoteLetterAndAccidentalsNode [28:38]
+          NoteLetterNode [28:38]: "f"
+          NoteAccidentalsNode [28:39]
+            SharpNode [28:39]
+      NoteNode [28:41]
+        NoteLetterAndAccidentalsNode [28:41]
+          NoteLetterNode [28:41]: "d"
+      NoteNode [28:43]
+        NoteLetterAndAccidentalsNode [28:43]
+          NoteLetterNode [28:43]: "e"
+      NoteNode [28:45]
+        NoteLetterAndAccidentalsNode [28:45]
+          NoteLetterNode [28:45]: "f"
+          NoteAccidentalsNode [28:46]
+            SharpNode [28:46]
+      OctaveSetNode [29:3]: 2
+      NoteNode [29:6]
+        NoteLetterAndAccidentalsNode [29:6]
+          NoteLetterNode [29:6]: "c"
+      NoteNode [29:8]
+        NoteLetterAndAccidentalsNode [29:8]
+          NoteLetterNode [29:8]: "a"
+      OctaveUpNode [29:10]
+      NoteNode [29:12]
+        NoteLetterAndAccidentalsNode [29:12]
+          NoteLetterNode [29:12]: "d"
+      NoteNode [29:14]
+        NoteLetterAndAccidentalsNode [29:14]
+          NoteLetterNode [29:14]: "f"
+          NoteAccidentalsNode [29:15]
+            SharpNode [29:15]
+      NoteNode [29:17]
+        NoteLetterAndAccidentalsNode [29:17]
+          NoteLetterNode [29:17]: "b"
+      OctaveUpNode [29:19]
+      NoteNode [29:21]
+        NoteLetterAndAccidentalsNode [29:21]
+          NoteLetterNode [29:21]: "c"
+          NoteAccidentalsNode [29:22]
+            SharpNode [29:22]
+      NoteNode [29:24]
+        NoteLetterAndAccidentalsNode [29:24]
+          NoteLetterNode [29:24]: "d"
+        DurationNode [29:25]
+          NoteLengthSecondsNode [29:25]: 2
+      RestNode [29:28]
+        DurationNode [29:29]
+          NoteLengthNode [29:29]
+            DenominatorNode: 16
+      OctaveDownNode [30:33]
+      OctaveDownNode [30:34]
+      NoteNode [30:36]
+        NoteLetterAndAccidentalsNode [30:36]
+          NoteLetterNode [30:36]: "a"
+      NoteNode [30:38]
+        NoteLetterAndAccidentalsNode [30:38]
+          NoteLetterNode [30:38]: "b"
+      OctaveUpNode [30:40]
+      NoteNode [30:42]
+        NoteLetterAndAccidentalsNode [30:42]
+          NoteLetterNode [30:42]: "c"
+      NoteNode [30:44]
+        NoteLetterAndAccidentalsNode [30:44]
+          NoteLetterNode [30:44]: "d"
+      NoteNode [30:46]
+        NoteLetterAndAccidentalsNode [30:46]
+          NoteLetterNode [30:46]: "e"
+      NoteNode [30:48]
+        NoteLetterAndAccidentalsNode [30:48]
+          NoteLetterNode [30:48]: "f"
+          NoteAccidentalsNode [30:49]
+            SharpNode [30:49]
+      NoteNode [30:51]
+        NoteLetterAndAccidentalsNode [30:51]
+          NoteLetterNode [30:51]: "g"
+      OctaveSetNode [31:3]: 3
+      NoteNode [31:6]
+        NoteLetterAndAccidentalsNode [31:6]
+          NoteLetterNode [31:6]: "a"
+      NoteNode [31:8]
+        NoteLetterAndAccidentalsNode [31:8]
+          NoteLetterNode [31:8]: "f"
+          NoteAccidentalsNode [31:9]
+            SharpNode [31:9]
+      NoteNode [31:11]
+        NoteLetterAndAccidentalsNode [31:11]
+          NoteLetterNode [31:11]: "d"
+      NoteNode [31:13]
+        NoteLetterAndAccidentalsNode [31:13]
+          NoteLetterNode [31:13]: "e"
+      NoteNode [31:15]
+        NoteLetterAndAccidentalsNode [31:15]
+          NoteLetterNode [31:15]: "f"
+          NoteAccidentalsNode [31:16]
+            SharpNode [31:16]
+      NoteNode [31:18]
+        NoteLetterAndAccidentalsNode [31:18]
+          NoteLetterNode [31:18]: "g"
+      NoteNode [31:20]
+        NoteLetterAndAccidentalsNode [31:20]
+          NoteLetterNode [31:20]: "a"
+      NoteNode [31:22]
+        NoteLetterAndAccidentalsNode [31:22]
+          NoteLetterNode [31:22]: "b"
+      OctaveUpNode [31:24]
+      NoteNode [31:26]
+        NoteLetterAndAccidentalsNode [31:26]
+          NoteLetterNode [31:26]: "c"
+      OctaveDownNode [31:28]
+      NoteNode [31:30]
+        NoteLetterAndAccidentalsNode [31:30]
+          NoteLetterNode [31:30]: "a"
+      NoteNode [31:32]
+        NoteLetterAndAccidentalsNode [31:32]
+          NoteLetterNode [31:32]: "f"
+          NoteAccidentalsNode [31:33]
+            SharpNode [31:33]
+      NoteNode [31:35]
+        NoteLetterAndAccidentalsNode [31:35]
+          NoteLetterNode [31:35]: "g"
+      NoteNode [31:37]
+        NoteLetterAndAccidentalsNode [31:37]
+          NoteLetterNode [31:37]: "a"
+      NoteNode [31:39]
+        NoteLetterAndAccidentalsNode [31:39]
+          NoteLetterNode [31:39]: "b"
+      OctaveUpNode [31:41]
+      NoteNode [31:43]
+        NoteLetterAndAccidentalsNode [31:43]
+          NoteLetterNode [31:43]: "c"
+      NoteNode [31:45]
+        NoteLetterAndAccidentalsNode [31:45]
+          NoteLetterNode [31:45]: "d"
+      OctaveSetNode [32:3]: 4
+      NoteNode [32:6]
+        NoteLetterAndAccidentalsNode [32:6]
+          NoteLetterNode [32:6]: "e"
+          NoteAccidentalsNode [32:7]
+            FlatNode [32:7]
+      NoteNode [32:9]
+        NoteLetterAndAccidentalsNode [32:9]
+          NoteLetterNode [32:9]: "d"
+      NoteNode [32:11]
+        NoteLetterAndAccidentalsNode [32:11]
+          NoteLetterNode [32:11]: "c"
+          NoteAccidentalsNode [32:12]
+            SharpNode [32:12]
+      NoteNode [32:14]
+        NoteLetterAndAccidentalsNode [32:14]
+          NoteLetterNode [32:14]: "d"
+      NoteNode [32:16]
+        NoteLetterAndAccidentalsNode [32:16]
+          NoteLetterNode [32:16]: "d"
+      NoteNode [32:18]
+        NoteLetterAndAccidentalsNode [32:18]
+          NoteLetterNode [32:18]: "c"
+      OctaveDownNode [32:20]
+      NoteNode [32:22]
+        NoteLetterAndAccidentalsNode [32:22]
+          NoteLetterNode [32:22]: "b"
+      OctaveUpNode [32:24]
+      NoteNode [32:26]
+        NoteLetterAndAccidentalsNode [32:26]
+          NoteLetterNode [32:26]: "c"
+      NoteNode [32:28]
+        NoteLetterAndAccidentalsNode [32:28]
+          NoteLetterNode [32:28]: "c"
+      OctaveDownNode [32:30]
+      NoteNode [32:32]
+        NoteLetterAndAccidentalsNode [32:32]
+          NoteLetterNode [32:32]: "a"
+      NoteNode [32:34]
+        NoteLetterAndAccidentalsNode [32:34]
+          NoteLetterNode [32:34]: "f"
+          NoteAccidentalsNode [32:35]
+            SharpNode [32:35]
+      NoteNode [32:37]
+        NoteLetterAndAccidentalsNode [32:37]
+          NoteLetterNode [32:37]: "e"
+      NoteNode [32:39]
+        NoteLetterAndAccidentalsNode [32:39]
+          NoteLetterNode [32:39]: "d"
+      OctaveDownNode [32:41]
+      NoteNode [32:43]
+        NoteLetterAndAccidentalsNode [32:43]
+          NoteLetterNode [32:43]: "a"
+      NoteNode [32:45]
+        NoteLetterAndAccidentalsNode [32:45]
+          NoteLetterNode [32:45]: "b"
+      OctaveUpNode [32:47]
+      NoteNode [32:49]
+        NoteLetterAndAccidentalsNode [32:49]
+          NoteLetterNode [32:49]: "c"
+      OctaveSetNode [33:3]: 2
+      NoteNode [33:6]
+        NoteLetterAndAccidentalsNode [33:6]
+          NoteLetterNode [33:6]: "d"
+      NoteNode [33:8]
+        NoteLetterAndAccidentalsNode [33:8]
+          NoteLetterNode [33:8]: "a"
+      OctaveUpNode [33:10]
+      NoteNode [33:12]
+        NoteLetterAndAccidentalsNode [33:12]
+          NoteLetterNode [33:12]: "d"
+      NoteNode [33:14]
+        NoteLetterAndAccidentalsNode [33:14]
+          NoteLetterNode [33:14]: "f"
+          NoteAccidentalsNode [33:15]
+            SharpNode [33:15]
+      NoteNode [33:17]
+        NoteLetterAndAccidentalsNode [33:17]
+          NoteLetterNode [33:17]: "a"
+      NoteNode [33:19]
+        NoteLetterAndAccidentalsNode [33:19]
+          NoteLetterNode [33:19]: "b"
+      OctaveUpNode [33:21]
+      NoteNode [33:23]
+        NoteLetterAndAccidentalsNode [33:23]
+          NoteLetterNode [33:23]: "c"
+      OctaveDownNode [33:25]
+      NoteNode [33:27]
+        NoteLetterAndAccidentalsNode [33:27]
+          NoteLetterNode [33:27]: "a"
+      NoteNode [33:29]
+        NoteLetterAndAccidentalsNode [33:29]
+          NoteLetterNode [33:29]: "b"
+      NoteNode [33:31]
+        NoteLetterAndAccidentalsNode [33:31]
+          NoteLetterNode [33:31]: "g"
+      NoteNode [33:33]
+        NoteLetterAndAccidentalsNode [33:33]
+          NoteLetterNode [33:33]: "d"
+      NoteNode [33:35]
+        NoteLetterAndAccidentalsNode [33:35]
+          NoteLetterNode [33:35]: "c"
+      OctaveDownNode [33:37]
+      NoteNode [33:39]
+        NoteLetterAndAccidentalsNode [33:39]
+          NoteLetterNode [33:39]: "b"
+      NoteNode [33:41]
+        NoteLetterAndAccidentalsNode [33:41]
+          NoteLetterNode [33:41]: "g"
+      NoteNode [33:43]
+        NoteLetterAndAccidentalsNode [33:43]
+          NoteLetterNode [33:43]: "a"
+      NoteNode [33:45]
+        NoteLetterAndAccidentalsNode [33:45]
+          NoteLetterNode [33:45]: "b"
+      OctaveSetNode [34:3]: 2
+      NoteNode [34:6]
+        NoteLetterAndAccidentalsNode [34:6]
+          NoteLetterNode [34:6]: "d"
+      NoteNode [34:8]
+        NoteLetterAndAccidentalsNode [34:8]
+          NoteLetterNode [34:8]: "g"
+      NoteNode [34:10]
+        NoteLetterAndAccidentalsNode [34:10]
+          NoteLetterNode [34:10]: "b"
+      OctaveUpNode [34:12]
+      NoteNode [34:14]
+        NoteLetterAndAccidentalsNode [34:14]
+          NoteLetterNode [34:14]: "d"
+      NoteNode [34:16]
+        NoteLetterAndAccidentalsNode [34:16]
+          NoteLetterNode [34:16]: "g"
+      NoteNode [34:18]
+        NoteLetterAndAccidentalsNode [34:18]
+          NoteLetterNode [34:18]: "a"
+      NoteNode [34:20]
+        NoteLetterAndAccidentalsNode [34:20]
+          NoteLetterNode [34:20]: "b"
+      NoteNode [34:22]
+        NoteLetterAndAccidentalsNode [34:22]
+          NoteLetterNode [34:22]: "g"
+      OctaveUpNode [34:24]
+      NoteNode [34:26]
+        NoteLetterAndAccidentalsNode [34:26]
+          NoteLetterNode [34:26]: "c"
+          NoteAccidentalsNode [34:27]
+            SharpNode [34:27]
+      OctaveDownNode [34:29]
+      NoteNode [34:31]
+        NoteLetterAndAccidentalsNode [34:31]
+          NoteLetterNode [34:31]: "b"
+          NoteAccidentalsNode [34:32]
+            FlatNode [34:32]
+      NoteNode [34:34]
+        NoteLetterAndAccidentalsNode [34:34]
+          NoteLetterNode [34:34]: "a"
+      NoteNode [34:36]
+        NoteLetterAndAccidentalsNode [34:36]
+          NoteLetterNode [34:36]: "b"
+          NoteAccidentalsNode [34:37]
+            FlatNode [34:37]
+      NoteNode [34:39]
+        NoteLetterAndAccidentalsNode [34:39]
+          NoteLetterNode [34:39]: "b"
+          NoteAccidentalsNode [34:40]
+            FlatNode [34:40]
+      NoteNode [34:42]
+        NoteLetterAndAccidentalsNode [34:42]
+          NoteLetterNode [34:42]: "a"
+      NoteNode [34:44]
+        NoteLetterAndAccidentalsNode [34:44]
+          NoteLetterNode [34:44]: "g"
+          NoteAccidentalsNode [34:45]
+            SharpNode [34:45]
+      NoteNode [34:47]
+        NoteLetterAndAccidentalsNode [34:47]
+          NoteLetterNode [34:47]: "a"
+      OctaveSetNode [35:3]: 3
+      NoteNode [35:6]
+        NoteLetterAndAccidentalsNode [35:6]
+          NoteLetterNode [35:6]: "a"
+      NoteNode [35:8]
+        NoteLetterAndAccidentalsNode [35:8]
+          NoteLetterNode [35:8]: "g"
+      NoteNode [35:10]
+        NoteLetterAndAccidentalsNode [35:10]
+          NoteLetterNode [35:10]: "f"
+          NoteAccidentalsNode [35:11]
+            SharpNode [35:11]
+      NoteNode [35:13]
+        NoteLetterAndAccidentalsNode [35:13]
+          NoteLetterNode [35:13]: "g"
+      NoteNode [35:15]
+        NoteLetterAndAccidentalsNode [35:15]
+          NoteLetterNode [35:15]: "g"
+      NoteNode [35:17]
+        NoteLetterAndAccidentalsNode [35:17]
+          NoteLetterNode [35:17]: "e"
+      NoteNode [35:19]
+        NoteLetterAndAccidentalsNode [35:19]
+          NoteLetterNode [35:19]: "c"
+          NoteAccidentalsNode [35:20]
+            SharpNode [35:20]
+      OctaveDownNode [35:22]
+      NoteNode [35:24]
+        NoteLetterAndAccidentalsNode [35:24]
+          NoteLetterNode [35:24]: "b"
+      NoteNode [35:26]
+        NoteLetterAndAccidentalsNode [35:26]
+          NoteLetterNode [35:26]: "a"
+      OctaveUpNode [35:28]
+      NoteNode [35:30]
+        NoteLetterAndAccidentalsNode [35:30]
+          NoteLetterNode [35:30]: "c"
+          NoteAccidentalsNode [35:31]
+            SharpNode [35:31]
+      NoteNode [35:33]
+        NoteLetterAndAccidentalsNode [35:33]
+          NoteLetterNode [35:33]: "e"
+      NoteNode [35:35]
+        NoteLetterAndAccidentalsNode [35:35]
+          NoteLetterNode [35:35]: "g"
+      NoteNode [35:37]
+        NoteLetterAndAccidentalsNode [35:37]
+          NoteLetterNode [35:37]: "a"
+      OctaveUpNode [35:39]
+      NoteNode [35:41]
+        NoteLetterAndAccidentalsNode [35:41]
+          NoteLetterNode [35:41]: "c"
+          NoteAccidentalsNode [35:42]
+            SharpNode [35:42]
+      NoteNode [35:44]
+        NoteLetterAndAccidentalsNode [35:44]
+          NoteLetterNode [35:44]: "d"
+      NoteNode [35:46]
+        NoteLetterAndAccidentalsNode [35:46]
+          NoteLetterNode [35:46]: "c"
+          NoteAccidentalsNode [35:47]
+            SharpNode [35:47]
+      OctaveSetNode [36:3]: 4
+      NoteNode [36:6]
+        NoteLetterAndAccidentalsNode [36:6]
+          NoteLetterNode [36:6]: "d"
+      OctaveDownNode [36:8]
+      NoteNode [36:10]
+        NoteLetterAndAccidentalsNode [36:10]
+          NoteLetterNode [36:10]: "a"
+      NoteNode [36:12]
+        NoteLetterAndAccidentalsNode [36:12]
+          NoteLetterNode [36:12]: "f"
+          NoteAccidentalsNode [36:13]
+            SharpNode [36:13]
+      NoteNode [36:15]
+        NoteLetterAndAccidentalsNode [36:15]
+          NoteLetterNode [36:15]: "e"
+      NoteNode [36:17]
+        NoteLetterAndAccidentalsNode [36:17]
+          NoteLetterNode [36:17]: "f"
+          NoteAccidentalsNode [36:18]
+            SharpNode [36:18]
+      NoteNode [36:20]
+        NoteLetterAndAccidentalsNode [36:20]
+          NoteLetterNode [36:20]: "a"
+      NoteNode [36:22]
+        NoteLetterAndAccidentalsNode [36:22]
+          NoteLetterNode [36:22]: "d"
+      NoteNode [36:24]
+        NoteLetterAndAccidentalsNode [36:24]
+          NoteLetterNode [36:24]: "f"
+          NoteAccidentalsNode [36:25]
+            SharpNode [36:25]
+      OctaveDownNode [36:27]
+      NoteNode [36:29]
+        NoteLetterAndAccidentalsNode [36:29]
+          NoteLetterNode [36:29]: "a"
+      OctaveUpNode [36:31]
+      NoteNode [36:33]
+        NoteLetterAndAccidentalsNode [36:33]
+          NoteLetterNode [36:33]: "d"
+      NoteNode [36:35]
+        NoteLetterAndAccidentalsNode [36:35]
+          NoteLetterNode [36:35]: "c"
+          NoteAccidentalsNode [36:36]
+            SharpNode [36:36]
+      OctaveDownNode [36:38]
+      NoteNode [36:40]
+        NoteLetterAndAccidentalsNode [36:40]
+          NoteLetterNode [36:40]: "b"
+      NoteNode [36:42]
+        NoteLetterAndAccidentalsNode [36:42]
+          NoteLetterNode [36:42]: "a"
+      NoteNode [36:44]
+        NoteLetterAndAccidentalsNode [36:44]
+          NoteLetterNode [36:44]: "g"
+      NoteNode [36:46]
+        NoteLetterAndAccidentalsNode [36:46]
+          NoteLetterNode [36:46]: "f"
+          NoteAccidentalsNode [36:47]
+            SharpNode [36:47]
+      NoteNode [36:49]
+        NoteLetterAndAccidentalsNode [36:49]
+          NoteLetterNode [36:49]: "e"
+      OctaveSetNode [37:3]: 2
+      NoteNode [37:6]
+        NoteLetterAndAccidentalsNode [37:6]
+          NoteLetterNode [37:6]: "d"
+        DurationNode [37:7]
+          NoteLengthNode [37:7]
+            DenominatorNode: 8
+      OctaveUpNode [37:9]
+      OctaveUpNode [37:10]
+      NoteNode [37:12]
+        NoteLetterAndAccidentalsNode [37:12]
+          NoteLetterNode [37:12]: "c"
+        DurationNode [37:13]
+          NoteLengthNode [37:13]
+            DenominatorNode: 16
+      OctaveDownNode [37:16]
+      NoteNode [37:18]
+        NoteLetterAndAccidentalsNode [37:18]
+          NoteLetterNode [37:18]: "b"
+      NoteNode [37:20]
+        NoteLetterAndAccidentalsNode [37:20]
+          NoteLetterNode [37:20]: "a"
+      NoteNode [37:22]
+        NoteLetterAndAccidentalsNode [37:22]
+          NoteLetterNode [37:22]: "g"
+      NoteNode [37:24]
+        NoteLetterAndAccidentalsNode [37:24]
+          NoteLetterNode [37:24]: "f"
+          NoteAccidentalsNode [37:25]
+            SharpNode [37:25]
+      NoteNode [37:27]
+        NoteLetterAndAccidentalsNode [37:27]
+          NoteLetterNode [37:27]: "e"
+      NoteNode [37:29]
+        NoteLetterAndAccidentalsNode [37:29]
+          NoteLetterNode [37:29]: "d"
+      OctaveUpNode [37:31]
+      NoteNode [37:33]
+        NoteLetterAndAccidentalsNode [37:33]
+          NoteLetterNode [37:33]: "c"
+      OctaveDownNode [37:35]
+      NoteNode [37:37]
+        NoteLetterAndAccidentalsNode [37:37]
+          NoteLetterNode [37:37]: "b"
+      NoteNode [37:39]
+        NoteLetterAndAccidentalsNode [37:39]
+          NoteLetterNode [37:39]: "a"
+      NoteNode [37:41]
+        NoteLetterAndAccidentalsNode [37:41]
+          NoteLetterNode [37:41]: "g"
+      NoteNode [37:43]
+        NoteLetterAndAccidentalsNode [37:43]
+          NoteLetterNode [37:43]: "f"
+          NoteAccidentalsNode [37:44]
+            SharpNode [37:44]
+      NoteNode [37:46]
+        NoteLetterAndAccidentalsNode [37:46]
+          NoteLetterNode [37:46]: "e"
+      NoteNode [37:48]
+        NoteLetterAndAccidentalsNode [37:48]
+          NoteLetterNode [37:48]: "d"
+      OctaveSetNode [38:3]: 3
+      NoteNode [38:6]
+        NoteLetterAndAccidentalsNode [38:6]
+          NoteLetterNode [38:6]: "c"
+      NoteNode [38:8]
+        NoteLetterAndAccidentalsNode [38:8]
+          NoteLetterNode [38:8]: "b"
+      NoteNode [38:10]
+        NoteLetterAndAccidentalsNode [38:10]
+          NoteLetterNode [38:10]: "a"
+      NoteNode [38:12]
+        NoteLetterAndAccidentalsNode [38:12]
+          NoteLetterNode [38:12]: "g"
+      NoteNode [38:14]
+        NoteLetterAndAccidentalsNode [38:14]
+          NoteLetterNode [38:14]: "f"
+          NoteAccidentalsNode [38:15]
+            SharpNode [38:15]
+      NoteNode [38:17]
+        NoteLetterAndAccidentalsNode [38:17]
+          NoteLetterNode [38:17]: "e"
+      NoteNode [38:19]
+        NoteLetterAndAccidentalsNode [38:19]
+          NoteLetterNode [38:19]: "d"
+      NoteNode [38:21]
+        NoteLetterAndAccidentalsNode [38:21]
+          NoteLetterNode [38:21]: "c"
+      OctaveDownNode [38:23]
+      NoteNode [38:25]
+        NoteLetterAndAccidentalsNode [38:25]
+          NoteLetterNode [38:25]: "b"
+      OctaveUpNode [38:27]
+      NoteNode [38:29]
+        NoteLetterAndAccidentalsNode [38:29]
+          NoteLetterNode [38:29]: "a"
+      NoteNode [38:31]
+        NoteLetterAndAccidentalsNode [38:31]
+          NoteLetterNode [38:31]: "g"
+      NoteNode [38:33]
+        NoteLetterAndAccidentalsNode [38:33]
+          NoteLetterNode [38:33]: "f"
+          NoteAccidentalsNode [38:34]
+            SharpNode [38:34]
+      NoteNode [38:36]
+        NoteLetterAndAccidentalsNode [38:36]
+          NoteLetterNode [38:36]: "e"
+      NoteNode [38:38]
+        NoteLetterAndAccidentalsNode [38:38]
+          NoteLetterNode [38:38]: "d"
+      NoteNode [38:40]
+        NoteLetterAndAccidentalsNode [38:40]
+          NoteLetterNode [38:40]: "c"
+      OctaveDownNode [38:42]
+      NoteNode [38:44]
+        NoteLetterAndAccidentalsNode [38:44]
+          NoteLetterNode [38:44]: "b"
+      OctaveSetNode [39:3]: 2
+      NoteNode [39:6]
+        NoteLetterAndAccidentalsNode [39:6]
+          NoteLetterNode [39:6]: "a"
+      OctaveUpNode [39:8]
+      NoteNode [39:10]
+        NoteLetterAndAccidentalsNode [39:10]
+          NoteLetterNode [39:10]: "g"
+      NoteNode [39:12]
+        NoteLetterAndAccidentalsNode [39:12]
+          NoteLetterNode [39:12]: "f"
+          NoteAccidentalsNode [39:13]
+            SharpNode [39:13]
+      NoteNode [39:15]
+        NoteLetterAndAccidentalsNode [39:15]
+          NoteLetterNode [39:15]: "e"
+      NoteNode [39:17]
+        NoteLetterAndAccidentalsNode [39:17]
+          NoteLetterNode [39:17]: "f"
+          NoteAccidentalsNode [39:18]
+            SharpNode [39:18]
+      NoteNode [39:20]
+        NoteLetterAndAccidentalsNode [39:20]
+          NoteLetterNode [39:20]: "a"
+      NoteNode [39:22]
+        NoteLetterAndAccidentalsNode [39:22]
+          NoteLetterNode [39:22]: "d"
+      NoteNode [39:24]
+        NoteLetterAndAccidentalsNode [39:24]
+          NoteLetterNode [39:24]: "a"
+      NoteNode [39:26]
+        NoteLetterAndAccidentalsNode [39:26]
+          NoteLetterNode [39:26]: "e"
+      NoteNode [39:28]
+        NoteLetterAndAccidentalsNode [39:28]
+          NoteLetterNode [39:28]: "a"
+      NoteNode [39:30]
+        NoteLetterAndAccidentalsNode [39:30]
+          NoteLetterNode [39:30]: "f"
+          NoteAccidentalsNode [39:31]
+            SharpNode [39:31]
+      NoteNode [39:33]
+        NoteLetterAndAccidentalsNode [39:33]
+          NoteLetterNode [39:33]: "a"
+      NoteNode [39:35]
+        NoteLetterAndAccidentalsNode [39:35]
+          NoteLetterNode [39:35]: "g"
+      NoteNode [39:37]
+        NoteLetterAndAccidentalsNode [39:37]
+          NoteLetterNode [39:37]: "a"
+      NoteNode [39:39]
+        NoteLetterAndAccidentalsNode [39:39]
+          NoteLetterNode [39:39]: "e"
+      NoteNode [39:41]
+        NoteLetterAndAccidentalsNode [39:41]
+          NoteLetterNode [39:41]: "a"
+      OctaveSetNode [40:3]: 3
+      NoteNode [40:6]
+        NoteLetterAndAccidentalsNode [40:6]
+          NoteLetterNode [40:6]: "f"
+          NoteAccidentalsNode [40:7]
+            SharpNode [40:7]
+      NoteNode [40:9]
+        NoteLetterAndAccidentalsNode [40:9]
+          NoteLetterNode [40:9]: "a"
+      NoteNode [40:11]
+        NoteLetterAndAccidentalsNode [40:11]
+          NoteLetterNode [40:11]: "d"
+      NoteNode [40:13]
+        NoteLetterAndAccidentalsNode [40:13]
+          NoteLetterNode [40:13]: "a"
+      NoteNode [40:15]
+        NoteLetterAndAccidentalsNode [40:15]
+          NoteLetterNode [40:15]: "g"
+      NoteNode [40:17]
+        NoteLetterAndAccidentalsNode [40:17]
+          NoteLetterNode [40:17]: "a"
+      NoteNode [40:19]
+        NoteLetterAndAccidentalsNode [40:19]
+          NoteLetterNode [40:19]: "e"
+      NoteNode [40:21]
+        NoteLetterAndAccidentalsNode [40:21]
+          NoteLetterNode [40:21]: "a"
+      NoteNode [40:23]
+        NoteLetterAndAccidentalsNode [40:23]
+          NoteLetterNode [40:23]: "f"
+          NoteAccidentalsNode [40:24]
+            SharpNode [40:24]
+      NoteNode [40:26]
+        NoteLetterAndAccidentalsNode [40:26]
+          NoteLetterNode [40:26]: "a"
+      NoteNode [40:28]
+        NoteLetterAndAccidentalsNode [40:28]
+          NoteLetterNode [40:28]: "d"
+      NoteNode [40:30]
+        NoteLetterAndAccidentalsNode [40:30]
+          NoteLetterNode [40:30]: "a"
+      NoteNode [40:32]
+        NoteLetterAndAccidentalsNode [40:32]
+          NoteLetterNode [40:32]: "g"
+      NoteNode [40:34]
+        NoteLetterAndAccidentalsNode [40:34]
+          NoteLetterNode [40:34]: "a"
+      NoteNode [40:36]
+        NoteLetterAndAccidentalsNode [40:36]
+          NoteLetterNode [40:36]: "e"
+      NoteNode [40:38]
+        NoteLetterAndAccidentalsNode [40:38]
+          NoteLetterNode [40:38]: "a"
+      OctaveSetNode [42:3]: 3
+      NoteNode [42:6]
+        NoteLetterAndAccidentalsNode [42:6]
+          NoteLetterNode [42:6]: "f"
+          NoteAccidentalsNode [42:7]
+            SharpNode [42:7]
+      NoteNode [42:9]
+        NoteLetterAndAccidentalsNode [42:9]
+          NoteLetterNode [42:9]: "a"
+      NoteNode [42:11]
+        NoteLetterAndAccidentalsNode [42:11]
+          NoteLetterNode [42:11]: "d"
+      NoteNode [42:13]
+        NoteLetterAndAccidentalsNode [42:13]
+          NoteLetterNode [42:13]: "a"
+      NoteNode [42:15]
+        NoteLetterAndAccidentalsNode [42:15]
+          NoteLetterNode [42:15]: "e"
+      NoteNode [42:17]
+        NoteLetterAndAccidentalsNode [42:17]
+          NoteLetterNode [42:17]: "a"
+      NoteNode [42:19]
+        NoteLetterAndAccidentalsNode [42:19]
+          NoteLetterNode [42:19]: "f"
+          NoteAccidentalsNode [42:20]
+            SharpNode [42:20]
+      NoteNode [42:22]
+        NoteLetterAndAccidentalsNode [42:22]
+          NoteLetterNode [42:22]: "a"
+      MarkerNode [46:3]: "weaving"
+      LispListNode [47:3]
+        LispSymbolNode [47:4]: "quant"
+        LispNumberNode [47:10]: 65
+      OctaveSetNode [48:3]: 3
+      NoteNode [48:6]
+        NoteLetterAndAccidentalsNode [48:6]
+          NoteLetterNode [48:6]: "g"
+        DurationNode [48:7]
+          NoteLengthNode [48:7]
+            DenominatorNode: 8
+      NoteNode [48:9]
+        NoteLetterAndAccidentalsNode [48:9]
+          NoteLetterNode [48:9]: "a"
+      NoteNode [48:11]
+        NoteLetterAndAccidentalsNode [48:11]
+          NoteLetterNode [48:11]: "b"
+      NoteNode [48:13]
+        NoteLetterAndAccidentalsNode [48:13]
+          NoteLetterNode [48:13]: "d"
+      NoteNode [48:15]
+        NoteLetterAndAccidentalsNode [48:15]
+          NoteLetterNode [48:15]: "a"
+      NoteNode [48:17]
+        NoteLetterAndAccidentalsNode [48:17]
+          NoteLetterNode [48:17]: "b"
+      OctaveUpNode [48:19]
+      NoteNode [48:21]
+        NoteLetterAndAccidentalsNode [48:21]
+          NoteLetterNode [48:21]: "c"
+      OctaveDownNode [48:23]
+      NoteNode [48:25]
+        NoteLetterAndAccidentalsNode [48:25]
+          NoteLetterNode [48:25]: "d"
+      NoteNode [48:27]
+        NoteLetterAndAccidentalsNode [48:27]
+          NoteLetterNode [48:27]: "b"
+      OctaveUpNode [48:29]
+      NoteNode [48:31]
+        NoteLetterAndAccidentalsNode [48:31]
+          NoteLetterNode [48:31]: "c"
+      NoteNode [48:33]
+        NoteLetterAndAccidentalsNode [48:33]
+          NoteLetterNode [48:33]: "d"
+      OctaveDownNode [48:35]
+      NoteNode [48:37]
+        NoteLetterAndAccidentalsNode [48:37]
+          NoteLetterNode [48:37]: "b"
+      OctaveUpNode [48:39]
+      BarlineNode [48:41]
+      NoteNode [48:43]
+        NoteLetterAndAccidentalsNode [48:43]
+          NoteLetterNode [48:43]: "c"
+      OctaveDownNode [48:45]
+      NoteNode [48:47]
+        NoteLetterAndAccidentalsNode [48:47]
+          NoteLetterNode [48:47]: "b"
+      OctaveUpNode [48:49]
+      NoteNode [48:51]
+        NoteLetterAndAccidentalsNode [48:51]
+          NoteLetterNode [48:51]: "c"
+      OctaveDownNode [48:53]
+      NoteNode [48:55]
+        NoteLetterAndAccidentalsNode [48:55]
+          NoteLetterNode [48:55]: "a"
+      NoteNode [48:57]
+        NoteLetterAndAccidentalsNode [48:57]
+          NoteLetterNode [48:57]: "b"
+      NoteNode [48:59]
+        NoteLetterAndAccidentalsNode [48:59]
+          NoteLetterNode [48:59]: "a"
+      NoteNode [48:61]
+        NoteLetterAndAccidentalsNode [48:61]
+          NoteLetterNode [48:61]: "b"
+      NoteNode [48:63]
+        NoteLetterAndAccidentalsNode [48:63]
+          NoteLetterNode [48:63]: "g"
+      BarlineNode [48:65]
+      OctaveSetNode [49:3]: 3
+      NoteNode [49:6]
+        NoteLetterAndAccidentalsNode [49:6]
+          NoteLetterNode [49:6]: "a"
+      NoteNode [49:8]
+        NoteLetterAndAccidentalsNode [49:8]
+          NoteLetterNode [49:8]: "g"
+      NoteNode [49:10]
+        NoteLetterAndAccidentalsNode [49:10]
+          NoteLetterNode [49:10]: "a"
+      NoteNode [49:12]
+        NoteLetterAndAccidentalsNode [49:12]
+          NoteLetterNode [49:12]: "f"
+          NoteAccidentalsNode [49:13]
+            SharpNode [49:13]
+      LispListNode [51:3]
+        LispSymbolNode [51:4]: "quant"
+        LispNumberNode [51:10]: 100
+      OctaveSetNode [52:3]: 3
+      NoteNode [52:6]
+        NoteLetterAndAccidentalsNode [52:6]
+          NoteLetterNode [52:6]: "g"
+        DurationNode [52:7]
+          NoteLengthNode [52:7]
+            DenominatorNode: 16
+      NoteNode [52:10]
+        NoteLetterAndAccidentalsNode [52:10]
+          NoteLetterNode [52:10]: "a"
+      NoteNode [52:12]
+        NoteLetterAndAccidentalsNode [52:12]
+          NoteLetterNode [52:12]: "f"
+          NoteAccidentalsNode [52:13]
+            SharpNode [52:13]
+      NoteNode [52:15]
+        NoteLetterAndAccidentalsNode [52:15]
+          NoteLetterNode [52:15]: "a"
+      NoteNode [52:17]
+        NoteLetterAndAccidentalsNode [52:17]
+          NoteLetterNode [52:17]: "g"
+      NoteNode [52:19]
+        NoteLetterAndAccidentalsNode [52:19]
+          NoteLetterNode [52:19]: "a"
+      NoteNode [52:21]
+        NoteLetterAndAccidentalsNode [52:21]
+          NoteLetterNode [52:21]: "e"
+      NoteNode [52:23]
+        NoteLetterAndAccidentalsNode [52:23]
+          NoteLetterNode [52:23]: "a"
+      OctaveSetNode [53:3]: 3
+      NoteNode [53:6]
+        NoteLetterAndAccidentalsNode [53:6]
+          NoteLetterNode [53:6]: "f"
+          NoteAccidentalsNode [53:7]
+            SharpNode [53:7]
+      NoteNode [53:9]
+        NoteLetterAndAccidentalsNode [53:9]
+          NoteLetterNode [53:9]: "a"
+      NoteNode [53:11]
+        NoteLetterAndAccidentalsNode [53:11]
+          NoteLetterNode [53:11]: "d"
+      NoteNode [53:13]
+        NoteLetterAndAccidentalsNode [53:13]
+          NoteLetterNode [53:13]: "e"
+      NoteNode [53:15]
+        NoteLetterAndAccidentalsNode [53:15]
+          NoteLetterNode [53:15]: "f"
+      NoteNode [53:17]
+        NoteLetterAndAccidentalsNode [53:17]
+          NoteLetterNode [53:17]: "d"
+      NoteNode [53:19]
+        NoteLetterAndAccidentalsNode [53:19]
+          NoteLetterNode [53:19]: "f"
+          NoteAccidentalsNode [53:20]
+            SharpNode [53:20]
+      NoteNode [53:22]
+        NoteLetterAndAccidentalsNode [53:22]
+          NoteLetterNode [53:22]: "d"
+      NoteNode [53:24]
+        NoteLetterAndAccidentalsNode [53:24]
+          NoteLetterNode [53:24]: "g"
+      NoteNode [53:26]
+        NoteLetterAndAccidentalsNode [53:26]
+          NoteLetterNode [53:26]: "d"
+      NoteNode [53:28]
+        NoteLetterAndAccidentalsNode [53:28]
+          NoteLetterNode [53:28]: "g"
+          NoteAccidentalsNode [53:29]
+            SharpNode [53:29]
+      NoteNode [53:31]
+        NoteLetterAndAccidentalsNode [53:31]
+          NoteLetterNode [53:31]: "d"
+      NoteNode [53:33]
+        NoteLetterAndAccidentalsNode [53:33]
+          NoteLetterNode [53:33]: "a"
+      NoteNode [53:35]
+        NoteLetterAndAccidentalsNode [53:35]
+          NoteLetterNode [53:35]: "d"
+      NoteNode [53:37]
+        NoteLetterAndAccidentalsNode [53:37]
+          NoteLetterNode [53:37]: "b"
+          NoteAccidentalsNode [53:38]
+            FlatNode [53:38]
+      NoteNode [53:40]
+        NoteLetterAndAccidentalsNode [53:40]
+          NoteLetterNode [53:40]: "d"
+      OctaveSetNode [54:3]: 3
+      NoteNode [54:6]
+        NoteLetterAndAccidentalsNode [54:6]
+          NoteLetterNode [54:6]: "b"
+      NoteNode [54:8]
+        NoteLetterAndAccidentalsNode [54:8]
+          NoteLetterNode [54:8]: "d"
+      OctaveUpNode [54:10]
+      NoteNode [54:12]
+        NoteLetterAndAccidentalsNode [54:12]
+          NoteLetterNode [54:12]: "c"
+      OctaveDownNode [54:14]
+      NoteNode [54:16]
+        NoteLetterAndAccidentalsNode [54:16]
+          NoteLetterNode [54:16]: "d"
+      OctaveUpNode [54:18]
+      NoteNode [54:20]
+        NoteLetterAndAccidentalsNode [54:20]
+          NoteLetterNode [54:20]: "c"
+          NoteAccidentalsNode [54:21]
+            SharpNode [54:21]
+      OctaveDownNode [54:23]
+      NoteNode [54:25]
+        NoteLetterAndAccidentalsNode [54:25]
+          NoteLetterNode [54:25]: "d"
+      OctaveUpNode [54:27]
+      NoteNode [54:29]
+        NoteLetterAndAccidentalsNode [54:29]
+          NoteLetterNode [54:29]: "d"
+      OctaveDownNode [54:31]
+      NoteNode [54:33]
+        NoteLetterAndAccidentalsNode [54:33]
+          NoteLetterNode [54:33]: "d"
+      OctaveUpNode [54:35]
+      NoteNode [54:37]
+        NoteLetterAndAccidentalsNode [54:37]
+          NoteLetterNode [54:37]: "e"
+          NoteAccidentalsNode [54:38]
+            FlatNode [54:38]
+      OctaveDownNode [54:40]
+      NoteNode [54:42]
+        NoteLetterAndAccidentalsNode [54:42]
+          NoteLetterNode [54:42]: "d"
+      OctaveUpNode [54:44]
+      NoteNode [54:46]
+        NoteLetterAndAccidentalsNode [54:46]
+          NoteLetterNode [54:46]: "e"
+      OctaveDownNode [54:48]
+      NoteNode [54:50]
+        NoteLetterAndAccidentalsNode [54:50]
+          NoteLetterNode [54:50]: "d"
+      OctaveUpNode [54:52]
+      NoteNode [54:54]
+        NoteLetterAndAccidentalsNode [54:54]
+          NoteLetterNode [54:54]: "f"
+      OctaveDownNode [54:56]
+      NoteNode [54:58]
+        NoteLetterAndAccidentalsNode [54:58]
+          NoteLetterNode [54:58]: "d"
+      OctaveUpNode [54:60]
+      NoteNode [54:62]
+        NoteLetterAndAccidentalsNode [54:62]
+          NoteLetterNode [54:62]: "f"
+          NoteAccidentalsNode [54:63]
+            SharpNode [54:63]
+      OctaveDownNode [54:65]
+      NoteNode [54:67]
+        NoteLetterAndAccidentalsNode [54:67]
+          NoteLetterNode [54:67]: "d"
+      OctaveUpNode [54:69]
+      NoteNode [54:71]
+        NoteLetterAndAccidentalsNode [54:71]
+          NoteLetterNode [54:71]: "f"
+          NoteAccidentalsNode [54:72]
+            SharpNode [54:72]
+      OctaveDownNode [54:74]
+      NoteNode [54:76]
+        NoteLetterAndAccidentalsNode [54:76]
+          NoteLetterNode [54:76]: "d"
+      OctaveSetNode [55:3]: 4
+      NoteNode [55:6]
+        NoteLetterAndAccidentalsNode [55:6]
+          NoteLetterNode [55:6]: "g"
+      OctaveDownNode [55:8]
+      NoteNode [55:10]
+        NoteLetterAndAccidentalsNode [55:10]
+          NoteLetterNode [55:10]: "b"
+      NoteNode [55:12]
+        NoteLetterAndAccidentalsNode [55:12]
+          NoteLetterNode [55:12]: "d"
+      NoteNode [55:14]
+        NoteLetterAndAccidentalsNode [55:14]
+          NoteLetterNode [55:14]: "b"
+      OctaveUpNode [55:16]
+      NoteNode [55:18]
+        NoteLetterAndAccidentalsNode [55:18]
+          NoteLetterNode [55:18]: "g"
+      OctaveDownNode [55:20]
+      NoteNode [55:22]
+        NoteLetterAndAccidentalsNode [55:22]
+          NoteLetterNode [55:22]: "b"
+      OctaveUpNode [55:24]
+      NoteNode [55:26]
+        NoteLetterAndAccidentalsNode [55:26]
+          NoteLetterNode [55:26]: "g"
+      OctaveDownNode [55:28]
+      NoteNode [55:30]
+        NoteLetterAndAccidentalsNode [55:30]
+          NoteLetterNode [55:30]: "b"
+      OctaveUpNode [55:32]
+      NoteNode [55:34]
+        NoteLetterAndAccidentalsNode [55:34]
+          NoteLetterNode [55:34]: "g"
+      OctaveDownNode [55:36]
+      NoteNode [55:38]
+        NoteLetterAndAccidentalsNode [55:38]
+          NoteLetterNode [55:38]: "b"
+      NoteNode [55:40]
+        NoteLetterAndAccidentalsNode [55:40]
+          NoteLetterNode [55:40]: "d"
+      NoteNode [55:42]
+        NoteLetterAndAccidentalsNode [55:42]
+          NoteLetterNode [55:42]: "b"
+      OctaveUpNode [55:44]
+      NoteNode [55:46]
+        NoteLetterAndAccidentalsNode [55:46]
+          NoteLetterNode [55:46]: "g"
+      OctaveDownNode [55:48]
+      NoteNode [55:50]
+        NoteLetterAndAccidentalsNode [55:50]
+          NoteLetterNode [55:50]: "b"
+      OctaveUpNode [55:52]
+      NoteNode [55:54]
+        NoteLetterAndAccidentalsNode [55:54]
+          NoteLetterNode [55:54]: "g"
+      OctaveDownNode [55:56]
+      NoteNode [55:58]
+        NoteLetterAndAccidentalsNode [55:58]
+          NoteLetterNode [55:58]: "b"
+      OctaveSetNode [56:3]: 4
+      NoteNode [56:6]
+        NoteLetterAndAccidentalsNode [56:6]
+          NoteLetterNode [56:6]: "g"
+      OctaveDownNode [56:8]
+      NoteNode [56:10]
+        NoteLetterAndAccidentalsNode [56:10]
+          NoteLetterNode [56:10]: "a"
+      NoteNode [56:12]
+        NoteLetterAndAccidentalsNode [56:12]
+          NoteLetterNode [56:12]: "d"
+      NoteNode [56:14]
+        NoteLetterAndAccidentalsNode [56:14]
+          NoteLetterNode [56:14]: "a"
+      OctaveUpNode [56:16]
+      NoteNode [56:18]
+        NoteLetterAndAccidentalsNode [56:18]
+          NoteLetterNode [56:18]: "g"
+      OctaveDownNode [56:20]
+      NoteNode [56:22]
+        NoteLetterAndAccidentalsNode [56:22]
+          NoteLetterNode [56:22]: "a"
+      OctaveUpNode [56:24]
+      NoteNode [56:26]
+        NoteLetterAndAccidentalsNode [56:26]
+          NoteLetterNode [56:26]: "g"
+      OctaveDownNode [56:28]
+      NoteNode [56:30]
+        NoteLetterAndAccidentalsNode [56:30]
+          NoteLetterNode [56:30]: "a"
+      OctaveUpNode [56:32]
+      NoteNode [56:34]
+        NoteLetterAndAccidentalsNode [56:34]
+          NoteLetterNode [56:34]: "g"
+      OctaveDownNode [56:36]
+      NoteNode [56:38]
+        NoteLetterAndAccidentalsNode [56:38]
+          NoteLetterNode [56:38]: "a"
+      NoteNode [56:40]
+        NoteLetterAndAccidentalsNode [56:40]
+          NoteLetterNode [56:40]: "d"
+      NoteNode [56:42]
+        NoteLetterAndAccidentalsNode [56:42]
+          NoteLetterNode [56:42]: "a"
+      OctaveUpNode [56:44]
+      NoteNode [56:46]
+        NoteLetterAndAccidentalsNode [56:46]
+          NoteLetterNode [56:46]: "g"
+      OctaveDownNode [56:48]
+      NoteNode [56:50]
+        NoteLetterAndAccidentalsNode [56:50]
+          NoteLetterNode [56:50]: "a"
+      OctaveUpNode [56:52]
+      NoteNode [56:54]
+        NoteLetterAndAccidentalsNode [56:54]
+          NoteLetterNode [56:54]: "g"
+      OctaveDownNode [56:56]
+      NoteNode [56:58]
+        NoteLetterAndAccidentalsNode [56:58]
+          NoteLetterNode [56:58]: "a"
+      OctaveSetNode [57:3]: 4
+      NoteNode [57:6]
+        NoteLetterAndAccidentalsNode [57:6]
+          NoteLetterNode [57:6]: "f"
+          NoteAccidentalsNode [57:7]
+            SharpNode [57:7]
+      NoteNode [57:9]
+        NoteLetterAndAccidentalsNode [57:9]
+          NoteLetterNode [57:9]: "c"
+      OctaveDownNode [57:11]
+      NoteNode [57:13]
+        NoteLetterAndAccidentalsNode [57:13]
+          NoteLetterNode [57:13]: "d"
+      OctaveUpNode [57:15]
+      NoteNode [57:17]
+        NoteLetterAndAccidentalsNode [57:17]
+          NoteLetterNode [57:17]: "c"
+      NoteNode [57:19]
+        NoteLetterAndAccidentalsNode [57:19]
+          NoteLetterNode [57:19]: "f"
+          NoteAccidentalsNode [57:20]
+            SharpNode [57:20]
+      NoteNode [57:22]
+        NoteLetterAndAccidentalsNode [57:22]
+          NoteLetterNode [57:22]: "c"
+      NoteNode [57:24]
+        NoteLetterAndAccidentalsNode [57:24]
+          NoteLetterNode [57:24]: "f"
+          NoteAccidentalsNode [57:25]
+            SharpNode [57:25]
+      NoteNode [57:27]
+        NoteLetterAndAccidentalsNode [57:27]
+          NoteLetterNode [57:27]: "c"
+      NoteNode [57:29]
+        NoteLetterAndAccidentalsNode [57:29]
+          NoteLetterNode [57:29]: "f"
+          NoteAccidentalsNode [57:30]
+            SharpNode [57:30]
+      NoteNode [57:32]
+        NoteLetterAndAccidentalsNode [57:32]
+          NoteLetterNode [57:32]: "c"
+      OctaveDownNode [57:34]
+      NoteNode [57:36]
+        NoteLetterAndAccidentalsNode [57:36]
+          NoteLetterNode [57:36]: "d"
+      OctaveUpNode [57:38]
+      NoteNode [57:40]
+        NoteLetterAndAccidentalsNode [57:40]
+          NoteLetterNode [57:40]: "c"
+      NoteNode [57:42]
+        NoteLetterAndAccidentalsNode [57:42]
+          NoteLetterNode [57:42]: "f"
+          NoteAccidentalsNode [57:43]
+            SharpNode [57:43]
+      NoteNode [57:45]
+        NoteLetterAndAccidentalsNode [57:45]
+          NoteLetterNode [57:45]: "c"
+      NoteNode [57:47]
+        NoteLetterAndAccidentalsNode [57:47]
+          NoteLetterNode [57:47]: "f"
+          NoteAccidentalsNode [57:48]
+            SharpNode [57:48]
+      NoteNode [57:50]
+        NoteLetterAndAccidentalsNode [57:50]
+          NoteLetterNode [57:50]: "c"
+      VoiceGroupNode [60:3]
+        VoiceNode [60:3]
+          VoiceNumberNode [60:3]: 1
+          EventSequenceNode [60:7]
+            OctaveSetNode [60:7]: 2
+            NoteNode [60:10]
+              NoteLetterAndAccidentalsNode [60:10]
+                NoteLetterNode [60:10]: "g"
+              DurationNode [60:11]
+                NoteLengthNode [60:11]
+                  DenominatorNode: 1
+        VoiceNode [61:3]
+          VoiceNumberNode [61:3]: 2
+          EventSequenceNode [61:7]
+            OctaveSetNode [61:7]: 3
+            RestNode [61:10]
+              DurationNode [61:11]
+                NoteLengthNode [61:11]
+                  DenominatorNode: 16
+            NoteNode [61:14]
+              NoteLetterAndAccidentalsNode [61:14]
+                NoteLetterNode [61:14]: "b"
+              DurationNode [61:15]
+                NoteLengthNode [61:15]
+                  DenominatorNode: 8
+                  DotsNode: 1
+                NoteLengthNode [61:18]
+                  DenominatorNode: 2
+                  DotsNode: 1
+        VoiceNode [62:3]
+          VoiceNumberNode [62:3]: 3
+          EventSequenceNode [62:7]
+            OctaveSetNode [62:7]: 4
+            RestNode [62:10]
+              DurationNode [62:11]
+                NoteLengthNode [62:11]
+                  DenominatorNode: 8
+            NoteNode [62:14]
+              NoteLetterAndAccidentalsNode [62:14]
+                NoteLetterNode [62:14]: "g"
+              DurationNode [62:15]
+                NoteLengthNode [62:15]
+                  DenominatorNode: 8
+                NoteLengthNode [62:17]
+                  DenominatorNode: 2
+                  DotsNode: 1
+  PartNode [65:1]
+    PartDeclarationNode [65:1]
+      PartNamesNode [65:1]
+        PartNameNode [65:1]: "cello"
+      PartAliasNode [65:7]: "aux"
+    EventSequenceNode [66:3]
+      AtMarkerNode [66:3]: "weaving"
+      LispListNode [67:3]
+        LispSymbolNode [67:4]: "quant"
+        LispNumberNode [67:10]: 65
+      LispListNode [67:14]
+        LispSymbolNode [67:15]: "p"
+      OctaveSetNode [68:3]: 3
+      RestNode [68:6]
+        DurationNode [68:7]
+          NoteLengthNode [68:7]
+            DenominatorNode: 16
+      NoteNode [68:10]
+        NoteLetterAndAccidentalsNode [68:10]
+          NoteLetterNode [68:10]: "a"
+        DurationNode [68:11]
+          NoteLengthNode [68:11]
+            DenominatorNode: 8
+      NoteNode [68:13]
+        NoteLetterAndAccidentalsNode [68:13]
+          NoteLetterNode [68:13]: "a"
+      NoteNode [68:15]
+        NoteLetterAndAccidentalsNode [68:15]
+          NoteLetterNode [68:15]: "a"
+      NoteNode [68:17]
+        NoteLetterAndAccidentalsNode [68:17]
+          NoteLetterNode [68:17]: "a"
+      BarlineNode [68:19]
+      NoteNode [68:21]
+        NoteLetterAndAccidentalsNode [68:21]
+          NoteLetterNode [68:21]: "a"
+      NoteNode [68:23]
+        NoteLetterAndAccidentalsNode [68:23]
+          NoteLetterNode [68:23]: "a"
+      NoteNode [68:25]
+        NoteLetterAndAccidentalsNode [68:25]
+          NoteLetterNode [68:25]: "a"
+      NoteNode [68:27]
+        NoteLetterAndAccidentalsNode [68:27]
+          NoteLetterNode [68:27]: "a"
+      NoteNode [68:29]
+        NoteLetterAndAccidentalsNode [68:29]
+          NoteLetterNode [68:29]: "a"
+      NoteNode [68:31]
+        NoteLetterAndAccidentalsNode [68:31]
+          NoteLetterNode [68:31]: "a"
+      NoteNode [68:33]
+        NoteLetterAndAccidentalsNode [68:33]
+          NoteLetterNode [68:33]: "a"
+      NoteNode [68:35]
+        NoteLetterAndAccidentalsNode [68:35]
+          NoteLetterNode [68:35]: "a"
+      BarlineNode [68:37]
+      NoteNode [68:39]
+        NoteLetterAndAccidentalsNode [68:39]
+          NoteLetterNode [68:39]: "a"
+      NoteNode [68:41]
+        NoteLetterAndAccidentalsNode [68:41]
+          NoteLetterNode [68:41]: "a"
+      NoteNode [68:43]
+        NoteLetterAndAccidentalsNode [68:43]
+          NoteLetterNode [68:43]: "a"
+      NoteNode [68:45]
+        NoteLetterAndAccidentalsNode [68:45]
+          NoteLetterNode [68:45]: "a"
+      NoteNode [68:47]
+        NoteLetterAndAccidentalsNode [68:47]
+          NoteLetterNode [68:47]: "a"
+      NoteNode [68:49]
+        NoteLetterAndAccidentalsNode [68:49]
+          NoteLetterNode [68:49]: "a"
+      NoteNode [68:51]
+        NoteLetterAndAccidentalsNode [68:51]
+          NoteLetterNode [68:51]: "a"
+      NoteNode [68:53]
+        NoteLetterAndAccidentalsNode [68:53]
+          NoteLetterNode [68:53]: "a"
+      BarlineNode [68:55]
+      NoteNode [68:57]
+        NoteLetterAndAccidentalsNode [68:57]
+          NoteLetterNode [68:57]: "a"
+      NoteNode [68:59]
+        NoteLetterAndAccidentalsNode [68:59]
+          NoteLetterNode [68:59]: "a"
+      NoteNode [68:61]
+        NoteLetterAndAccidentalsNode [68:61]
+          NoteLetterNode [68:61]: "a"
+      NoteNode [68:63]
+        NoteLetterAndAccidentalsNode [68:63]
+          NoteLetterNode [68:63]: "a"

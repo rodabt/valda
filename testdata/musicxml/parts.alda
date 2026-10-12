@@ -1,0 +1,14 @@
+midi-flute:
+  (key-signature "") c4 d e f | g4 a b > c | < b4 a g f | e4 d c2
+
+midi-oboe:
+  (key-signature "") c4 e g > c | < g4 e c2 | g1 | c1
+
+midi-clarinet:
+  (key-signature "f+ c+") (transpose -2) d4 d d d | r1 | d4 d d d | r1
+
+midi-bassoon:
+  (key-signature "") o3 c1 | g1 | c1 | c1
+
+midi-french-horn:
+  (key-signature "f+") (transpose -7) g4 b g b | > d4 < b g2 | r1 | g1
