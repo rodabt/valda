@@ -65,6 +65,40 @@ with the same ops (`eval-and-play`, `load`, `replay`, `score-data`, `export`,
 etc.) and the same `.alda-nrepl-port` file. Alda editor integrations should
 therefore work with it.
 
+## Claude Code skills
+
+`skills/` holds two [Claude Code](https://claude.com/claude-code) skills that
+write music for valda. You describe what you want to play along with. Claude
+plans the form, writes a `.alda` score, checks it with valda, and exports MIDI
+or WAV.
+
+| Skill | Writes |
+|---|---|
+| `valda-music` | Backing and jam tracks (blues, rock, pop, funk, jazz, bossa, reggae, country, metal, ballad), chord progressions, and practice material: scales, modes, arpeggios, interval and rhythm drills, tempo ramps with a click |
+| `valda-drums` | Rock, pop and metal drum parts: grooves, fills, crashes, builds, stops and endings arranged over a song form, practice loops, and drums for an existing score |
+
+For example:
+
+> A 12-bar blues in A at 96 BPM with bass, piano and drums. Leave the guitar
+> out, I'll play that.
+
+> A pop-punk drum track at 170 BPM: verse, chorus, verse, chorus, bridge,
+> double chorus. Put a fill into every chorus.
+
+Use them together for a full band: `valda-music` covers everything except
+detailed drum parts, which are `valda-drums`' job. Each skill has a `SKILL.md`, reference notes (Alda syntax,
+theory, genres and exercises; the GM drum map, grooves, fills and song
+structure) and templates to start from: `backing-track.alda`,
+`scale-exercise.alda` and `song-drums.alda`. Exported drums use MIDI channel
+10, so they drop into any DAW drum track.
+
+```
+skills/install.sh     # symlink both skills into ~/.claude/skills (or $CLAUDE_SKILLS_DIR)
+skills/test.sh        # check every code snippet and template with valda
+```
+
+Restart Claude Code (or start a new session) after installing.
+
 ## Architecture
 
 ```
