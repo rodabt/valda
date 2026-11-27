@@ -7,7 +7,7 @@ SRC="$(cd "$(dirname "$0")" && pwd)"
 DEST_DIR="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
 mkdir -p "$DEST_DIR"
 
-for skill in valda-music valda-drums; do
+for skill in valda-music valda-drums valda-cinematic; do
 	if [ ! -f "$SRC/$skill/SKILL.md" ]; then
 		echo "install.sh: $SRC/$skill has no SKILL.md" >&2
 		exit 1

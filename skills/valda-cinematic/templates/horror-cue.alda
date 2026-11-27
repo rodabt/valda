@@ -1,0 +1,77 @@
+# Horror cue ("slow burn + stinger" arc): no key, E as a gravity point, semitone clusters.
+# 16 bars @ 64 BPM (3.75 s/bar) = 1:00. 8 melodic parts + percussion.
+#
+# | marker   | bars  | time   | texture                                                         | dyn    |
+# |----------|-------|--------|-----------------------------------------------------------------|--------|
+# | drone    | 1-4   | 0:00   | contrabass low E, tremolo E/F semitone, atmosphere pad          | pp     |
+# | musicbox | 5-8   | 0:15   | celesta "music box" tune with wrong notes (b6, tritone)         | p      |
+# | creep    | 9-12  | 0:30   | E-F ostinato gets faster (4ths→8ths→triplets→16ths), cluster grows, choir, heartbeat | p→f |
+# | peak     | 13-14 | 0:45   | everything at once, cymbal roll, high string cluster            | ff     |
+# | silence  | 14.3  | 0:50.6 | 2 beats of total silence in every part                          | —      |
+# | stinger  | 15    | 0:52.5 | fff cluster in every register + low piano + crash/china + timpani | fff  |
+# | (decay)  | 16    | 0:56.3 | faint drone and the music-box fragment, unresolved              | pp     |
+#
+# Audition the payoff: valda play -f horror-cue.alda --from peak
+
+(tempo! 64)
+
+midi-contrabass:
+  (track-vol 64) (pan 72) (quant 100)
+  %drone    (vol 45) o1 e1~1~1~1
+  %musicbox (vol 48) o1 e1~1 | (vol 52) o1 e2 f2 | o1 e2 f2
+  %creep    (vol 58) o1 e4 f4 e4 f4 | (vol 64) o1 e8 f e f e f e f |
+            (vol 72) o1 e12 f e f e f e f e f e f | (vol 80) o1 [e16 f]*8
+  %peak     (vol 90) o1 [e16 f]*8 | (vol 100) o1 [e16 f]*4
+  %silence  r2
+  %stinger  (vol 100) o1 e2/f r2 | r1
+
+midi-tremolo-strings:
+  (track-vol 64) (pan 40) (quant 100)
+  (vol 28) o2 e1~1~1~1/f
+  (vol 32) o2 e1~1~1~1/f
+  (vol 40) o2 e1/f/b- | (vol 50) o2 e1/f/b-/>e-< | (vol 60) o2 e1/f/b-/>e-/e< | (vol 72) o2 e1/f/b-/>e-/e/f<
+  (vol 85) o2 e1/f/b-/>e-/e/f/b-< | (vol 100) o2 e2/f/b-/>e-/e/f/b-< r2
+  (vol 100) o2 e1/f/b-/>e-/e/f/b-/>c+/d<< | (vol 40) o2 e1/f
+
+midi-string-ensemble-2 "high-cluster":
+  (track-vol 55) (pan 30) (quant 100)
+  r1*10
+  (vol 30) o6 c1/c+ | (vol 40) o6 c1/c+/d | (vol 55) o6 c1/c+/d | (vol 70) o6 c2/c+/d r2
+  (vol 100) o5 b1/>c/c+/d< | r1
+
+midi-celesta:
+  (track-vol 60) (pan 25)
+  r1*4
+  (vol 45) o5 e8 a b >c< b a e4 | o5 e8 a b >c< b a- e4 | o5 d8 f a b- a f d4 | o5 e2 r2
+  r1*7
+  (vol 28) o5 e8 a b- r8 r2
+
+piano:
+  (track-vol 64) (pan 50)
+  r1*6 | (vol 55) o1 e2/f r2 | r1*7
+  (vol 100) o0 a1/>e/f/b-/>e<< | r1
+
+midi-choir-aahs:
+  (track-vol 51) (pan 50) (quant 100)
+  r1*8
+  (vol 35) o2 e1/f | (vol 45) o2 e1/f | (vol 55) o2 e1/f/b- | (vol 65) o2 e1/f/b-
+  (vol 78) o2 e1/f/b-/>e-< | (vol 90) o2 e2/f/b-/>e-< r2
+  (vol 100) o2 e1/f/b-/>e-/f< | r1
+
+midi-fx-atmosphere:
+  (track-vol 42) (pan 60) (quant 100)
+  (vol 40) o3 e1~1~1~1/b | o3 f1~1~1~1/b | o3 e1~1~1~1/b-
+  o3 e1/b- | o3 e2/b- r2 | r1 | (vol 30) o3 e1/b-
+
+midi-timpani:
+  (track-vol 64) (pan 50)
+  r1*8
+  (vol 50) o2 e4 e8 r8 r2 | (vol 58) o2 e4 e8 r8 r2 | (vol 66) o2 e4 e8 r8 e4 e8 r8 | (vol 75) o2 e4 e8 r8 e4 e8 r8
+  (vol 85) o2 e32*32 | (vol 100) o2 e32*16 r2
+  (vol 100) o2 e4 r2. | r1
+
+midi-percussion:
+  (track-vol 68)
+  r1*11
+  (vol 25) o3 d+32*32 | (vol 40) o3 d+32*32 | (vol 60) o3 d+32*16 r2
+  (vol 100) o1 b4/>>c+/e<< r2. | r1

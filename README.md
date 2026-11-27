@@ -137,6 +137,7 @@ or WAV.
 |---|---|
 | `valda-music` | Backing and jam tracks (blues, rock, pop, funk, jazz, bossa, reggae, country, metal, ballad), chord progressions, and practice material: scales, modes, arpeggios, interval and rhythm drills, tempo ramps with a click |
 | `valda-drums` | Rock, pop and metal drum parts: grooves, fills, crashes, builds, stops and endings arranged over a song form, practice loops, and drums for an existing score |
+| `valda-cinematic` | Cinematic and orchestral cues (epic, heroic, fantasy, drama, horror, thriller, sci-fi, romance, noir, whimsical, elegy): themes, ostinatos, swells, climaxes, stingers and hit points. It asks for mood, length, purpose and arc when the request is vague |
 
 For example:
 
@@ -146,15 +147,20 @@ For example:
 > A pop-punk drum track at 170 BPM: verse, chorus, verse, chorus, bridge,
 > double chorus. Put a fill into every chorus.
 
+> A 90-second epic battle cue in D minor that builds to a climax at 1:00.
+
 Use them together for a full band: `valda-music` covers everything except
-detailed drum parts, which are `valda-drums`' job. Each skill has a `SKILL.md`, reference notes (Alda syntax,
+detailed drum parts, which are `valda-drums`' job. `valda-cinematic` writes
+for the GM orchestra (strings, brass, woodwinds, timpani, choir, hybrid synths)
+and checks each cue's dynamic arc with `scripts/levels.sh`. Each skill has a `SKILL.md`, reference notes (Alda syntax,
 theory, genres and exercises; the GM drum map, grooves, fills and song
 structure) and templates to start from: `backing-track.alda`,
-`scale-exercise.alda` and `song-drums.alda`. Exported drums use MIDI channel
+`scale-exercise.alda`, `song-drums.alda`, and `epic-cue.alda`,
+`horror-cue.alda` and `drama-cue.alda`. Exported drums use MIDI channel
 10, so they drop into any DAW drum track.
 
 ```
-skills/install.sh     # symlink both skills into ~/.claude/skills (or $CLAUDE_SKILLS_DIR)
+skills/install.sh     # symlink the skills into ~/.claude/skills (or $CLAUDE_SKILLS_DIR)
 skills/test.sh        # check every code snippet and template with valda
 ```
 

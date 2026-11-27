@@ -7,7 +7,7 @@ description: >
   material such as scales, modes, arpeggios, interval drills, rhythm drills and tempo-ramp
   exercises with a click. Writes a .alda score, validates it with valda, and exports MIDI/WAV.
   For detailed drum parts (rock/pop/metal grooves, fills, song-form drum arrangements), use
-  the valda-drums skill instead or alongside.
+  the valda-drums skill instead or alongside. For film/orchestral/cinematic cues, use valda-cinematic.
 ---
 
 # valda-music: backing tracks, accompaniment and exercises in Alda

@@ -11,7 +11,7 @@ valda="${VALDA:-$here/../valda}"
 [ -x "$valda" ] || { echo "test.sh: valda not found at $valda (set VALDA)" >&2; exit 2; }
 
 fail=0
-for skill in valda-music valda-drums; do
+for skill in valda-music valda-drums valda-cinematic; do
 	md="$here/$skill/SKILL.md"
 	if ! head -5 "$md" | grep -q "^name: $skill$" || ! head -5 "$md" | grep -q '^description:'; then
 		echo "FAIL $skill/SKILL.md: missing name/description frontmatter"

@@ -1,0 +1,151 @@
+# Epic hybrid cue in D minor ("trailer" arc: build -> theme -> rise -> climax -> tail)
+# 40 bars @ 128 BPM (1.875 s/bar) = 1:15. 12 melodic parts + percussion (limit: 15 + drums).
+#
+# | marker | bars  | time  | harmony (1 chord/bar)    | texture                                   | dyn   |
+# |--------|-------|-------|--------------------------|-------------------------------------------|-------|
+# | intro  | 1-8   | 0:00  | Dm pedal                 | low drone, pad, taiko every 2 bars, horn hint of theme | pp-p  |
+# | build  | 9-16  | 0:15  | Dm Bb F C x2             | 16th string ostinato enters, taiko groove, timpani, D pedal | mp    |
+# | theme  | 17-24 | 0:30  | Dm Bb F C x2             | THEME in horns + low strings (8vb), choir pad, crash on 17 | f     |
+# | rise   | 25-28 | 0:45  | Bb C Bb A (V)            | drop back, then crescendo: rolls, reverse cymbal         | mf->ff|
+# | climax | 29-36 | 0:52.5| Dm Bb F C x2             | THEME 8va in violins + trumpets + horns, full choir, taiko B | ff    |
+# | tail   | 37-40 | 1:07.5| Dm hit, drone            | tutti hit, then low drone + choir fade                    | ff->pp |
+#
+# The theme is one variable pair (themeA/themeB) reused with (transpose). Audition: valda play -f epic-cue.alda --from rise
+
+(tempo! 128)
+
+# ---------- theme (4 + 4 bars over Dm Bb F C)
+themeA = o4 d2 a2 | g4. f8 d2 | f4. e8 f4 a4 | g1
+themeB = o4 d2 a2 | b-4. a8 g4 f4 | a2 >c2< | g2 e2
+
+# ---------- string ostinato, one bar per chord
+ostDm = o3 [d16 d a d >d< d a d]*2
+ostBb = o3 [d16 d b- d >d< d b- d]*2
+ostF  = o3 [c16 c a c >c< c a c]*2
+ostC  = o3 [c16 c g c >c< c g c]*2
+ostA  = o3 [c+16 c+ a c+ >c+< c+ e c+]*2
+ostLoop = ostDm ostBb ostF ostC
+
+# ---------- harmony helpers
+padLoop   = o3 d1/a/>f< | o3 d1/f/b- | o3 c1/f/a | o3 c1/e/g
+choirLoop = o3 a1/>d/f< | o3 b-1/>d/f< | o3 a1/>c/f< | o3 g1/>c/e<
+choirHi   = o4 d1/f/a | o4 d1/f/b- | o4 c1/f/a | o4 c1/e/g
+violinPad = o4 f1/a | o4 f1/b- | o4 f1/a | o4 e1/g
+bassRoots = o2 d1 | o1 b-1 | o2 f1 | o2 c1
+tromRoots = o2 d1/a | o1 b-1/>f< | o2 f1/>c< | o2 c1/g
+timpHits  = o2 d4 r2. | o2 b-4 r2. | o2 f4 r2. | o3 c4 r2.
+timpDrive = o2 d8 d r4 d4 r4 | o2 b-8 b- r4 b-4 r4 | o2 f8 f r4 f4 r4 | o3 c8 c r4 c4 r4
+taikoA    = o2 d4 r8 d8 d4 r4
+taikoB    = o2 d8 r16 d16 r8 d8 d4 r8 d8
+
+# ===== BRASS =====
+midi-french-horn:
+  (track-vol 64) (pan 38) (quant 95)
+  %intro  r1*4 | (vol 45) o4 d2 a2 | g1 | r1*2
+  %build  (vol 58) [o3 f1 | f | f | e]*2
+  %theme  (vol 88) themeA themeB
+  %rise   (vol 62) o3 f1 | (vol 74) g1 | (vol 86) f1 | (vol 98) e1
+  %climax (vol 100) themeA themeB
+  %tail   (vol 100) o3 d4/a r2. | (vol 55) o4 d2 a2 | g1 | (vol 40) o4 d1
+
+midi-trumpet:
+  (track-vol 60) (pan 58) (quant 95)
+  r1*28
+  (vol 95) themeA themeB
+  (vol 100) o4 d4/a r2. | r1*3
+
+midi-trombone:
+  (track-vol 64) (pan 68) (quant 100)
+  r1*8
+  (vol 60) tromRoots*2
+  (vol 80) tromRoots*2
+  (vol 62) o1 b-1/>f< | (vol 72) o2 c1/g | (vol 84) o1 b-1/>f< | (vol 96) o2 a1/>e<
+  (vol 100) tromRoots*2
+  (vol 100) o2 d4/a r2. | r1*3
+
+# ===== PERCUSSION =====
+midi-timpani:
+  (track-vol 68) (pan 50)
+  (vol 60) o2 d4 r2. | r1*3 | o2 d4 r2. | r1*3
+  (vol 70) timpHits*2
+  (vol 85) timpHits*2
+  (vol 35) o2 a32*32 | (vol 45) a32*32 | (vol 58) a32*32 | (vol 70) a32*16 (vol 85) a32*16
+  (vol 100) timpDrive*2
+  (vol 100) o2 d4 r2. | r1*3
+
+midi-taiko-drum:
+  (track-vol 68) (pan 50)
+  [(vol 70) o2 d2 r2 | r1]*4
+  (vol 80) taikoA*8
+  (vol 90) taikoB*8
+  (vol 75) o2 d8*8 | d8*8 | (vol 80) d16*16 | d16*16
+  (vol 100) taikoB*8
+  (vol 100) o2 d4 r2. | r1*3
+
+# rising swoosh: its peak is ~1.5 s after the start, so start 3 beats (1.4 s at 128 BPM) before the downbeat
+midi-reverse-cymbal:
+  (track-vol 56) (pan 50) (vol 85)
+  r1*15 | r4 o4 c2. | r1*11 | r4 o4 c2. | r1*12
+
+midi-percussion:
+  (track-vol 68)
+  r1*16
+  (vol 85) o3 c+1 | r1*7
+  (vol 30) o2 d32*32 | (vol 40) d32*32 | (vol 52) d32*32 | (vol 65) d32*32
+  (vol 100) o1 b4/>>c+<< r2. | r1*3 | (vol 90) o3 a1 | r1*3
+  (vol 100) o1 b4/>>c+<< r2. | r1*3
+
+# ===== CHOIR / SYNTH =====
+midi-choir-aahs:
+  (track-vol 56) (pan 50) (quant 100)
+  r1*16
+  (vol 60) choirLoop*2
+  (vol 52) o3 b-1/>d/f< | (vol 66) o3 g1/>c/e< | (vol 80) o3 b-1/>d/f< | (vol 95) o3 a1/>c+/e<
+  (vol 100) choirHi*2
+  (vol 95) o4 d1/f/a | (vol 60) o3 a1/>d< | (vol 45) o3 a1/>d< | (vol 30) o3 a1/>d<
+
+midi-synth-pad-warm:
+  (track-vol 44) (pan 50) (quant 100)
+  (vol 40) o3 d1~1~1~1/a/>f< | o3 d1~1~1~1/a/>e<
+  (vol 45) padLoop*2
+  (vol 50) padLoop*2
+  (vol 52) o3 d1/f/b- | o3 c1/e/g | o3 d1/f/b- | o3 c+1/e/a
+  (vol 55) padLoop*2
+  (vol 50) o3 d1~1~1~1/a/>f<
+
+# ===== STRINGS =====
+midi-string-ensemble-1 "violins":
+  (track-vol 68) (pan 30) (quant 100)
+  r1*8
+  (vol 50) violinPad*2
+  (vol 65) violinPad*2
+  (vol 52) o4 f1/b- | (vol 66) o4 g1/>c< | (vol 80) o4 f1/b- | (vol 95) o4 e1/a
+  (vol 100) (transpose 12) themeA themeB (transpose 0)
+  (vol 100) o4 d4/a/>d< r2. | r1*3
+
+midi-string-ensemble-1 "ostinato":
+  (track-vol 64) (pan 45) (quant 60)
+  r1*8
+  (vol 60) ostLoop*2
+  (vol 75) ostLoop*2
+  (vol 55) ostBb | (vol 68) ostC | (vol 82) ostBb | (vol 95) ostA
+  (vol 95) ostLoop*2
+  (vol 100) o3 d4/a/>d< r2. | r1*3
+
+midi-string-ensemble-1 "low-strings":
+  (track-vol 68) (pan 65) (quant 100)
+  (vol 45) o2 d1~1~1~1/>d< | (vol 55) o2 d1~1~1~1/>d<
+  (vol 60) o2 d1~1~1~1/>d< | o2 d1~1~1~1/>d<
+  (vol 85) (transpose -12) themeA themeB (transpose 0)
+  (vol 58) o2 b-8*8 | (vol 70) o3 c8*8 | (vol 84) o2 b-8*8 | (vol 98) o2 a8*8
+  (vol 100) [o2 d8*8 | o1 b-8*8 | o2 f8*8 | o2 c8*8]*2
+  (vol 100) o2 d4/a r2. | (vol 50) o2 d1~1~1/a
+
+midi-contrabass:
+  (track-vol 64) (pan 72) (quant 100)
+  (vol 50) o1 d1~1~1~1 | o1 d1~1~1~1
+  (vol 70) bassRoots*2
+  (vol 85) bassRoots*2
+  (vol 65) o1 b-1 | (vol 75) o2 c1 | (vol 85) o1 b-1 | (vol 95) o1 a1
+  (vol 100) bassRoots*2
+  (vol 100) o1 d4 r2. | (vol 55) o1 d1~1~1

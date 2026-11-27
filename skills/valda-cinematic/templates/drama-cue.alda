@@ -1,0 +1,76 @@
+# Emotional drama cue in D major ("swell" arc): piano ostinato + strings, minor iv, a 4-3 suspension, ritardando ending.
+# 24 bars @ 72 BPM (3.33 s/bar), ritardando to 66 and 58 in the last two bars = ~1:21. 6 melodic parts.
+#
+# | marker  | bars  | time  | harmony                                              | texture                                  | dyn   |
+# |---------|-------|-------|------------------------------------------------------|------------------------------------------|-------|
+# | intro   | 1-4   | 0:00  | D  G/D  D  Gm/D   (D pedal, minor iv)                | piano alone                              | p     |
+# | theme   | 5-12  | 0:13  | D  A/C#  Bm  G  D/F#  G  Gm  Asus4-A                | THEME in solo cello, string pad, bass    | mp    |
+# | swell   | 13-20 | 0:40  | same as theme                                        | THEME 8va in violins, cello countermelody, horn, crescendo to Gm (bar 19) | mf→ff |
+# | resolve | 21-24 | 1:07  | D(add9)  G/D  Gm/D  D   (pedal, rit. 72→66→58)       | thinning out, theme fragment in cello    | p→pp  |
+#
+# Audition the climax: valda play -f drama-cue.alda --from swell
+
+(tempo! 72)
+
+# ---------- piano broken chords (one bar each, root in the left hand)
+pD    = o2 d8 a > d f+ a f+ d < a
+pD9   = o2 d8 a > e f+ a f+ e < a
+pGd   = o2 d8 b > d g b g d < b
+pGmd  = o2 d8 b- > d g b- g d < b-
+pAcs  = o2 c+8 a > c+ e a e c+ < a
+pBm   = o2 b8 > f+ b > d f+ d < b f+ <
+pG    = o2 g8 > d g b > d < b g d <
+pDf   = o2 f+8 a > d f+ a f+ d < a
+pGm   = o2 g8 > d g b- > d < b- g d <
+pAsus = o2 a8 > e a > d e c+ < a e <
+
+# ---------- the theme (cello register). A = bars 1-4, B = bars 5-8. B ends on the 4-3 suspension (d -> c+ over A)
+themeA = o3 a2 o4 d4 e4 | o4 e2. c+4 | o4 d2 f+4 e4 | o4 d1
+themeB = o3 a2 o4 d4 f+4 | o4 g2. f+4 | o4 d2 o3 b-2 | o4 d2 c+2
+
+padProg  = o3 f+1/a/>d< | o3 e1/a/>c+< | o3 f+1/b/>d< | o3 g1/b/>d< | o3 f+1/a/>d< | o3 g1/b/>d< | o3 g1/b-/>d< | o3 a2/>d/e< o3 a2/>c+/e<
+bassProg = o2 d1 | o2 c+1 | o1 b1 | o1 g1 | o1 f+1 | o1 g1 | o1 g1 | o1 a1
+
+piano:
+  (track-vol 75) (pan 45) (quant 95)
+  %intro   (vol 45) pD pGd pD pGmd
+  %theme   (vol 48) pD pAcs pBm pG pDf pG pGm pAsus
+  %swell   (vol 52) pD (vol 55) pAcs (vol 58) pBm (vol 61) pG (vol 64) pDf (vol 67) pG (vol 72) pGm (vol 68) pAsus
+  %resolve (vol 50) pD9 (vol 44) pGd
+           (tempo! 66) (vol 40) pGmd
+           (tempo! 58) (vol 38) o2 d1/a/>d/f+/a<
+
+midi-cello:
+  (track-vol 80) (pan 62) (quant 100)
+  r1*4
+  (vol 68) themeA themeB
+  (vol 66) o3 f+2 a2 | (vol 70) o3 e1 | (vol 74) o3 d2 f+2 | (vol 78) o3 g2 b2 |
+  (vol 82) o3 a1 | (vol 86) o3 b2 g2 | (vol 92) o3 b-1 | (vol 88) o3 a2 g2
+  (vol 62) o3 a2 o4 d2 | (vol 56) o4 e1 | (vol 50) o4 d2 o3 b-2 | (vol 44) o3 a1
+
+midi-string-ensemble-1 "violins":
+  (track-vol 75) (pan 30) (quant 100)
+  r1*12
+  (transpose 12) (vol 70) themeA (vol 88) themeB (transpose 0)
+  (vol 55) o5 d1 | (vol 48) o5 d1 | (vol 40) o5 d1 | (vol 32) o5 d1
+
+midi-string-ensemble-2 "pad":
+  (track-vol 65) (pan 50) (quant 100)
+  r1*4
+  (vol 38) padProg
+  (vol 55) o3 f+1/a/>d< | (vol 60) o3 e1/a/>c+< | (vol 64) o3 f+1/b/>d< | (vol 68) o3 g1/b/>d< |
+  (vol 72) o3 f+1/a/>d< | (vol 76) o3 g1/b/>d< | (vol 84) o3 g1/b-/>d< | (vol 80) o3 a2/>d/e< o3 a2/>c+/e<
+  (vol 50) o3 f+1/a/>e< | (vol 44) o3 g1/b/>d< | (vol 38) o3 g1/b-/>d< | (vol 32) o3 f+1/a/>d<
+
+midi-contrabass:
+  (track-vol 70) (pan 72) (quant 100)
+  (vol 38) o2 d1~1~1~1
+  (vol 45) bassProg
+  (vol 60) bassProg
+  (vol 45) o2 d1~1 | (vol 40) o2 d1 | (vol 35) o2 d1   # split at each tempo change: a tie keeps its starting tempo
+
+midi-french-horn:
+  (track-vol 60) (pan 38) (quant 100)
+  r1*12
+  (vol 45) o3 a1 | (vol 50) a1 | (vol 55) b1 | (vol 60) b1 | (vol 65) a1 | (vol 70) b1 | (vol 80) b-1 | (vol 75) a1
+  (vol 45) o3 a1 | (vol 40) b1 | (vol 35) b-1 | (vol 30) a1

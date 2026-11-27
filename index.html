@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>valda: scores you can type</title>
-<meta name="description" content="valda plays Alda, the text-based music language, from a single binary with a built-in synthesizer. Export to MIDI or WAV.">
+<meta name="description" content="valda plays Alda, the text-based music language, from a single binary with a built-in synthesizer. Claude Code skills write backing tracks, drum parts and film cues for it. Export to MIDI or WAV.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -172,9 +172,34 @@ h3 { font-size: 1.3rem; font-weight: 700; font-variation-settings: "opsz" 32; ma
 .learn a { font-size: 1.2rem; font-weight: 700; }
 .learn p { margin: 4px 0 0; color: var(--muted); max-width: 58ch; }
 
+/* Hero: the Claude lane */
+.ask { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--rule); }
+.eyebrow { font-weight: 700; font-variation-settings: "opsz" 32; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--plum); margin: 0 0 10px; }
+.ask > p { max-width: 44ch; margin: 0 0 16px; }
+.ask blockquote { margin: 0 0 20px; padding: 4px 0 4px 16px; border-left: 3px solid var(--marigold); font-size: 1.1rem; max-width: 44ch; }
+.ask .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+a.btn { text-decoration: none; display: inline-block; }
+a.btn.play:hover { color: var(--paper); background: var(--cobalt); border-color: var(--cobalt); }
+a.btn:not(.play):hover { border-color: var(--muted); color: var(--ink); }
+.top nav a.accent { color: var(--ink); font-weight: 700; text-decoration: underline; text-decoration-color: var(--marigold); text-decoration-thickness: 3px; text-underline-offset: 0.3em; }
+
 /* Skills */
-.skill { display: flex; flex-direction: column; gap: 14px; }
+#skills { background: color-mix(in srgb, var(--sheet) 55%, var(--paper)); }
+.steps { list-style: none; counter-reset: step; margin: 0 0 48px; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+@media (min-width: 720px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; } }
+.steps li { counter-increment: step; padding-top: 12px; border-top: 2px solid var(--ink); }
+.steps li::before { content: counter(step); display: block; font-weight: 800; font-size: 2rem; line-height: 1; font-variation-settings: "opsz" 96, "wdth" 80; color: var(--marigold); margin-bottom: 8px; }
+.steps strong { display: block; font-size: 1.1rem; }
+.steps span { color: var(--muted); font-size: 0.95rem; }
+.skills-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+@media (min-width: 1000px) { .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.skill { display: flex; flex-direction: column; gap: 14px; background: var(--sheet); border: 1px solid var(--rule); border-top: 4px solid var(--c); border-radius: 14px; padding: 22px 20px; }
+.skill h3 { margin: 0; }
+.skill .for { margin: -8px 0 0; color: var(--muted); font-size: 0.95rem; }
 .skill > p { margin: 0; max-width: 58ch; }
+.skill .links { margin-top: auto; }
+.skill pre.sample { background: var(--paper); }
 .skill blockquote { margin: 0; padding: 4px 0 4px 16px; border-left: 3px solid var(--marigold); color: var(--ink); font-size: 1.05rem; }
 pre.sample { margin: 0; background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; overflow-x: auto; line-height: 1.5; }
 pre.sample .c { color: var(--muted); }
@@ -191,11 +216,11 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
 <header class="wrap top">
   <a class="mark" href="#">valda</a>
   <nav aria-label="Main">
+    <a class="accent" href="#skills">Ask Claude</a>
     <a href="#install">Install</a>
     <a href="#commands">Commands</a>
     <a href="#examples">Examples</a>
     <a href="#learn">Learn</a>
-    <a href="#skills">Claude skills</a>
     <a href="README.md">README</a>
     <a href="https://github.com/rodabt/valda">GitHub</a>
   </nav>
@@ -209,6 +234,16 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
       <p>One small binary with a synthesizer built in. Play a score, keep jamming in a REPL, or export it to MIDI and WAV for your DAW.</p>
       <div class="cmd"><code>valda play -c 'piano: c8 d e f g4 a8 b &gt; c2'</code><button class="copy" type="button">Copy</button></div>
       <div class="cmd"><code>valda export -f song.alda -M 1 -o song.mid</code><button class="copy" type="button">Copy</button></div>
+
+      <div class="ask">
+        <p class="eyebrow">Or describe it to Claude</p>
+        <p>Three Claude Code skills come with valda. Say what you want to hear, and Claude writes the score, checks it with valda and exports MIDI or WAV.</p>
+        <blockquote>“A 90-second epic battle cue in D minor that builds to a climax at 1:00.”</blockquote>
+        <div class="actions">
+          <a class="btn play" href="#skills">See what Claude can write</a>
+          <a class="btn" href="#skills-install">Install the skills</a>
+        </div>
+      </div>
     </div>
 
     <div>
@@ -230,6 +265,68 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
       <p class="studio-note">This preview reads a small part of Alda (parts, notes, rests, chords, octaves, durations and tempo) and plays it with a simple browser synth. valda itself reads the whole language and plays it with a General MIDI SoundFont.</p>
     </div>
   </div>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Ask Claude to write it</h2>
+      <p class="intro">Three Claude Code skills come with valda: one for backing tracks and practice material, one for drums, one for film and game music. Describe the piece in plain words. You get a real <code>.alda</code> score you can read, change and play.</p>
+      <ol class="steps">
+        <li><strong>Describe it</strong><span>Style, key, tempo, length, which instruments to leave out. If something important is missing, Claude asks first.</span></li>
+        <li><strong>Check the plan</strong><span>Claude shows the form before writing: sections, bars, chords, timings.</span></li>
+        <li><strong>Claude writes and checks it</strong><span>The score is checked with valda: it parses, every part has the same length, markers land on time.</span></li>
+        <li><strong>Play or export</strong><span><code>valda play</code>, or MIDI with one track per part for your DAW, or WAV.</span></li>
+      </ol>
+      <div class="skills-grid">
+        <article class="skill" style="--c: var(--cobalt)">
+          <h3>valda-music</h3>
+          <p class="for">Backing tracks and practice material</p>
+          <p>Jam tracks in blues, rock, pop, funk, jazz, bossa, reggae, country, metal or ballad style, chord progressions, scales, modes, arpeggios, interval and rhythm drills, and tempo ramps with a click.</p>
+          <blockquote>“A 12-bar blues in A at 96 BPM with bass, piano and drums. Leave the guitar out, I'll play that.”</blockquote>
+          <pre class="sample"><code><span class="c"># the plan, shown first</span>
+intro 4 | verse 8: Am F C G ×2
+chorus 8: F C G Am ×2 | outro 4
+@ 100 BPM ≈ 1:07</code></pre>
+          <p class="links"><a href="skills/valda-music/SKILL.md">Read the skill</a>, or start from a template: <a href="skills/valda-music/templates/backing-track.alda">backing track</a>, <a href="skills/valda-music/templates/scale-exercise.alda">scale exercise</a>.</p>
+        </article>
+        <article class="skill" style="--c: var(--teal)">
+          <h3>valda-drums</h3>
+          <p class="for">Drum parts for rock, pop and metal</p>
+          <p>From punk and pop-punk to thrash and metalcore: grooves, fills, crashes, builds, stops and endings, arranged across intro, verse, chorus, bridge and outro. It also adds drums to a score you already have.</p>
+          <blockquote>“A pop-punk drum track at 170 BPM: verse, chorus, verse, chorus, bridge, double chorus. Put a fill into every chorus.”</blockquote>
+          <pre class="sample"><code><span class="c">#     1 &amp; 2 &amp; 3 &amp; 4 &amp;
+# HH  x x x x x x x x
+# SN  . . x . . . x .
+# BD  x . . . x x . .</span>
+verseA = [
+  V1: (vol 70) o2 f+8 f+ f+ f+ f+ f+ f+ f+
+  V2: r8 r (vol 90) o2 d r r r d r
+  V3: (vol 92) o2 c8 r r r c c r r
+  V0:
+]</code></pre>
+          <p class="links"><a href="skills/valda-drums/SKILL.md">Read the skill</a>, or open the <a href="skills/valda-drums/templates/song-drums.alda">64-bar rock arrangement</a>. Exported drums land on MIDI channel 10, ready for any DAW drum track.</p>
+        </article>
+        <article class="skill" style="--c: var(--plum)">
+          <h3>valda-cinematic</h3>
+          <p class="for">Film, trailer, TV and game music</p>
+          <p>Cues in epic, heroic, fantasy, drama, horror, thriller, sci-fi, romance, noir, whimsical or elegy moods, for the General MIDI orchestra: strings, brass, woodwinds, timpani, choir, harp, synths and taiko. Builds, swells, climaxes, stingers, hit points and seamless game loops. It checks that each section's loudness follows the arc.</p>
+          <blockquote>“A slow-burn horror cue, about a minute, that goes quiet and ends on a stinger.”</blockquote>
+          <pre class="sample"><code><span class="c"># the cue sheet, shown first</span>
+intro  0:00  Dm pedal, low drone     pp
+build  0:15  string ostinato, taiko  mp
+theme  0:30  horns + low strings     f
+climax 0:52  theme 8va, full choir   ff
+<span class="c">128 BPM, 40 bars = 1:15</span></code></pre>
+          <p class="links"><a href="skills/valda-cinematic/SKILL.md">Read the skill</a>, or start from a cue: <a href="skills/valda-cinematic/templates/epic-cue.alda">epic</a>, <a href="skills/valda-cinematic/templates/horror-cue.alda">horror</a>, <a href="skills/valda-cinematic/templates/drama-cue.alda">drama</a>.</p>
+        </article>
+      </div>
+      <div class="install" id="skills-install">
+        <p>Link all three skills into Claude Code, then start a new session:</p>
+        <div class="cmd"><code>skills/install.sh</code><button class="copy" type="button">Copy</button></div>
+        <p class="after-skills">Using Docker? Start Claude Code with <code>VALDA</code> pointing at the wrapper, so the skills run valda through the image. Keep your scores under the folder you start it from.</p>
+        <div class="cmd"><code>VALDA=$PWD/scripts/valda-docker.sh claude</code><button class="copy" type="button">Copy</button></div>
+      </div>
+    </div>
+  </section>
 
   <section id="install">
     <div class="wrap">
@@ -329,7 +426,7 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
           </ul>
         </div>
       </div>
-      <p class="try">To play one: <code>valda play -f examples/bach_cello_suite_no_1.alda</code>. The full list is in the <a href="examples/">examples folder</a>.</p>
+      <p class="try">To play one: <code>valda play -f examples/bach_cello_suite_no_1.alda</code>. The full list is in the <a href="examples/">examples folder</a>. The Claude skills add their own templates: backing tracks, drum arrangements and film cues (<a href="#skills">see them</a>).</p>
     </div>
   </section>
 
@@ -360,44 +457,6 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
     </div>
   </section>
 
-  <section id="skills">
-    <div class="wrap">
-      <h2>Ask Claude to write it</h2>
-      <p class="intro">Two Claude Code skills come with valda. Describe what you want to play along with. Claude plans the form, writes the <code>.alda</code> score, checks it with valda and exports MIDI or WAV.</p>
-      <div class="split">
-        <article class="skill">
-          <h3>valda-music</h3>
-          <p>Backing tracks and practice material: jam tracks in blues, rock, pop, funk, jazz, bossa, reggae, country, metal or ballad style, chord progressions, scales, modes, arpeggios, interval and rhythm drills, and tempo ramps with a click.</p>
-          <blockquote>“A 12-bar blues in A at 96 BPM with bass, piano and drums. Leave the guitar out, I'll play that.”</blockquote>
-          <pre class="sample"><code><span class="c"># Claude shows the plan before writing the score</span>
-intro 4 | verse 8: Am F C G ×2 | chorus 8: F C G Am ×2 | outro 4   @ 100 BPM ≈ 1:07</code></pre>
-          <p class="links"><a href="skills/valda-music/SKILL.md">Read the skill</a>, or start from a template: <a href="skills/valda-music/templates/backing-track.alda">backing track</a>, <a href="skills/valda-music/templates/scale-exercise.alda">scale exercise</a>.</p>
-        </article>
-        <article class="skill">
-          <h3>valda-drums</h3>
-          <p>Drum parts for rock, pop and metal, from punk and pop-punk to thrash and metalcore. Grooves, fills, crashes, builds, stops and endings, arranged across intro, verse, chorus, bridge and outro. It also adds drums to a score you already have.</p>
-          <blockquote>“A pop-punk drum track at 170 BPM: verse, chorus, verse, chorus, bridge, double chorus. Put a fill into every chorus.”</blockquote>
-          <pre class="sample"><code><span class="c">#     1 &amp; 2 &amp; 3 &amp; 4 &amp;
-# HH  x x x x x x x x
-# SN  . . x . . . x .
-# BD  x . . . x x . .</span>
-verseA = [
-  V1: (vol 70) o2 f+8 f+ f+ f+ f+ f+ f+ f+
-  V2: r8 r (vol 90) o2 d r r r d r
-  V3: (vol 92) o2 c8 r r r c c r r
-  V0:
-]</code></pre>
-          <p class="links"><a href="skills/valda-drums/SKILL.md">Read the skill</a>, or open the <a href="skills/valda-drums/templates/song-drums.alda">64-bar rock arrangement</a>. Exported drums land on MIDI channel 10, ready for any DAW drum track.</p>
-        </article>
-      </div>
-      <div class="install">
-        <p>Link both skills into Claude Code, then start a new session:</p>
-        <div class="cmd"><code>skills/install.sh</code><button class="copy" type="button">Copy</button></div>
-        <p class="after-skills">Using Docker? Start Claude Code with <code>VALDA</code> pointing at the wrapper, so the skills run valda through the image. Keep your scores under the folder you start it from.</p>
-        <div class="cmd"><code>VALDA=$PWD/scripts/valda-docker.sh claude</code><button class="copy" type="button">Copy</button></div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
